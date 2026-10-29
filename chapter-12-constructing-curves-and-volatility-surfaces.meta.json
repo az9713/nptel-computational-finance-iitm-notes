@@ -1,0 +1,181 @@
+{
+  "chapter": 12,
+  "title": "Constructing curves and volatility surfaces",
+  "file": "chapter-12-constructing-curves-and-volatility-surfaces.html",
+  "source_recordings": [
+    33,
+    35,
+    36
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "curve-object",
+    "bootstrap",
+    "interpolation",
+    "option-cross-section",
+    "surface-construction",
+    "paired-laboratories",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "curve-object",
+      "recording": 33,
+      "start_seconds": 70,
+      "end_seconds": 264,
+      "topic": "YTM-point construction versus zero-coupon bootstrap; coupon dependence and common discount function"
+    },
+    {
+      "section": "bootstrap",
+      "recording": 33,
+      "start_seconds": 159,
+      "end_seconds": 245,
+      "topic": "Overlapping cash-flow bootstrap distinguished from independent YTM roots; full triangular example, identification and rate definitions"
+    },
+    {
+      "section": "interpolation",
+      "recording": 33,
+      "start_seconds": 131,
+      "end_seconds": 264,
+      "topic": "Interpolation of maturity points, spline discussion; explicit log-discount choice and global segment properties versus unsupported smoothness claims"
+    },
+    {
+      "section": "option-cross-section",
+      "recording": 33,
+      "start_seconds": 265,
+      "end_seconds": 391,
+      "topic": "Consistent option quote collection, liquidity and volatility surface; original payoff-based price constraints before interpolation"
+    },
+    {
+      "section": "surface-construction",
+      "recording": 33,
+      "start_seconds": 301,
+      "end_seconds": 478,
+      "topic": "Contract-by-contract IV collection, model-conditioned surface and interpolation; common synthetic price family and bounded price-space guarantees"
+    },
+    {
+      "section": "surface-construction",
+      "recording": 35,
+      "start_seconds": 1255,
+      "end_seconds": 1285,
+      "topic": "Volatility slice/surface construction preview"
+    },
+    {
+      "section": "surface-construction",
+      "recording": 36,
+      "start_seconds": 1101,
+      "end_seconds": 1163,
+      "topic": "Strike-wise implied-volatility plot; shape and model qualifications"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 35,
+      "start_seconds": 16,
+      "end_seconds": 1154,
+      "topic": "Full R lab bond/option objectives, admissible brackets, bisection/verbose records, Newton/secant/uniroot; accurate counts and limitations"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 35,
+      "start_seconds": 1155,
+      "end_seconds": 1254,
+      "topic": "Far-strike quote perturbation and maturity-YTM table"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 36,
+      "start_seconds": 16,
+      "end_seconds": 974,
+      "topic": "Full Python objectives, bracket/code/history,25bisections versus4Newtonupdates, secant and SciPy brentq interface"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 36,
+      "start_seconds": 974,
+      "end_seconds": 1130,
+      "topic": "K27000 prices5and6 with recalculated annual IV change and no universal strike-shape assertion"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 36,
+      "start_seconds": 1163,
+      "end_seconds": 1302,
+      "topic": "Five coupon maturities and coupon amounts; original complete price fixture distinguishes YTM collection from zero curve"
+    },
+    {
+      "section": "limits",
+      "recording": 33,
+      "start_seconds": 352,
+      "end_seconds": 792,
+      "topic": "Liquidity and date evolution, common inversion abstraction, solver comparison and calculus preview; limitations and complete numerical pipeline"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch12_curves_and_surfaces.py",
+      "check": "Exact-date bootstrap/repricing, rate conventions, interpolation, finite call constraints, mixture surface and full paired-lab calculations"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch12_curve_objects.py",
+    "assets/ch12-curve-objects.svg",
+    "assets/ch12-curve-objects-portrait.svg",
+    "code/ch08_binomial_valuation.py",
+    "code/ch10_inverse_pricing.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
+      "code_sha256": {
+        "code/ch12_curves_and_surfaces.py": "770a9ed22565626aefbb1f4f5184e7486174591fae6daf7c5af188dd0a459a0a"
+      },
+      "artifact_sha256": {
+        "figures/ch12_curve_objects.py": "c396979fdaf32d631d4bcc2b297802266c724b3b2c79069ffb69c847a9b3711d",
+        "assets/ch12-curve-objects.svg": "0767a1d6321ecbbaa369aa0d1032dbd62416624074ac86a861f4142d1b49d78b",
+        "assets/ch12-curve-objects-portrait.svg": "adfe3c3024c218ec51b7d147e73a593c0031133b74034547464e415210c5dedd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "299e6791c3ac06c98d7c5d38266ceebc233c5b37d83f7596e9eaf98e6e88f642"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
+      "code_sha256": {
+        "code/ch12_curves_and_surfaces.py": "770a9ed22565626aefbb1f4f5184e7486174591fae6daf7c5af188dd0a459a0a"
+      },
+      "artifact_sha256": {
+        "figures/ch12_curve_objects.py": "c396979fdaf32d631d4bcc2b297802266c724b3b2c79069ffb69c847a9b3711d",
+        "assets/ch12-curve-objects.svg": "0767a1d6321ecbbaa369aa0d1032dbd62416624074ac86a861f4142d1b49d78b",
+        "assets/ch12-curve-objects-portrait.svg": "adfe3c3024c218ec51b7d147e73a593c0031133b74034547464e415210c5dedd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "2fc32d2376198512506eb7158e1e37b834592761c2fd0ccdf6923721f153fe66"
+    }
+  ],
+  "limitations": [
+    "Synthetic complete-date coupon grid and original declared lab prices; not observed quotes",
+    "Finite monthly mixture, CRR implied parameters and bounded price-space interpolation; no general surface-fit theorem",
+    "Necessary finite-grid checks, not complete market arbitrage or quote authentication",
+    "R and SciPy interfaces documented rather than locally executed"
+  ],
+  "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
+  "full_scientific_review_rounds": 2
+}

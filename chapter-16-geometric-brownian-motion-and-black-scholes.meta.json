@@ -1,0 +1,240 @@
+{
+  "chapter": 16,
+  "title": "Geometric Brownian motion and Black–Scholes",
+  "file": "chapter-16-geometric-brownian-motion-and-black-scholes.html",
+  "source_recordings": [
+    46,
+    47,
+    51,
+    50
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "pricing-task",
+    "brownian",
+    "gbm",
+    "pricing-measure-and-limit",
+    "gaussian-price",
+    "pde-and-hedging",
+    "full-workshop",
+    "inference",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "pricing-task",
+      "recording": 51,
+      "start_seconds": 593,
+      "end_seconds": 641,
+      "topic": "Priya European contract and model inputs; physical versus pricing question"
+    },
+    {
+      "section": "pricing-task",
+      "recording": 46,
+      "start_seconds": 615,
+      "end_seconds": 756,
+      "topic": "European equation versus American continuation and exercise constraint"
+    },
+    {
+      "section": "brownian",
+      "recording": 47,
+      "start_seconds": 655,
+      "end_seconds": 924,
+      "topic": "Independent shock variance scaling and the full Brownian-process contract; correct marginal/process distinction"
+    },
+    {
+      "section": "gbm",
+      "recording": 47,
+      "start_seconds": 274,
+      "end_seconds": 655,
+      "topic": "Gaussian exponential moment and mean-adjustment convention; finite-horizon positivity and moment interpretation"
+    },
+    {
+      "section": "gbm",
+      "recording": 47,
+      "start_seconds": 781,
+      "end_seconds": 981,
+      "topic": "Explicit GBM/SDE and lognormal transition law with full symbol definitions"
+    },
+    {
+      "section": "pricing-measure-and-limit",
+      "recording": 47,
+      "start_seconds": 981,
+      "end_seconds": 1156,
+      "topic": "Risk-neutral drift and CRR-to-lognormal limit; explicit terminal convergence and unbounded-payoff justification"
+    },
+    {
+      "section": "pricing-measure-and-limit",
+      "recording": 46,
+      "start_seconds": 756,
+      "end_seconds": 958,
+      "topic": "Relationship between lattice pricing and continuous equation; clarified convergence versus computational-cost claims"
+    },
+    {
+      "section": "gaussian-price",
+      "recording": 51,
+      "start_seconds": 641,
+      "end_seconds": 817,
+      "topic": "Full d1/d2/call/put computation, parity and exercise versus price interpretation"
+    },
+    {
+      "section": "gaussian-price",
+      "recording": 51,
+      "start_seconds": 873,
+      "end_seconds": 988,
+      "topic": "Volatility comparison, vega and exact implied-volatility identification range"
+    },
+    {
+      "section": "pde-and-hedging",
+      "recording": 46,
+      "start_seconds": 958,
+      "end_seconds": 1215,
+      "topic": "Meaning of each Black–Scholes PDE term and constant coefficients; explicit dynamic-consistency derivation"
+    },
+    {
+      "section": "pde-and-hedging",
+      "recording": 46,
+      "start_seconds": 1215,
+      "end_seconds": 1372,
+      "topic": "European terminal, zero-stock and high-stock boundary conditions, with finite-domain qualification"
+    },
+    {
+      "section": "pde-and-hedging",
+      "recording": 50,
+      "start_seconds": 384,
+      "end_seconds": 757,
+      "topic": "Complete K75 discounted-strike and Smax250 boundary workshop with declared volatility stress test"
+    },
+    {
+      "section": "full-workshop",
+      "recording": 51,
+      "start_seconds": 45,
+      "end_seconds": 358,
+      "topic": "Complete one-step S64 CRR calibration and exact martingale expectation identity"
+    },
+    {
+      "section": "full-workshop",
+      "recording": 51,
+      "start_seconds": 358,
+      "end_seconds": 593,
+      "topic": "Three-year GBM moments, Jensen comparison, and explicitly separated parameter switch"
+    },
+    {
+      "section": "full-workshop",
+      "recording": 51,
+      "start_seconds": 817,
+      "end_seconds": 1021,
+      "topic": "Actual four-count CRR convergence, three volatilities, and cross-method verification limits"
+    },
+    {
+      "section": "full-workshop",
+      "recording": 50,
+      "start_seconds": 33,
+      "end_seconds": 384,
+      "topic": "Complete strike75 expiry payoff cases and distinction from discounted present boundaries"
+    },
+    {
+      "section": "inference",
+      "recording": 47,
+      "start_seconds": 1156,
+      "end_seconds": 1331,
+      "topic": "Full equal-spacing log-return moment estimation and variance convention"
+    },
+    {
+      "section": "inference",
+      "recording": 47,
+      "start_seconds": 1331,
+      "end_seconds": 1499,
+      "topic": "GBM as modeling assumption, calibration and empirical tail/model limitations"
+    },
+    {
+      "section": "limits",
+      "recording": 46,
+      "start_seconds": 816,
+      "end_seconds": 958,
+      "topic": "Computational cost, refinement and limits of tree/PDE comparisons; executable benchmark contract"
+    },
+    {
+      "section": "pricing-task",
+      "recording": 46,
+      "start_seconds": 151,
+      "end_seconds": 615,
+      "topic": "Option risk-transfer motivation, expiry styles and contract specifications"
+    },
+    {
+      "section": "gbm",
+      "recording": 47,
+      "start_seconds": 103,
+      "end_seconds": 274,
+      "topic": "Positive stock-price motivation and limited-liability versus lognormal-model distinction"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch16_black_scholes.py",
+      "check": "GBM workshop, direct Gaussian-payoff integration, parity, Greeks, PDE, limiting prices and input contracts"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch08_binomial_valuation.py",
+    "figures/ch16_prices_and_convergence.py",
+    "assets/ch16-prices-and-convergence.svg",
+    "assets/ch16-prices-and-convergence-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "8d2077569d488e687ad62ec7af36b62b50056c6813d32f2ebe673592ec8c8f0f",
+      "code_sha256": {
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "figures/ch16_prices_and_convergence.py": "0cdb0b0629fa2473f9092f6e2831eac7858493b2e4dd4c88e0b5de0bf97758cf",
+        "assets/ch16-prices-and-convergence.svg": "62210a2fd5ec5785c82456db60b46cd61b654f0d2fd4039c3ccb1d29d04ae0ba",
+        "assets/ch16-prices-and-convergence-portrait.svg": "405e693a9a624d830f113b4b5196caf43ef9aa00a2819adfa982fbba5a3b26ed"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "c17a69509aa0be5432942274fb0d801fbe16149b54b2e7e56aed0f465634615b"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
+      "code_sha256": {
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "figures/ch16_prices_and_convergence.py": "0cdb0b0629fa2473f9092f6e2831eac7858493b2e4dd4c88e0b5de0bf97758cf",
+        "assets/ch16-prices-and-convergence.svg": "62210a2fd5ec5785c82456db60b46cd61b654f0d2fd4039c3ccb1d29d04ae0ba",
+        "assets/ch16-prices-and-convergence-portrait.svg": "405e693a9a624d830f113b4b5196caf43ef9aa00a2819adfa982fbba5a3b26ed"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "ef40eaacd7701c9cc3034d09091a711b44abb78d587816873c7e6d66e85f2ec4",
+      "resolved_nonblocking_findings": [
+        "Two Itô multiplication commas replaced by thin spaces; exact historical-body reconstruction checked independently"
+      ]
+    }
+  ],
+  "limitations": [
+    "No dividends or stochastic coefficients",
+    "Terminal CRR price limit is not a full functional weak-convergence or continuous-market replication theorem",
+    "Moderate-input price implementation does not promise relative tail-price accuracy",
+    "Historical estimates use an explicitly original synthetic fixture"
+  ],
+  "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
+  "full_scientific_review_rounds": 2
+}

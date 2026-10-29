@@ -1,0 +1,144 @@
+{
+  "chapter": 1,
+  "title": "Financial models become executable algorithms",
+  "file": "chapter-01-financial-models-become-executable-algorithms.html",
+  "source_recordings": [
+    1,
+    2,
+    3,
+    10,
+    11
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "financial-questions",
+    "bond-contract",
+    "discounting",
+    "algorithm",
+    "function-contract",
+    "paired-laboratories",
+    "notebook-reproducibility",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "financial-questions",
+      "recording": 1,
+      "start_seconds": 16,
+      "end_seconds": 337,
+      "topic": "Course prerequisites, financial objects, and computational thinking"
+    },
+    {
+      "section": "bond-contract",
+      "recording": 2,
+      "start_seconds": 229,
+      "end_seconds": 1151,
+      "topic": "Bond contract, tradability, default, face value, coupon, maturity, and payment schedule; historical anecdotes excluded as unverified"
+    },
+    {
+      "section": "discounting",
+      "recording": 2,
+      "start_seconds": 1151,
+      "end_seconds": 1828,
+      "topic": "Time value, opportunity cost, inflation, risk, discount factor versus rate and present-value sum; replication and negative-rate boundary added"
+    },
+    {
+      "section": "algorithm",
+      "recording": 3,
+      "start_seconds": 15,
+      "end_seconds": 1022,
+      "topic": "Algorithms, pseudocode, LLM checking, loop/function reuse, direct/iterative classification and runtime; invariant proof added"
+    },
+    {
+      "section": "function-contract",
+      "recording": 11,
+      "start_seconds": 98,
+      "end_seconds": 249,
+      "topic": "Python function translation of cash-flow pseudocode; validation and structural checks added"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 10,
+      "start_seconds": 103,
+      "end_seconds": 781,
+      "topic": "R vector pricing, two bond schedules, rate scenarios, compounding table, exponential recurrence and library comparison"
+    },
+    {
+      "section": "paired-laboratories",
+      "recording": 11,
+      "start_seconds": 249,
+      "end_seconds": 854,
+      "topic": "Python pricing scenarios, timing-unit ambiguity, compounding table, exponential recurrence and library discrepancy"
+    },
+    {
+      "section": "notebook-reproducibility",
+      "recording": 10,
+      "start_seconds": 600,
+      "end_seconds": 840,
+      "topic": "Repeated work/runtime motivation, library comparison and floating-point equality"
+    },
+    {
+      "section": "notebook-reproducibility",
+      "recording": 11,
+      "start_seconds": 614,
+      "end_seconds": 1050,
+      "topic": "Notebook cell-order error, precision comparisons, timing and float equality"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch01_cashflows.py",
+      "check": "Exact rational present value, invariant trace, transformations, shape/domain rejection, rate sensitivity, and notebook-state failure"
+    }
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+      "code_sha256": {
+        "code/ch01_cashflows.py": "332cc2a791575f2c6c7ead7816cca96033de4077d484b1f71424108382b09667"
+      },
+      "artifact_sha256": {},
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "0728fab213e2a60fe78c78c4f05ae6e7c3f50932ec2793ae9c9630c3e7077898"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+      "code_sha256": {
+        "code/ch01_cashflows.py": "332cc2a791575f2c6c7ead7816cca96033de4077d484b1f71424108382b09667"
+      },
+      "artifact_sha256": {},
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "16bf272b83e014e18aca11db951563847c92546ba7d6885212ded2e26835edc8"
+    }
+  ],
+  "limitations": [
+    "Certain-payment flat effective annual model; not a market-data or credit-risk model",
+    "Machine transcription and selected frames, not comprehensive audiovisual verification",
+    "R semantics explained; execution evidence is for the Python companion",
+    "Moderate-magnitude floating-point teaching implementation, not global range certification"
+  ],
+  "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+  "selected_frame_checks": [
+    {
+      "recording": 11,
+      "second": 245,
+      "observation": "Displayed time vectors1,2,3 and1..5; chapter explicitly assumes annual rate/year units despite conflicting narrated horizon"
+    }
+  ],
+  "full_scientific_review_rounds": 2
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "path": "assets/input/tex/extensions/boldsymbol.js",
+    "source": "https://raw.githubusercontent.com/mathjax/MathJax/3.2.2/es5/input/tex/extensions/boldsymbol.js",
+    "sha256": "d6771fee0772db2657796c8d0e20e1878bb3237f6d3ed1e828e1834a4ff743ca",
+    "license": "mathjax-LICENSE",
+    "reason": "Local boldsymbol extension for the existing MathJax3.2.2 bundle"
+  }
+]

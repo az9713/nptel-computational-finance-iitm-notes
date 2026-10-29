@@ -1,0 +1,207 @@
+{
+  "chapter": 18,
+  "title": "A reproducible option-pricing laboratory",
+  "file": "chapter-18-a-reproducible-option-pricing-laboratory.html",
+  "source_recordings": [
+    52,
+    53
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "clean-session",
+    "terminal-expectation",
+    "intermediate-overflow",
+    "logarithmic-sum",
+    "r-translation",
+    "closed-form-check",
+    "matrix-and-indices",
+    "grid-refinement",
+    "put-boundary-defect",
+    "diagnostics-and-limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "clean-session",
+      "recording": 52,
+      "start_seconds": 15,
+      "end_seconds": 103,
+      "topic": "R lab function inputs, horizon naming and explicit model conventions"
+    },
+    {
+      "section": "clean-session",
+      "recording": 52,
+      "start_seconds": 253,
+      "end_seconds": 398,
+      "topic": "Clean kernel/run-all demonstration and full common option inputs"
+    },
+    {
+      "section": "clean-session",
+      "recording": 53,
+      "start_seconds": 1071,
+      "end_seconds": 1130,
+      "topic": "Python skipped-function definition failure and clean sequential execution"
+    },
+    {
+      "section": "terminal-expectation",
+      "recording": 52,
+      "start_seconds": 103,
+      "end_seconds": 253,
+      "topic": "Full R terminal nodes, pricing weights, vector payoff and discounted terminal expectation"
+    },
+    {
+      "section": "terminal-expectation",
+      "recording": 52,
+      "start_seconds": 398,
+      "end_seconds": 425,
+      "topic": "Recomputed three/30/300/1000-step source call table"
+    },
+    {
+      "section": "terminal-expectation",
+      "recording": 53,
+      "start_seconds": 42,
+      "end_seconds": 591,
+      "topic": "Complete NumPy/SciPy terminal implementation, all index endpoints, elementwise payoffs, call/put and resolution table"
+    },
+    {
+      "section": "intermediate-overflow",
+      "recording": 52,
+      "start_seconds": 503,
+      "end_seconds": 655,
+      "topic": "Complete observed1200/1500-step failure discussion, with explicitly independent range diagnosis"
+    },
+    {
+      "section": "intermediate-overflow",
+      "recording": 53,
+      "start_seconds": 737,
+      "end_seconds": 822,
+      "topic": "Observed1000/1020/1200 behavior and corrected interpretation of combinatorial intermediate versus up/down separation"
+    },
+    {
+      "section": "r-translation",
+      "recording": 52,
+      "start_seconds": 15,
+      "end_seconds": 253,
+      "topic": "Complete R terminal-pricing function translated with explicit scalar contract, vector binomial log masses and stable payoff arithmetic"
+    },
+    {
+      "section": "closed-form-check",
+      "recording": 52,
+      "start_seconds": 425,
+      "end_seconds": 544,
+      "topic": "Complete R d1/d2/pnorm closed formula and exact-model versus floating benchmark distinction"
+    },
+    {
+      "section": "closed-form-check",
+      "recording": 53,
+      "start_seconds": 591,
+      "end_seconds": 767,
+      "topic": "Complete pairedPython normalCDF call, parityput and standardized probability interpretation"
+    },
+    {
+      "section": "matrix-and-indices",
+      "recording": 52,
+      "start_seconds": 655,
+      "end_seconds": 1090,
+      "topic": "Complete R full matrix, terminal/payoff callback, both boundary rows, all offset indices, recurrence and spot extraction"
+    },
+    {
+      "section": "matrix-and-indices",
+      "recording": 53,
+      "start_seconds": 822,
+      "end_seconds": 1130,
+      "topic": "Complete paired Python array dimensions, terminal/boundary initialization, descending loops, cell ordering and spot extraction"
+    },
+    {
+      "section": "grid-refinement",
+      "recording": 52,
+      "start_seconds": 1004,
+      "end_seconds": 1212,
+      "topic": "Full spatial/time refinement experiment, rejectedfiner grid, three-method comparison and corrected numerical-limit interpretation"
+    },
+    {
+      "section": "grid-refinement",
+      "recording": 53,
+      "start_seconds": 822,
+      "end_seconds": 911,
+      "topic": "Upper-domain heuristic and stock/time array resolution with actual stability contract"
+    },
+    {
+      "section": "put-boundary-defect",
+      "recording": 53,
+      "start_seconds": 1130,
+      "end_seconds": 1260,
+      "topic": "Complete attemptedput substitution and mismatchedresult discussion, with explicitly controlled boundary-only fault reproduction and structural checks"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch18_option_laboratory.py",
+      "check": "Stable logarithmic terminal sums, full paired lab inputs, naive overflow diagnostics, controlled boundary defect and refinement checks"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch08_binomial_valuation.py",
+    "code/ch16_black_scholes.py",
+    "code/ch17_finite_differences.py",
+    "figures/ch18_intermediates_and_boundaries.py",
+    "assets/ch18-intermediates-and-boundaries.svg",
+    "assets/ch18-intermediates-and-boundaries-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "code_sha256": {
+        "code/ch18_option_laboratory.py": "8bec3e5c3cbd6115f86eb3ff3d4736f348cb6958906ebf49828cfaeaea056afe"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "code/ch17_finite_differences.py": "d3949ef39ac42abbf3665be0a7d08600e6bce2690045f6f4d9198f3e718297a7",
+        "figures/ch18_intermediates_and_boundaries.py": "e5a159c702a9496a45cfe4fcfbafcb6ba6ed6c0a5313f355b4e61863b4f55762",
+        "assets/ch18-intermediates-and-boundaries.svg": "06c989ac9f9ef2a1c229895459b4d2b90fb27123aa75840d8f2671aaf4767f5e",
+        "assets/ch18-intermediates-and-boundaries-portrait.svg": "e38eb8d0c07a38a19532f729241766e4fba25dbf8023cf5380b6a2cbde406127"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "25992fa2630575d8c96e8969aa68e46f4acc13c1608042978ad14dec8e098480"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "code_sha256": {
+        "code/ch18_option_laboratory.py": "8bec3e5c3cbd6115f86eb3ff3d4736f348cb6958906ebf49828cfaeaea056afe"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "code/ch17_finite_differences.py": "d3949ef39ac42abbf3665be0a7d08600e6bce2690045f6f4d9198f3e718297a7",
+        "figures/ch18_intermediates_and_boundaries.py": "e5a159c702a9496a45cfe4fcfbafcb6ba6ed6c0a5313f355b4e61863b4f55762",
+        "assets/ch18-intermediates-and-boundaries.svg": "06c989ac9f9ef2a1c229895459b4d2b90fb27123aa75840d8f2671aaf4767f5e",
+        "assets/ch18-intermediates-and-boundaries-portrait.svg": "e38eb8d0c07a38a19532f729241766e4fba25dbf8023cf5380b6a2cbde406127"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "0fa4dafe5e44ba1b71a01ad837e784195166f0c7238799bfb9fd000c9716a27e"
+    }
+  ],
+  "limitations": [
+    "Moderate terminal trees through5000 steps, log-gamma cancellation remains at very large counts",
+    "Controlled defects demonstrate mechanisms without recovering original notebook execution traces",
+    "R/SciPy comparisons documentary, not runtime claims",
+    "European-only terminal sum and no-dividend constant-coefficient finite-domain grids"
+  ],
+  "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+  "full_scientific_review_rounds": 2
+}

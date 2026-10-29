@@ -1,0 +1,357 @@
+[
+  {
+    "title": "NPTEL Computational Finance 1, official course",
+    "url": "https://nptel.ac.in/courses/130106003",
+    "supports": "Course identity, instructors, institutions, syllabus, and recording outline."
+  },
+  {
+    "title": "NPTEL source YouTube playlist",
+    "url": "https://www.youtube.com/playlist?list=PLyqSpQzTE6M_HO74zZkM7xBvLEtE1uIZ2",
+    "supports": "The supplied sequence of 76 source recordings."
+  },
+  {
+    "title": "NIST DLMF Â§1.4(vi), Taylor's theorem for real variables",
+    "url": "https://dlmf.nist.gov/1.4.vi",
+    "supports": "Finite Taylor theorem and Lagrange/integral remainder forms, equations 1.4.35â€“1.4.37."
+  },
+  {
+    "title": "David Goldberg, What Every Computer Scientist Should Know About Floating-Point Arithmetic",
+    "url": "https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html",
+    "supports": "Rounding-error mechanisms and cancellation; edited reprint of the 1991 article."
+  },
+  {
+    "title": "Python 3.13 mathematical-functions documentation",
+    "url": "https://docs.python.org/3.13/library/math.html",
+    "supports": "Documented interfaces for exp, expm1, log1p, fsum, isfinite, and comb."
+  },
+  {
+    "title": "Harry Markowitz, Portfolio Selection (1952)",
+    "url": "https://doi.org/10.1111/j.1540-6261.1952.tb01525.x",
+    "supports": "Return beliefs and portfolio selection; expected returns, variance and covariance, especially pages 77 and 79â€“81."
+  },
+  {
+    "title": "Stephen Boyd and Lieven Vandenberghe, Convex Optimization (2004)",
+    "url": "https://web.stanford.edu/~boyd/cvxbook/",
+    "supports": "Section 3.1.3 printed page 69: first-order convexity criteria; section 5.6 pages 251â€“252: perturbation interpretations of multipliers under stated assumptions."
+  },
+  {
+    "title": "Investor.gov bond overview",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+    "supports": "Bond terminology, credit risk and interest-rate risk."
+  },
+  {
+    "title": "Python 3.13 built-in functions",
+    "url": "https://docs.python.org/3.13/library/functions.html#zip",
+    "supports": "Default zip truncation and strict pairing."
+  },
+  {
+    "title": "Python 3.13 timeit",
+    "url": "https://docs.python.org/3.13/library/timeit.html",
+    "supports": "Repeated timing, call-count normalization, and interference limitations."
+  },
+  {
+    "title": "R base arithmetic documentation",
+    "url": "https://www.stat.ethz.ch/R-manual/R-devel/library/base/html/Arithmetic.html",
+    "supports": "Elementwise vector arithmetic and recycling of shorter vectors."
+  },
+  {
+    "title": "R base sum documentation",
+    "url": "https://www.stat.ethz.ch/R-manual/R-devel/library/base/html/sum.html",
+    "supports": "Reduction of numeric vectors to a sum and missing-value behavior."
+  },
+  {
+    "title": "NumPy 2.2 square linear solve",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.linalg.solve.html",
+    "supports": "Square full-rank solver, accepted shapes, errors and LAPACK implementation."
+  },
+  {
+    "title": "NumPy 2.2 least-squares solve",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.linalg.lstsq.html",
+    "supports": "Residual minimization, minimum-length selection, rank cutoff and residual-array convention."
+  },
+  {
+    "title": "NumPy 2.2 condition number",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.linalg.cond.html",
+    "supports": "Norm choice and default singular-value computation."
+  },
+  {
+    "title": "NumPy 2.2 symmetric eigensolver",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.linalg.eigh.html",
+    "supports": "Real symmetric eigenpairs, column ordering, triangle convention and numerical implementation."
+  },
+  {
+    "title": "NumPy 2.2 covariance",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.cov.html",
+    "supports": "Observation orientation, sample denominator and covariance interface."
+  },
+  {
+    "title": "Fama and French (2004), The Capital Asset Pricing Model: Theory and Evidence",
+    "url": "https://mba.tuck.dartmouth.edu/bespeneckbo/default/AFA611-Eckbo%20web%20site/AFA611-S6B-FamaFrench-CAPM-JEP04.pdf",
+    "supports": "Printed pages 26â€“29: portfolio efficiency, market clearing and assumptions behind CAPM pricing restrictions."
+  },
+  {
+    "title": "Fama (1991), Efficient Capital Markets: II",
+    "url": "https://www.bu.edu/econ/files/2011/01/Fama2.pdf",
+    "supports": "Printed pages 1575â€“1576: joint testing of efficiency and an asset-pricing model."
+  },
+  {
+    "title": "NumPy 2.2 Dirichlet generator",
+    "url": "https://numpy.org/doc/2.2/reference/random/generated/numpy.random.Generator.dirichlet.html",
+    "supports": "The explicitly chosen weight distribution and Gamma-normalization construction."
+  },
+  {
+    "title": "R base matrix multiplication",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/RHOME/library/base/html/matmult.html",
+    "supports": "Matrix-product operator, vector promotion and inner-product result shape."
+  },
+  {
+    "title": "OIC: Option basics",
+    "url": "https://www.optionseducation.org/referencelibrary/faq/basics",
+    "supports": "Holder/writer, exercise styles, call/put rights"
+  },
+  {
+    "title": "OIC: Protective put",
+    "url": "https://www.optionseducation.org/strategies/all-strategies/protective-put-married-put",
+    "supports": "Long stock plus long put"
+  },
+  {
+    "title": "OIC: Covered call",
+    "url": "https://www.optionseducation.org/strategies/all-strategies/covered-call-buy-write",
+    "supports": "Long stock plus written call"
+  },
+  {
+    "title": "OIC: Put–call parity",
+    "url": "https://www.optionseducation.org/advancedconcepts/put-call-parity",
+    "supports": "Discounted strike, common underlying/strike/expiry and trading qualifications"
+  },
+  {
+    "title": "Python3.13 function tutorial",
+    "url": "https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions",
+    "supports": "Function objects, scopes and callbacks"
+  },
+  {
+    "title": "R: function",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/base/html/function.html",
+    "supports": "Closure environment and definition"
+  },
+  {
+    "title": "R: force",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/base/html/force.html",
+    "supports": "Fixing an argument value in a returned closure"
+  },
+  {
+    "title": "Cox, Ross and Rubinstein (1979), Option Pricing: A Simplified Approach",
+    "url": "https://bpb-us-w2.wpmucdn.com/u.osu.edu/dist/7/36891/files/2017/07/CRR79-1yy8av8.pdf",
+    "supports": "One-step hedge, pricing weights, self-financing rebalancing and binomial terminal sum; linked author manuscript pages3–10"
+  },
+  {
+    "title": "Chalasani et al. (1999), A Refined Binomial Lattice for Pricing American Asian Options",
+    "url": "https://publications.ri.cmu.edu/storage/publications/pub_files/pub1/chalasani_prasad_1999_3/chalasani_prasad_1999_3.pdf",
+    "supports": "Introductory pages1–3, refining path statistics for Asian claims; local toy algorithm independent"
+  },
+  {
+    "title": "NumPy2.2 maximum",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.maximum.html",
+    "supports": "Elementwise maximum, broadcasting and NaN propagation"
+  },
+  {
+    "title": "NumPy2.2 arange",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.arange.html",
+    "supports": "Integer half-open grid endpoints"
+  },
+  {
+    "title": "R extrema",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extremes.html",
+    "supports": "Parallel and reducing maxima/minima, recycling"
+  },
+  {
+    "title": "R binomial distribution",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Binomial.html",
+    "supports": "dbinom binomial probability masses"
+  },
+  {
+    "title": "SciPy bisect documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.bisect.html",
+    "supports": "Continuity, opposite signs, and library stopping/reporting contract; no SciPy runtime dependency"
+  },
+  {
+    "title": "OIC: Volatility Skew and Options, October2023",
+    "url": "https://www.optionseducation.org/news/volatility-skew-and-options-an-overview-1",
+    "supports": "Strike-dependent implied-volatility curve terminology and different shapes"
+  },
+  {
+    "title": "NIST DLMF §3.8, Nonlinear Equations",
+    "url": "https://dlmf.nist.gov/3.8",
+    "supports": "Sections ii–iii: local Newton and secant convergence and their assumptions."
+  },
+  {
+    "title": "SciPy newton documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.newton.html",
+    "supports": "Derivative/derivative-free interfaces and step-based stopping qualification; documentation only."
+  },
+  {
+    "title": "SciPy brentq documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html",
+    "supports": "Continuous sign-bracket contract and Brent method description; documentation only."
+  },
+  {
+    "title": "R uniroot documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/uniroot.html",
+    "supports": "Bracket, convergence checking and result diagnostics; documentation only."
+  },
+  {
+    "title": "U.S. Treasury Yield Curve Methodology, revised February18 2025",
+    "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics/treasury-yield-curve-methodology",
+    "supports": "Official par-curve output and bootstrapped/monotone-convex forward-rate methodology; no implementation equivalence claimed."
+  },
+  {
+    "title": "NumPy2.2 linear interpolation",
+    "url": "https://numpy.org/doc/2.2/reference/generated/numpy.interp.html",
+    "supports": "Piecewise linear interpolation, expected coordinate order and default outside-grid behavior."
+  },
+  {
+    "title": "NIST DLMF §3.4, Differentiation",
+    "url": "https://dlmf.nist.gov/3.4",
+    "supports": "Centered first/second finite differences, equations3.4.20/3.4.22; local expansions derived independently."
+  },
+  {
+    "title": "Bond Market Association, Standard Formulas (1999), chapterSF",
+    "url": "https://www.sifma.org/wp-content/uploads/2017/08/chsf.pdf",
+    "supports": "PrintedSF49–50 fixed-cash-flow duration and convexity versus interest-sensitive effective measures; yield units require conversion."
+  },
+  {
+    "title": "TreasuryDirect, Buying a Treasury Marketable Security",
+    "url": "https://www.treasurydirect.gov/marketable-securities/buying-a-marketable-security/",
+    "supports": "Accrued interest included in certain purchase payments and received in the regular interest payment."
+  },
+  {
+    "title": "Pratt (1964), Risk Aversion in the Small and in the Large",
+    "url": "https://msuweb.montclair.edu/~lebelp/PrattRiskSmalllargeEC1964.pdf",
+    "supports": "Printedpp122–125 local risk aversion, certainty/purchase-price distinction and small-risk premium; finite mechanisms derived in text."
+  },
+  {
+    "title": "Bernoulli (1738), Exposition of a New Theory on the Measurement of Risk, Sommer translation (1954)",
+    "url": "https://theparticle.com/cs/bc/dsci/Bernoulli_1738.pdf",
+    "supports": "Printedpp24–28 and31–33 utility and StPetersburg discussion; chapter explicitly uses a scaled payout and independent numerical ticket example."
+  },
+  {
+    "title": "NIST DLMF §3.5, Quadrature",
+    "url": "https://dlmf.nist.gov/3.5",
+    "supports": "Sectionsi–ii composite trapezoid/Simpson formulas and smooth-function error bounds; kernel constants derived in chapter."
+  },
+  {
+    "title": "R integrate documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/integrate.html",
+    "supports": "Adaptive GaussKronrod/extrapolation, vector callback, returned diagnostics and missed-feature limitations; documentary comparison only."
+  },
+  {
+    "title": "SciPy quad documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html",
+    "supports": "QUADPACK interface, absolute/relative targets, estimated errors and diagnostics; no local SciPy runtime claim."
+  },
+  {
+    "title": "Black and Scholes (1973), The Pricing of Options and Corporate Liabilities",
+    "url": "https://www.cs.princeton.edu/courses/archive/fall2000/cs323/resources/blackscholes.pdf",
+    "supports": "Printed pp640–644 idealized assumptions, pricing equation and call formula; actual scanned passages inspected."
+  },
+  {
+    "title": "MIT 15.070J, Gamarnik (2013), Lecture 6: Brownian motion",
+    "url": "https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/resources/mit15_070jf13_lec6/",
+    "supports": "Sections3–4 process definition, increment scaling and covariance; full process existence not proved in the chapter."
+  },
+  {
+    "title": "MIT 15.070J, Gamarnik (2013), Lecture 17: Itô process and formula",
+    "url": "https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/resources/mit15_070jf13_lec17/",
+    "supports": "Sections1–3 Itô integral notation and smooth transformation formula used for explicit exponential/SDE verification."
+  },
+  {
+    "title": "Tourin, Chapter12 in Touzi (2010), Optimal Stochastic Control, Stochastic Target Problems, and Backward SDE",
+    "url": "https://webhomes.maths.ed.ac.uk/~dsiska/scdaa_2024-25/Fields-LN.pdf",
+    "supports": "Actual pp192–194 diffusion monotonicity and one-sided Black–Scholes drift; authorship/date verified on title page."
+  },
+  {
+    "title": "Holst (2015), Computational Finance: Differential Equation Techniques",
+    "url": "https://ccom.ucsd.edu/~mholst/teaching/ucsd/413_s15/MGTF-413-Lecture-Notes-8.pdf",
+    "supports": "Actual pp15–16 theta time-average derivation, especially equation2.60; chapter matrix equations independently derived."
+  },
+  {
+    "title": "Feng, Linetsky, Morales and Nocedal (2010), On the Solution of Complementarity Problems Arising in American Options Pricing",
+    "url": "https://users.iems.northwestern.edu/~nocedal/PDFfiles/ameropt.pdf",
+    "supports": "Actual PDF dated August3,2010, section2 lower-obstacle signs and remaining-time formulation; no implementation-equivalence claim."
+  },
+  {
+    "title": "R logical-vector documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/base/html/logical.html",
+    "supports": "TRUE/FALSE reserved constants versus rebindable T/F global aliases; documentary comparison."
+  },
+  {
+    "title": "SciPy comb documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.comb.html",
+    "supports": "Floating default exact=False and array/exact interface; not a local SciPy execution claim."
+  },
+  {
+    "title": "Loader (2002), Fast and Accurate Computation of Binomial Probabilities",
+    "url": "https://www.r-project.org/doc/reports/CLoader-dbinom-2002.pdf",
+    "supports": "Actual pp1–3 direct-product range and log-gamma cancellation limitations; full Loader algorithm not implemented."
+  },
+  {
+    "title": "R normal-distribution documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html",
+    "supports": "pnorm CDF, default mean0/sd1, vector interface; documentary comparison."
+  },
+  {
+    "title": "Boyd and Vandenberghe, Convex Optimization",
+    "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+    "supports": "Printed pp521–523 equality quadratic KKT, nonsingularity and definiteness on the constraint nullspace; restricted reading scope. Also printed pp226–227 affine Slater qualification,242–244 KKT/complementarity,563–567 logbarrier central path and gap."
+  },
+  {
+    "title": "Markowitz (1952), Portfolio Selection",
+    "url": "https://traders.berkeley.edu/papers/Markowitz.pdf",
+    "supports": "Printed pp77–80 expected return, variance/covariance and original no-short setting; unrestricted closed formulas proved independently."
+  },
+  {
+    "title": "R linear solve documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/base/html/solve.html",
+    "supports": "solve(A,b) specified right hand side versus solve(A) inverse; documentary R comparison."
+  },
+  {
+    "title": "NumPy linear solve documentation",
+    "url": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html",
+    "supports": "Square full-rank system, vector/matrix right hand sides and floating LAPACK solve interface."
+  },
+  {
+    "title": "R quadprog solve.QP manual",
+    "url": "https://cran.r-project.org/web/packages/quadprog/quadprog.pdf",
+    "supports": "Actual pp1–2 quadratic objective sign, columnwise >= constraints and first meq equalities; documentary runtime comparison."
+  },
+  {
+    "title": "Python quadprog solve_qp official implementation",
+    "url": "https://github.com/quadprog/quadprog/blob/master/quadprog/quadprog.pyx",
+    "supports": "Actual signature/docstring objective, columns >=, first meq equalities, returned solution/value; no package runtime claim."
+  },
+  {
+    "title": "NumPy least-squares documentation",
+    "url": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html",
+    "supports": "Least-squares/minimum-norm reconstruction and rank/residual contract; primal equality checks remain separate."
+  },
+  {
+    "title": "Brunnermeier, Princeton Eco525 One Period Model",
+    "url": "https://www.princeton.edu/~markus/teaching/Eco525/01%20OnePeriodModel%20StatePrices%20SDF%20EMM_a.pdf",
+    "supports": "Actual slides1-39–1-43 finite stateprices, FTAP and incomplete/complete geometry; bounded reading scope."
+  },
+  {
+    "title": "Kogan, MIT15.450 (Fall2010), Arbitrage-Free Pricing Models",
+    "url": "https://www.ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/219406be97b96bc540e0be6aa778c0b7_MIT15_450F10_lec01.pdf",
+    "supports": "Actual printedslides10–14 positivity/noarb and probability-normalized state-price density; no whole-course theorem audit."
+  },
+  {
+    "title": "R lpSolve official manual",
+    "url": "https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf",
+    "supports": "Actual pp2–3 and6 defaultnonnegativevariables, rowconstraints, resultstatus/objval/solution; R calls documentary."
+  },
+  {
+    "title": "SciPy HiGHS linprog official documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html",
+    "supports": "Row <= constraints, explicit signed bounds, status and numericaltolerances; no SciPy runtime claim."
+  }
+]

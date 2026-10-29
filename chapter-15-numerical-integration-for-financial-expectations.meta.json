@@ -1,0 +1,237 @@
+{
+  "chapter": 15,
+  "title": "Numerical integration for financial expectations",
+  "file": "chapter-15-numerical-integration-for-financial-expectations.html",
+  "source_recordings": [
+    40,
+    43,
+    44,
+    45
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "quadrature-contract",
+    "trapezoid",
+    "simpson",
+    "convergence-and-failures",
+    "expected-utility",
+    "continuous-allocation",
+    "paired-calculus-labs",
+    "library-contracts",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "quadrature-contract",
+      "recording": 40,
+      "start_seconds": 75,
+      "end_seconds": 281,
+      "topic": "Integration by partition and polynomial quadrature; signed quantity, sample contract and arithmetic limitations"
+    },
+    {
+      "section": "quadrature-contract",
+      "recording": 43,
+      "start_seconds": 883,
+      "end_seconds": 1069,
+      "topic": "Fivepoint quadrature workshop; explicit independent polynomial table where original ordinates are not narrated"
+    },
+    {
+      "section": "trapezoid",
+      "recording": 40,
+      "start_seconds": 281,
+      "end_seconds": 471,
+      "topic": "Linear-interpolant quadrature, composite endpoint weights and full local/global second-order error mechanism"
+    },
+    {
+      "section": "simpson",
+      "recording": 40,
+      "start_seconds": 471,
+      "end_seconds": 765,
+      "topic": "Quadratic paired panels, exact composite weights/evenness, full fourth-order kernel proof and 1/3 versus3/8 distinction"
+    },
+    {
+      "section": "simpson",
+      "recording": 43,
+      "start_seconds": 990,
+      "end_seconds": 1069,
+      "topic": "Mixedworkshop Simpson weights and h/3 scaling on explicit worked data"
+    },
+    {
+      "section": "convergence-and-failures",
+      "recording": 40,
+      "start_seconds": 192,
+      "end_seconds": 281,
+      "topic": "Integration versus differentiation arithmetic; corrected claims of absentroundoff/universalaccuracy"
+    },
+    {
+      "section": "convergence-and-failures",
+      "recording": 40,
+      "start_seconds": 877,
+      "end_seconds": 1048,
+      "topic": "Error-order and Taylor synthesis with explicit convergence tests and limits"
+    },
+    {
+      "section": "expected-utility",
+      "recording": 44,
+      "start_seconds": 854,
+      "end_seconds": 1042,
+      "topic": "Full Rcontinuous expectedutility setup, canonicalCRRA, loggross parameters and [-.95,5] integration; explicit coordinate and tail analysis"
+    },
+    {
+      "section": "expected-utility",
+      "recording": 44,
+      "start_seconds": 1042,
+      "end_seconds": 1128,
+      "topic": "Custom trapezoid/Simpson versuslibrary comparison with actualcomputed grids"
+    },
+    {
+      "section": "expected-utility",
+      "recording": 45,
+      "start_seconds": 1273,
+      "end_seconds": 1422,
+      "topic": "Full pairedPython continuous utility/density andquadsetup, actual transformed integration and checks"
+    },
+    {
+      "section": "expected-utility",
+      "recording": 45,
+      "start_seconds": 1479,
+      "end_seconds": 1595,
+      "topic": "n20/40/80/160/320 customquadrature comparisons; correct1/3rule and precisionlimits"
+    },
+    {
+      "section": "continuous-allocation",
+      "recording": 44,
+      "start_seconds": 1010,
+      "end_seconds": 1042,
+      "topic": "Allocation grid maximum near42–43percent; independently derived continuous derivative/strict-concavity optimum"
+    },
+    {
+      "section": "continuous-allocation",
+      "recording": 45,
+      "start_seconds": 1422,
+      "end_seconds": 1479,
+      "topic": "Alpha riskyfraction correction and actualcontinuous optimum with integration accuracy requirements"
+    },
+    {
+      "section": "paired-calculus-labs",
+      "recording": 44,
+      "start_seconds": 16,
+      "end_seconds": 854,
+      "topic": "Complete Rexp derivative/errorgrid, roundedbond,10yzero/30yannualpar, analytic/numericalduration andclean/dirtyillustration"
+    },
+    {
+      "section": "paired-calculus-labs",
+      "recording": 45,
+      "start_seconds": 16,
+      "end_seconds": 1271,
+      "topic": "Complete pairedPythonexp/errorgrid/bond/duration/convexity/settlement laboratory with corrected units and explicit frequency"
+    },
+    {
+      "section": "paired-calculus-labs",
+      "recording": 43,
+      "start_seconds": 1069,
+      "end_seconds": 1249,
+      "topic": "Supplied25bps threeprices, recomputed effective duration and convexity; completes mixedworkshop"
+    },
+    {
+      "section": "library-contracts",
+      "recording": 40,
+      "start_seconds": 765,
+      "end_seconds": 877,
+      "topic": "Adaptive libraryintegration, verifiedR/SciPy interfaces and finite-sampling/error-estimate limits"
+    },
+    {
+      "section": "library-contracts",
+      "recording": 44,
+      "start_seconds": 1042,
+      "end_seconds": 1128,
+      "topic": "Handwritten versusRintegrate comparison under explicit tolerances and semantic-only R example"
+    },
+    {
+      "section": "library-contracts",
+      "recording": 45,
+      "start_seconds": 1479,
+      "end_seconds": 1595,
+      "topic": "Pythonquad versuscomposite methods; error estimates and no unverified precision claims"
+    },
+    {
+      "section": "limits",
+      "recording": 40,
+      "start_seconds": 877,
+      "end_seconds": 1271,
+      "topic": "Full calculus/course synthesis, PDE/optimization/MonteCarlo preview with correct numerical/model-error separation"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch15_quadrature.py",
+      "check": "Polynomial exactness and convergence, unseen smooth feature, continuous utility/tail/optimum, full paired calculus laboratories and rejection contracts"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch15_convergence_and_allocation.py",
+    "assets/ch15-convergence-and-allocation.svg",
+    "assets/ch15-convergence-and-allocation-portrait.svg",
+    "code/ch08_binomial_valuation.py",
+    "code/ch10_inverse_pricing.py",
+    "code/ch13_bond_calculus.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
+      "code_sha256": {
+        "code/ch15_quadrature.py": "700bee729d5d06c02a248d52dc74ad1a2bdfe8687f382f9331d6cd82a9d1517e"
+      },
+      "artifact_sha256": {
+        "figures/ch15_convergence_and_allocation.py": "ba6135fd723255de72dd71649ede7fcb1e3d6fae51b8b20f284ad844749f9ee9",
+        "assets/ch15-convergence-and-allocation.svg": "baa48ee76e9577b6941a00544d32983ac279160090b75313a2f4b2c2649be28c",
+        "assets/ch15-convergence-and-allocation-portrait.svg": "4cc0b820d36a40719875fc022965dd36b41fb592d1fab0ac20ad2a6aaff6f5b6",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d",
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "1e239d96e28583dd4154057d32ad407f00043fc2d0c62f907b9c98bc0ef12505"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
+      "code_sha256": {
+        "code/ch15_quadrature.py": "700bee729d5d06c02a248d52dc74ad1a2bdfe8687f382f9331d6cd82a9d1517e"
+      },
+      "artifact_sha256": {
+        "figures/ch15_convergence_and_allocation.py": "ba6135fd723255de72dd71649ede7fcb1e3d6fae51b8b20f284ad844749f9ee9",
+        "assets/ch15-convergence-and-allocation.svg": "baa48ee76e9577b6941a00544d32983ac279160090b75313a2f4b2c2649be28c",
+        "assets/ch15-convergence-and-allocation-portrait.svg": "4cc0b820d36a40719875fc022965dd36b41fb592d1fab0ac20ad2a6aaff6f5b6",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d",
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "5e8735b43f0b22ee1ab87904824659b9e4fcf5ed27b0d1b4c2d0719ecddfb7a2"
+    }
+  ],
+  "limitations": [
+    "One-dimensional fixed-grid rules on specified moderate fixtures",
+    "Analytic omitted-tail bound does not certify floating-point or quadrature errors",
+    "R and SciPy interface comparisons documentary, not local runtime claims",
+    "Original polynomial table replaces incompletely narrated on-screen values; no invented recovery",
+    "Continuous allocation from numerical derivative integration and strict-concavity argument, not interval-certified root"
+  ],
+  "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
+  "full_scientific_review_rounds": 2
+}

@@ -1,0 +1,150 @@
+{
+  "chapter": 7,
+  "title": "Option payoffs and functions",
+  "file": "chapter-07-option-payoffs-and-functions.html",
+  "source_recordings": [
+    20,
+    21,
+    22
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "contract-and-exercise",
+    "payoff-geometry",
+    "financing-and-writers",
+    "strategy-arithmetic",
+    "parity-and-arbitrage",
+    "functions-as-values",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "contract-and-exercise",
+      "recording": 20,
+      "start_seconds": 437,
+      "end_seconds": 1127,
+      "topic": "Holder/writer, premium, underlying, call/put, exercise styles and moneyness; asset/hedge corrections added"
+    },
+    {
+      "section": "payoff-geometry",
+      "recording": 21,
+      "start_seconds": 44,
+      "end_seconds": 418,
+      "topic": "Call/put expiry cases, graphs, slopes and strike kink; convexity/Lipschitz and finite-difference proofs added"
+    },
+    {
+      "section": "payoff-geometry",
+      "recording": 22,
+      "start_seconds": 175,
+      "end_seconds": 289,
+      "topic": "Function domain, range, graph, derivative and convexity"
+    },
+    {
+      "section": "financing-and-writers",
+      "recording": 21,
+      "start_seconds": 419,
+      "end_seconds": 600,
+      "topic": "Payoff versus premium-subtracted profit, holder/writer mirror; common-date financing and loss bounds added"
+    },
+    {
+      "section": "strategy-arithmetic",
+      "recording": 22,
+      "start_seconds": 289,
+      "end_seconds": 803,
+      "topic": "Straddle, protective put and covered call arithmetic; corrected long-put floor and explicit funded net outcomes"
+    },
+    {
+      "section": "parity-and-arbitrage",
+      "recording": 22,
+      "start_seconds": 803,
+      "end_seconds": 1096,
+      "topic": "Protective versus fiduciary package, equality of cost by no arbitrage, parity not standalone pricing; full funding/shorting assumptions, cash-flow account and bounds added"
+    },
+    {
+      "section": "functions-as-values",
+      "recording": 22,
+      "start_seconds": 45,
+      "end_seconds": 175,
+      "topic": "Named reusable procedure, bond-pricing abstraction and black-box interface"
+    },
+    {
+      "section": "functions-as-values",
+      "recording": 22,
+      "start_seconds": 1066,
+      "end_seconds": 1258,
+      "topic": "First-class functions, apply-to-grid and generic binomial-pricing callback preview; contracts and closure examples added"
+    },
+    {
+      "section": "limits",
+      "recording": 21,
+      "start_seconds": 566,
+      "end_seconds": 810,
+      "topic": "Nonlinear underlying claim versus linear portfolio arithmetic, replication and probabilistic-pricing bridge, not discounted physical expectation by default"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch07_payoff_functions.py",
+      "check": "Payoff geometry, funded profits, strategies, parity arbitrage and scalar callback contracts"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch07_payoff_geometry.py",
+    "assets/ch07-payoff-geometry.svg",
+    "assets/ch07-payoff-geometry-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+      "code_sha256": {
+        "code/ch07_payoff_functions.py": "789e12847081c2eaa94155257fa970cacfcc8c6288790f7977cd2d7c1d0fa4d4"
+      },
+      "artifact_sha256": {
+        "figures/ch07_payoff_geometry.py": "02114f918734f9f610b041cb3030f3485110cc08fe46a1ce28ae9f6e0b022197",
+        "assets/ch07-payoff-geometry.svg": "8e8258332757f61be48e84e56afe9cfde677bd7afdf3cf9445727959884ad9b9",
+        "assets/ch07-payoff-geometry-portrait.svg": "caa3e8fe1cec45afc623ef65b8e4ee9928103fab581971cb5ec7e81fd9335d6b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "d79a837d5e884512f5991dfb931d31951288b2fda07584a9f5305c888a0f5c28",
+      "nonblocking_disposition": "Grid now preserves mixed Boolean types for rejection, checked in full R2."
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+      "code_sha256": {
+        "code/ch07_payoff_functions.py": "20d076bf95c78d861d479ac010de62e2d3a1e3abd89cd6b55bd3966bd91405e1"
+      },
+      "artifact_sha256": {
+        "figures/ch07_payoff_geometry.py": "02114f918734f9f610b041cb3030f3485110cc08fe46a1ce28ae9f6e0b022197",
+        "assets/ch07-payoff-geometry.svg": "8e8258332757f61be48e84e56afe9cfde677bd7afdf3cf9445727959884ad9b9",
+        "assets/ch07-payoff-geometry-portrait.svg": "caa3e8fe1cec45afc623ef65b8e4ee9928103fab581971cb5ec7e81fd9335d6b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "975756ce2d92b478d8f9e0d7a0a856023ad456705286b762da341bb6231bfaaa",
+      "nonblocking_disposition": "Extreme-price covered-call cancellation retained as a numerical-range limitation; all printed and plotted moderate inputs independently verified."
+    }
+  ],
+  "limitations": [
+    "Synthetic per-share European claims; no current market quotes or contract specifications",
+    "Single common certain funding rate, no dividends/default/costs",
+    "R semantics documented; Python companion executed",
+    "Machine transcripts; no comprehensive audiovisual verification",
+    "Composite wealth helper is checked on moderate teaching prices; terminal-minus-call can cancel at extreme prices such as 1e18 or 1e20. Exact minimum identity remains mathematical."
+  ],
+  "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+  "full_scientific_review_rounds": 2
+}

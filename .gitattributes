@@ -1,0 +1,5 @@
+# Preserve exact reviewed bytes: metadata binds SHA-256 digests of artifacts.
+* -text
+*.png binary
+*.woff binary
+*.woff2 binary

@@ -1,0 +1,148 @@
+{
+  "chapter": 5,
+  "title": "Covariance and the geometry of risk",
+  "file": "chapter-05-covariance-and-the-geometry-of-risk.html",
+  "source_recordings": [
+    13,
+    15,
+    17
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "covariance-and-correlation",
+    "portfolio-quadratic",
+    "positive-semidefinite",
+    "spectral-decomposition",
+    "sector-example",
+    "conditioning-and-approximation",
+    "executable-lab",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "covariance-and-correlation",
+      "recording": 13,
+      "start_seconds": 16,
+      "end_seconds": 679,
+      "topic": "Covariance, correlation, symmetry, linear relation, and hedging motivation; probability counterexamples added"
+    },
+    {
+      "section": "portfolio-quadratic",
+      "recording": 13,
+      "start_seconds": 679,
+      "end_seconds": 1742,
+      "topic": "Portfolio variance, covariance matrix, matrix-vector versus elementwise product, general quadratic form and estimation preview"
+    },
+    {
+      "section": "portfolio-quadratic",
+      "recording": 17,
+      "start_seconds": 321,
+      "end_seconds": 710,
+      "topic": "Workshop variance/volatility, covariance versus correlation and double-sum/matrix agreement; fully specified local matrix used"
+    },
+    {
+      "section": "positive-semidefinite",
+      "recording": 15,
+      "start_seconds": 552,
+      "end_seconds": 695,
+      "topic": "Symmetric covariance and nonnegative eigenvalues; complete-data Gram, rank and missing-data counterexamples added"
+    },
+    {
+      "section": "spectral-decomposition",
+      "recording": 15,
+      "start_seconds": 267,
+      "end_seconds": 666,
+      "topic": "Eigenvectors, eigenvalues, symmetric orthogonality and principal risk directions; local spectral-theorem and trace proofs added"
+    },
+    {
+      "section": "sector-example",
+      "recording": 15,
+      "start_seconds": 695,
+      "end_seconds": 1564,
+      "topic": "Illustrative bank/utility eigenvalues, trace shares, loading interpretation and principal components, reworked with explicit local sector matrix"
+    },
+    {
+      "section": "sector-example",
+      "recording": 17,
+      "start_seconds": 710,
+      "end_seconds": 990,
+      "topic": "Iron/silk sector workshop, eigenvector interpretation, trace and condition diagnostics; specified teaching matrix analyzed"
+    },
+    {
+      "section": "conditioning-and-approximation",
+      "recording": 15,
+      "start_seconds": 1564,
+      "end_seconds": 1815,
+      "topic": "Covariance conditioning, small eigenvalues and optimization sensitivity; ridge and truncation proofs added"
+    },
+    {
+      "section": "conditioning-and-approximation",
+      "recording": 17,
+      "start_seconds": 1135,
+      "end_seconds": 1231,
+      "topic": "Nearly correlated equal-variance matrix and condition number199"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch05_covariance_geometry.py",
+      "check": "Exact covariance quadratic, eigensystem reconstruction/orthogonality/trace, sample Gram/rank, pairwise-missing counterexample, conditioning and regularization"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch05_spectral_risk.py",
+    "assets/ch05-spectral-risk.svg",
+    "assets/ch05-spectral-risk-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
+      "code_sha256": {
+        "code/ch05_covariance_geometry.py": "aeb182c878b8089083bbadad82086d9fa40161c1fa3a676b4cf860f51fb31a70"
+      },
+      "artifact_sha256": {
+        "figures/ch05_spectral_risk.py": "ffe2f91899296713ee59e72bcafea4bb904da63423aff0e376541b8ed562efe6",
+        "assets/ch05-spectral-risk.svg": "93f529538a48cc3e5e6b8276961b272ea465956f2b88ecbed11f99be2f997135",
+        "assets/ch05-spectral-risk-portrait.svg": "9b3dbcbecfbf563c502842c03ced4f0fd2f3c4fc0f94fb76ad22a5b9297f9c3b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "b27d18c02f5686cfcf5d3091e86757f7b356964a97b965ee7e71335052c24ea4"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
+      "code_sha256": {
+        "code/ch05_covariance_geometry.py": "aeb182c878b8089083bbadad82086d9fa40161c1fa3a676b4cf860f51fb31a70"
+      },
+      "artifact_sha256": {
+        "figures/ch05_spectral_risk.py": "ffe2f91899296713ee59e72bcafea4bb904da63423aff0e376541b8ed562efe6",
+        "assets/ch05-spectral-risk.svg": "93f529538a48cc3e5e6b8276961b272ea465956f2b88ecbed11f99be2f997135",
+        "assets/ch05-spectral-risk-portrait.svg": "9b3dbcbecfbf563c502842c03ced4f0fd2f3c4fc0f94fb76ad22a5b9297f9c3b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "a29d919d3ce6dfa5310a25d004796fa0c03ef387baf6c87a311d0e6a5ac76d3c"
+    }
+  ],
+  "limitations": [
+    "Supplied illustrative covariance inputs, not empirical estimates",
+    "Machine transcription, not comprehensive audiovisual verification",
+    "Covariance geometry does not establish tail risk, causal factors or a portfolio preference",
+    "Finite-magnitude teaching code, not full numerical-range certification"
+  ],
+  "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
+  "full_scientific_review_rounds": 2
+}

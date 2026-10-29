@@ -1,0 +1,555 @@
+{
+  "playlist_url": "https://www.youtube.com/playlist?list=PLyqSpQzTE6M_HO74zZkM7xBvLEtE1uIZ2",
+  "title": "Computational Finance 1",
+  "channel": "NPTEL-NOC IITM",
+  "acquired_at_utc": "2026-10-28T14:06:17.031748+00:00",
+  "recording_count": 76,
+  "recordings": [
+    {
+      "playlist_index": 1,
+      "video_id": "D6t80Fl_H3o",
+      "title": "Introduction - Computational Finance 1",
+      "duration_seconds": 345,
+      "url": "https://www.youtube.com/watch?v=D6t80Fl_H3o"
+    },
+    {
+      "playlist_index": 2,
+      "video_id": "Uq3lLX2dP2I",
+      "title": "A Tour of Computational Finance",
+      "duration_seconds": 1836,
+      "url": "https://www.youtube.com/watch?v=Uq3lLX2dP2I"
+    },
+    {
+      "playlist_index": 3,
+      "video_id": "aZKV53ut6xk",
+      "title": "Algorithms and Computations",
+      "duration_seconds": 1029,
+      "url": "https://www.youtube.com/watch?v=aZKV53ut6xk"
+    },
+    {
+      "playlist_index": 4,
+      "video_id": "TqofnqWqfWo",
+      "title": "Rates, Compounding & Interpolation",
+      "duration_seconds": 985,
+      "url": "https://www.youtube.com/watch?v=TqofnqWqfWo"
+    },
+    {
+      "playlist_index": 5,
+      "video_id": "DXfo5VN6Pag",
+      "title": "Taylor Expansions",
+      "duration_seconds": 1060,
+      "url": "https://www.youtube.com/watch?v=DXfo5VN6Pag"
+    },
+    {
+      "playlist_index": 6,
+      "video_id": "EVhI0ZwXmQw",
+      "title": "Numerical Errors and Ill-Conditioning",
+      "duration_seconds": 775,
+      "url": "https://www.youtube.com/watch?v=EVhI0ZwXmQw"
+    },
+    {
+      "playlist_index": 7,
+      "video_id": "EY8v9jYgfiI",
+      "title": "Portfolio Choice",
+      "duration_seconds": 1826,
+      "url": "https://www.youtube.com/watch?v=EY8v9jYgfiI"
+    },
+    {
+      "playlist_index": 8,
+      "video_id": "LXqwYZAx39U",
+      "title": "Workout problems 1",
+      "duration_seconds": 816,
+      "url": "https://www.youtube.com/watch?v=LXqwYZAx39U"
+    },
+    {
+      "playlist_index": 9,
+      "video_id": "Q9a5uh_wVxg",
+      "title": "Workout problems 2",
+      "duration_seconds": 768,
+      "url": "https://www.youtube.com/watch?v=Q9a5uh_wVxg"
+    },
+    {
+      "playlist_index": 10,
+      "video_id": "bum3F1x5V9E",
+      "title": "Hands-on with R week 1",
+      "duration_seconds": 848,
+      "url": "https://www.youtube.com/watch?v=bum3F1x5V9E"
+    },
+    {
+      "playlist_index": 11,
+      "video_id": "illR2swPrlA",
+      "title": "Hands-on with Python week 1",
+      "duration_seconds": 1058,
+      "url": "https://www.youtube.com/watch?v=illR2swPrlA"
+    },
+    {
+      "playlist_index": 12,
+      "video_id": "uTMpPniWNzI",
+      "title": "Linear Algebra Computationally",
+      "duration_seconds": 1955,
+      "url": "https://www.youtube.com/watch?v=uTMpPniWNzI"
+    },
+    {
+      "playlist_index": 13,
+      "video_id": "wHRFzDrQ2v8",
+      "title": "Variance, Covariance, and the Matrix",
+      "duration_seconds": 1750,
+      "url": "https://www.youtube.com/watch?v=wHRFzDrQ2v8"
+    },
+    {
+      "playlist_index": 14,
+      "video_id": "5JJs0sYsNRc",
+      "title": "Choosing Weights to Hit a Target and Ill Conditioning",
+      "duration_seconds": 1271,
+      "url": "https://www.youtube.com/watch?v=5JJs0sYsNRc"
+    },
+    {
+      "playlist_index": 15,
+      "video_id": "YBf6vY8DTQk",
+      "title": "The Shape of Risk: Eigenvalues",
+      "duration_seconds": 1823,
+      "url": "https://www.youtube.com/watch?v=YBf6vY8DTQk"
+    },
+    {
+      "playlist_index": 16,
+      "video_id": "l4vboV8ZW8Y",
+      "title": "CAPM and Factor Models as Showcases",
+      "duration_seconds": 1043,
+      "url": "https://www.youtube.com/watch?v=l4vboV8ZW8Y"
+    },
+    {
+      "playlist_index": 17,
+      "video_id": "Rfld-LPgqOc",
+      "title": "worked out problems",
+      "duration_seconds": 1238,
+      "url": "https://www.youtube.com/watch?v=Rfld-LPgqOc"
+    },
+    {
+      "playlist_index": 18,
+      "video_id": "gErGiGysqGg",
+      "title": "Hands-on with R week 2",
+      "duration_seconds": 1128,
+      "url": "https://www.youtube.com/watch?v=gErGiGysqGg"
+    },
+    {
+      "playlist_index": 19,
+      "video_id": "eMqO00JydbU",
+      "title": "Hands-on with Python week 2",
+      "duration_seconds": 1029,
+      "url": "https://www.youtube.com/watch?v=eMqO00JydbU"
+    },
+    {
+      "playlist_index": 20,
+      "video_id": "Yb0zHyI78uI",
+      "title": "Options, and Functions",
+      "duration_seconds": 1147,
+      "url": "https://www.youtube.com/watch?v=Yb0zHyI78uI"
+    },
+    {
+      "playlist_index": 21,
+      "video_id": "wkP2COr257I",
+      "title": "Payoffs at Expiration",
+      "duration_seconds": 817,
+      "url": "https://www.youtube.com/watch?v=wkP2COr257I"
+    },
+    {
+      "playlist_index": 22,
+      "video_id": "W_2cd-HcSlQ",
+      "title": "Functions in Three Senses",
+      "duration_seconds": 1265,
+      "url": "https://www.youtube.com/watch?v=W_2cd-HcSlQ"
+    },
+    {
+      "playlist_index": 23,
+      "video_id": "T2nCgCCCGp0",
+      "title": "A First Option Price",
+      "duration_seconds": 1886,
+      "url": "https://www.youtube.com/watch?v=T2nCgCCCGp0"
+    },
+    {
+      "playlist_index": 24,
+      "video_id": "VSRqVpPORjM",
+      "title": "The Lattice Extends",
+      "duration_seconds": 1481,
+      "url": "https://www.youtube.com/watch?v=VSRqVpPORjM"
+    },
+    {
+      "playlist_index": 25,
+      "video_id": "sTCiJZC9Eks",
+      "title": "A Note on Exotic Options",
+      "duration_seconds": 609,
+      "url": "https://www.youtube.com/watch?v=sTCiJZC9Eks"
+    },
+    {
+      "playlist_index": 26,
+      "video_id": "DaMqZBctdOA",
+      "title": "Worked Out Problems",
+      "duration_seconds": 2020,
+      "url": "https://www.youtube.com/watch?v=DaMqZBctdOA"
+    },
+    {
+      "playlist_index": 27,
+      "video_id": "QrfItQ6Ja48",
+      "title": "Hands-on with R week 3",
+      "duration_seconds": 1703,
+      "url": "https://www.youtube.com/watch?v=QrfItQ6Ja48"
+    },
+    {
+      "playlist_index": 28,
+      "video_id": "IinrVfGHhUc",
+      "title": "Hands-on with Python week 3",
+      "duration_seconds": 1833,
+      "url": "https://www.youtube.com/watch?v=IinrVfGHhUc"
+    },
+    {
+      "playlist_index": 29,
+      "video_id": "GAdrEnlmQII",
+      "title": "Non-Linear Equations in Finance",
+      "duration_seconds": 955,
+      "url": "https://www.youtube.com/watch?v=GAdrEnlmQII"
+    },
+    {
+      "playlist_index": 30,
+      "video_id": "-jbOR9wyiEc",
+      "title": "The Implied-Volatility Surface",
+      "duration_seconds": 1615,
+      "url": "https://www.youtube.com/watch?v=-jbOR9wyiEc"
+    },
+    {
+      "playlist_index": 31,
+      "video_id": "Zoiea_ICkUw",
+      "title": "Newton's Method: Faster When It Works",
+      "duration_seconds": 1186,
+      "url": "https://www.youtube.com/watch?v=Zoiea_ICkUw"
+    },
+    {
+      "playlist_index": 32,
+      "video_id": "MX3EJMjzPd0",
+      "title": "The Secant Method",
+      "duration_seconds": 1717,
+      "url": "https://www.youtube.com/watch?v=MX3EJMjzPd0"
+    },
+    {
+      "playlist_index": 33,
+      "video_id": "K1nzQZkbrc0",
+      "title": "Building the Curve and the Surface",
+      "duration_seconds": 799,
+      "url": "https://www.youtube.com/watch?v=K1nzQZkbrc0"
+    },
+    {
+      "playlist_index": 34,
+      "video_id": "73L3OgHozlc",
+      "title": "Worked Out Problems",
+      "duration_seconds": 1820,
+      "url": "https://www.youtube.com/watch?v=73L3OgHozlc"
+    },
+    {
+      "playlist_index": 35,
+      "video_id": "QM-4xBk3-Yo",
+      "title": "Hands-on with R week 4",
+      "duration_seconds": 1298,
+      "url": "https://www.youtube.com/watch?v=QM-4xBk3-Yo"
+    },
+    {
+      "playlist_index": 36,
+      "video_id": "0dSyShJpJ8M",
+      "title": "Hands-on with Python week 4",
+      "duration_seconds": 1309,
+      "url": "https://www.youtube.com/watch?v=0dSyShJpJ8M"
+    },
+    {
+      "playlist_index": 37,
+      "video_id": "mDaDhzLBa3s",
+      "title": "Duration and Convexity | Clean and Dirty Price",
+      "duration_seconds": 1419,
+      "url": "https://www.youtube.com/watch?v=mDaDhzLBa3s"
+    },
+    {
+      "playlist_index": 38,
+      "video_id": "ZuKP8bL2teM",
+      "title": "Computational Calculus of Bond and Portfolio | Numerical Differentiation",
+      "duration_seconds": 1429,
+      "url": "https://www.youtube.com/watch?v=ZuKP8bL2teM"
+    },
+    {
+      "playlist_index": 39,
+      "video_id": "J5rSv1QU_A0",
+      "title": "Portfolio's Objective Function",
+      "duration_seconds": 1941,
+      "url": "https://www.youtube.com/watch?v=J5rSv1QU_A0"
+    },
+    {
+      "playlist_index": 40,
+      "video_id": "hqtCh6oPNAg",
+      "title": "Trapezoidal and Simpson's Rule",
+      "duration_seconds": 1278,
+      "url": "https://www.youtube.com/watch?v=hqtCh6oPNAg"
+    },
+    {
+      "playlist_index": 41,
+      "video_id": "1idHyM97UQw",
+      "title": "Choice under Uncertainty | Expected Utility and more",
+      "duration_seconds": 1969,
+      "url": "https://www.youtube.com/watch?v=1idHyM97UQw"
+    },
+    {
+      "playlist_index": 42,
+      "video_id": "c3x9ESz-sUw",
+      "title": "Worked Out Problems 1",
+      "duration_seconds": 1377,
+      "url": "https://www.youtube.com/watch?v=c3x9ESz-sUw"
+    },
+    {
+      "playlist_index": 43,
+      "video_id": "RTkHfclZU5M",
+      "title": "Worked Out Problems 2",
+      "duration_seconds": 1255,
+      "url": "https://www.youtube.com/watch?v=RTkHfclZU5M"
+    },
+    {
+      "playlist_index": 44,
+      "video_id": "XUeDdmvrPA4",
+      "title": "Hands-on with R week 5",
+      "duration_seconds": 1134,
+      "url": "https://www.youtube.com/watch?v=XUeDdmvrPA4"
+    },
+    {
+      "playlist_index": 45,
+      "video_id": "-XbX-f6dgzU",
+      "title": "Hands-on with Python week 5",
+      "duration_seconds": 1601,
+      "url": "https://www.youtube.com/watch?v=-XbX-f6dgzU"
+    },
+    {
+      "playlist_index": 46,
+      "video_id": "dOVNfdH8eXc",
+      "title": "Computational Aspects of Black Scholes",
+      "duration_seconds": 1372,
+      "url": "https://www.youtube.com/watch?v=dOVNfdH8eXc"
+    },
+    {
+      "playlist_index": 47,
+      "video_id": "OVj_aSIFrnU",
+      "title": "Geometrix Brownian Motion",
+      "duration_seconds": 1499,
+      "url": "https://www.youtube.com/watch?v=OVj_aSIFrnU"
+    },
+    {
+      "playlist_index": 48,
+      "video_id": "bgOMr7NoaM4",
+      "title": "PDE with American Options",
+      "duration_seconds": 1300,
+      "url": "https://www.youtube.com/watch?v=bgOMr7NoaM4"
+    },
+    {
+      "playlist_index": 49,
+      "video_id": "jgMzYrDuDJc",
+      "title": "American Options",
+      "duration_seconds": 795,
+      "url": "https://www.youtube.com/watch?v=jgMzYrDuDJc"
+    },
+    {
+      "playlist_index": 50,
+      "video_id": "D5XXir17h6Y",
+      "title": "Worked Out Problems 1",
+      "duration_seconds": 1502,
+      "url": "https://www.youtube.com/watch?v=D5XXir17h6Y"
+    },
+    {
+      "playlist_index": 51,
+      "video_id": "ES-YuUxGLVU",
+      "title": "Worked Out Problems 2",
+      "duration_seconds": 1021,
+      "url": "https://www.youtube.com/watch?v=ES-YuUxGLVU"
+    },
+    {
+      "playlist_index": 52,
+      "video_id": "SkGT4qCWivE",
+      "title": "Pricing Options with R; Binomial, GBM, PDE",
+      "duration_seconds": 1219,
+      "url": "https://www.youtube.com/watch?v=SkGT4qCWivE"
+    },
+    {
+      "playlist_index": 53,
+      "video_id": "pBKbCIiIhZM",
+      "title": "Pricing Options with Python; Binomial, GBM, PDE",
+      "duration_seconds": 1267,
+      "url": "https://www.youtube.com/watch?v=pBKbCIiIhZM"
+    },
+    {
+      "playlist_index": 54,
+      "video_id": "BboxA_P4mgw",
+      "title": "Constrained Optiomisation and Arbitrage Detection",
+      "duration_seconds": 394,
+      "url": "https://www.youtube.com/watch?v=BboxA_P4mgw"
+    },
+    {
+      "playlist_index": 55,
+      "video_id": "N0WKJMDYFiU",
+      "title": "Equality Constrained Markowitz",
+      "duration_seconds": 979,
+      "url": "https://www.youtube.com/watch?v=N0WKJMDYFiU"
+    },
+    {
+      "playlist_index": 56,
+      "video_id": "e9aaYvf5Sko",
+      "title": "The Efficient Frontier | Capital Market Line",
+      "duration_seconds": 905,
+      "url": "https://www.youtube.com/watch?v=e9aaYvf5Sko"
+    },
+    {
+      "playlist_index": 57,
+      "video_id": "HWdOocZNmWY",
+      "title": "Inequality Constraint; KKT Conditions",
+      "duration_seconds": 1539,
+      "url": "https://www.youtube.com/watch?v=HWdOocZNmWY"
+    },
+    {
+      "playlist_index": 58,
+      "video_id": "PkYVRUjlXuw",
+      "title": "Arbitrage Detection by Linear Programming",
+      "duration_seconds": 1633,
+      "url": "https://www.youtube.com/watch?v=PkYVRUjlXuw"
+    },
+    {
+      "playlist_index": 59,
+      "video_id": "u83_uy8KMqI",
+      "title": "Optimization Tutorial 1",
+      "duration_seconds": 1593,
+      "url": "https://www.youtube.com/watch?v=u83_uy8KMqI"
+    },
+    {
+      "playlist_index": 60,
+      "video_id": "k8THMGEadyM",
+      "title": "Optimization Tutorial 2",
+      "duration_seconds": 1065,
+      "url": "https://www.youtube.com/watch?v=k8THMGEadyM"
+    },
+    {
+      "playlist_index": 61,
+      "video_id": "Ob6VVg3-WGc",
+      "title": "Optimization Tutorial 3",
+      "duration_seconds": 1378,
+      "url": "https://www.youtube.com/watch?v=Ob6VVg3-WGc"
+    },
+    {
+      "playlist_index": 62,
+      "video_id": "6tRuGJN726k",
+      "title": "Worked Out Problems 1",
+      "duration_seconds": 1502,
+      "url": "https://www.youtube.com/watch?v=6tRuGJN726k"
+    },
+    {
+      "playlist_index": 63,
+      "video_id": "jNhSse03YCc",
+      "title": "Worked Out Problems 2",
+      "duration_seconds": 1226,
+      "url": "https://www.youtube.com/watch?v=jNhSse03YCc"
+    },
+    {
+      "playlist_index": 64,
+      "video_id": "mQrVU7B1J_s",
+      "title": "Markowitz Portfolio Optimization and Arbitrage Detection using R",
+      "duration_seconds": 2213,
+      "url": "https://www.youtube.com/watch?v=mQrVU7B1J_s"
+    },
+    {
+      "playlist_index": 65,
+      "video_id": "mTDzJe6eWhc",
+      "title": "Markowitz Portfolio Optimization and Arbitrage Detection using Python",
+      "duration_seconds": 1682,
+      "url": "https://www.youtube.com/watch?v=mTDzJe6eWhc"
+    },
+    {
+      "playlist_index": 66,
+      "video_id": "HMxDxLDjJRA",
+      "title": "Pricing Options and Portfolio using Monte Carlo",
+      "duration_seconds": 996,
+      "url": "https://www.youtube.com/watch?v=HMxDxLDjJRA"
+    },
+    {
+      "playlist_index": 67,
+      "video_id": "VTPhAs8lvMw",
+      "title": "From Random Walk to Geometric Brownian Motion",
+      "duration_seconds": 1401,
+      "url": "https://www.youtube.com/watch?v=VTPhAs8lvMw"
+    },
+    {
+      "playlist_index": 68,
+      "video_id": "9gHdG_NR4lM",
+      "title": "Sampling from Distribution; Monte Carlo Simulator",
+      "duration_seconds": 1059,
+      "url": "https://www.youtube.com/watch?v=9gHdG_NR4lM"
+    },
+    {
+      "playlist_index": 69,
+      "video_id": "9iGgw21Ef1M",
+      "title": "European Call by Monte Carlo",
+      "duration_seconds": 1792,
+      "url": "https://www.youtube.com/watch?v=9iGgw21Ef1M"
+    },
+    {
+      "playlist_index": 70,
+      "video_id": "AIdCWKcRUqs",
+      "title": "Expected Utility under parameter Uncertainty",
+      "duration_seconds": 1242,
+      "url": "https://www.youtube.com/watch?v=AIdCWKcRUqs"
+    },
+    {
+      "playlist_index": 71,
+      "video_id": "v1jVN1M8buA",
+      "title": "Beginning from the END",
+      "duration_seconds": 696,
+      "url": "https://www.youtube.com/watch?v=v1jVN1M8buA"
+    },
+    {
+      "playlist_index": 72,
+      "video_id": "swfRQ4hZMOA",
+      "title": "Worked Out Problems 1",
+      "duration_seconds": 1423,
+      "url": "https://www.youtube.com/watch?v=swfRQ4hZMOA"
+    },
+    {
+      "playlist_index": 73,
+      "video_id": "cgSWayBSavU",
+      "title": "Worked Out Problems 2",
+      "duration_seconds": 629,
+      "url": "https://www.youtube.com/watch?v=cgSWayBSavU"
+    },
+    {
+      "playlist_index": 74,
+      "video_id": "Ef8yLaig29Q",
+      "title": "Worked Out Problems 3",
+      "duration_seconds": 1681,
+      "url": "https://www.youtube.com/watch?v=Ef8yLaig29Q"
+    },
+    {
+      "playlist_index": 75,
+      "video_id": "56EvyfTBVaI",
+      "title": "Monte Carlo Simulation, GBM, Pricing Asian Call using R and Colab",
+      "duration_seconds": 2075,
+      "url": "https://www.youtube.com/watch?v=56EvyfTBVaI"
+    },
+    {
+      "playlist_index": 76,
+      "video_id": "PPXINyIjwto",
+      "title": "Monte Carlo Simulation, GBM, Pricing Asian Call using Python and Colab",
+      "duration_seconds": 2030,
+      "url": "https://www.youtube.com/watch?v=PPXINyIjwto"
+    }
+  ],
+  "official_course_url": "https://nptel.ac.in/courses/130106003",
+  "course_id": "130106003",
+  "course_run": "noc26-ec21",
+  "instructors": [
+    "Sourish Das",
+    "Bikramaditya Datta"
+  ],
+  "institutions": [
+    "Chennai Mathematical Institute",
+    "IIT Kanpur"
+  ],
+  "coordinating_institute": "IIT Madras",
+  "source_acquisition": "Local faster-whisper small.en transcription; publisher download URLs unavailable; YouTube caption requests blocked.",
+  "total_duration_seconds": 100554
+}

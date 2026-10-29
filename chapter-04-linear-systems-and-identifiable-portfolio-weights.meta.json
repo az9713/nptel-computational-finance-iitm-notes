@@ -1,0 +1,130 @@
+{
+  "chapter": 4,
+  "title": "Linear systems and identifiable portfolio weights",
+  "file": "chapter-04-linear-systems-and-identifiable-portfolio-weights.html",
+  "source_recordings": [
+    12,
+    14,
+    17
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "vectors-and-returns",
+    "linear-constraints",
+    "feasibility-and-choice",
+    "elimination-and-solve",
+    "residual-and-conditioning",
+    "executable-lab",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "vectors-and-returns",
+      "recording": 12,
+      "start_seconds": 767,
+      "end_seconds": 1949,
+      "topic": "Return units, ordered vectors, dot product, code cost, bond and position valuations"
+    },
+    {
+      "section": "vectors-and-returns",
+      "recording": 17,
+      "start_seconds": 39,
+      "end_seconds": 321,
+      "topic": "Three-asset mean-return workshop"
+    },
+    {
+      "section": "linear-constraints",
+      "recording": 14,
+      "start_seconds": 15,
+      "end_seconds": 561,
+      "topic": "Target-return system, rectangular dimensions, consistency and uniqueness; solver/rank clarifications"
+    },
+    {
+      "section": "feasibility-and-choice",
+      "recording": 14,
+      "start_seconds": 561,
+      "end_seconds": 1031,
+      "topic": "Portfolio feasibility versus minimum-variance objective and frontier preview; least-norm counterexample added"
+    },
+    {
+      "section": "elimination-and-solve",
+      "recording": 17,
+      "start_seconds": 1000,
+      "end_seconds": 1135,
+      "topic": "Two-asset target-return solve and comparison to three-asset underdetermination"
+    },
+    {
+      "section": "elimination-and-solve",
+      "recording": 14,
+      "start_seconds": 1031,
+      "end_seconds": 1135,
+      "topic": "Lagrangian block systems and square-solver behavior; local LU derivation added"
+    },
+    {
+      "section": "residual-and-conditioning",
+      "recording": 14,
+      "start_seconds": 1135,
+      "end_seconds": 1263,
+      "topic": "Conditioning and near-singular solves; residual, norm bound and general-eigenvalue counterexample added"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch04_linear_systems.py",
+      "check": "Exact constraint family, feasible bounds, LU identity, solver shape/failure contracts, least-norm choice, residual and conditioning examples"
+    }
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "b4a2c51912750f04ecc6590ce4d325e684423a9da30a2242b701d8a34997dba3",
+      "code_sha256": {
+        "code/ch04_linear_systems.py": "872c65d1176715f6f570a9faa20368bda01dce1c9c956ddd3cce3ef49689165d"
+      },
+      "artifact_sha256": {
+        "figures/ch04_feasible_weights.py": "60c0042e47c8833fafb854bf3f50ca395f02d9a7c83bff63456b93eb9c366b84",
+        "assets/ch04-feasible-weights.svg": "69b43072b35442732f78d5a0d1dc466257a2ce49da84863e2905b8c8ea0ffc59"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "db35b7e4d8125a67f68799c2e25ba66227af6bea85a0c6d9b919b3af3d41fd94"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "b4a2c51912750f04ecc6590ce4d325e684423a9da30a2242b701d8a34997dba3",
+      "code_sha256": {
+        "code/ch04_linear_systems.py": "872c65d1176715f6f570a9faa20368bda01dce1c9c956ddd3cce3ef49689165d"
+      },
+      "artifact_sha256": {
+        "figures/ch04_feasible_weights.py": "60c0042e47c8833fafb854bf3f50ca395f02d9a7c83bff63456b93eb9c366b84",
+        "assets/ch04-feasible-weights.svg": "69b43072b35442732f78d5a0d1dc466257a2ce49da84863e2905b8c8ea0ffc59"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "fda4608ba5bfc8d2b1438b95fa7282a781450dd5e5b516f9facf059502b2391c"
+    }
+  ],
+  "limitations": [
+    "Specified one-period expected-return inputs, not market estimates",
+    "Machine transcription, not comprehensive audiovisual verification",
+    "Workshop17 covariance/eigenvalue material developed separately in chapter5",
+    "Moderate-scale teaching kernels, not certified for all machine input ranges"
+  ],
+  "body_sha256": "b4a2c51912750f04ecc6590ce4d325e684423a9da30a2242b701d8a34997dba3",
+  "reviewed_artifacts": [
+    "figures/ch04_feasible_weights.py",
+    "assets/ch04-feasible-weights.svg"
+  ],
+  "full_scientific_review_rounds": 2
+}

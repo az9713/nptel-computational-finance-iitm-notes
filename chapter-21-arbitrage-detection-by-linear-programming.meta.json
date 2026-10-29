@@ -1,0 +1,175 @@
+{
+  "chapter": 21,
+  "title": "Arbitrage detection by linear programming",
+  "file": "chapter-21-arbitrage-detection-by-linear-programming.html",
+  "source_recordings": [
+    58,
+    63,
+    64,
+    65
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "cashflow-model",
+    "bounded-lp",
+    "complete-detection",
+    "replication-trade",
+    "state-prices",
+    "finite-theorem",
+    "completeness",
+    "amrit-workshop",
+    "implementation",
+    "execution-and-synthesis",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "cashflow-model",
+      "recording": 58,
+      "start_seconds": 16,
+      "end_seconds": 423,
+      "topic": "Complete finite-market bond/stock/call setup, payoffmatrix/holdings and state-by-state arbitrage definition"
+    },
+    {
+      "section": "cashflow-model",
+      "recording": 64,
+      "start_seconds": 1339,
+      "end_seconds": 1430,
+      "topic": "R laboratory payoff/price inputs and arbitrage objective"
+    },
+    {
+      "section": "cashflow-model",
+      "recording": 65,
+      "start_seconds": 1288,
+      "end_seconds": 1381,
+      "topic": "Paired Python payoff/price inputs and initialcost definition"
+    },
+    {
+      "section": "bounded-lp",
+      "recording": 58,
+      "start_seconds": 423,
+      "end_seconds": 483,
+      "topic": "Source cost-minimizing bounded LP, scaling and unboundedness interpretation"
+    },
+    {
+      "section": "complete-detection",
+      "recording": 58,
+      "start_seconds": 483,
+      "end_seconds": 535,
+      "topic": "Sourcezero-versusnegativeoptimum interpretation, corrected with complete second phase and original zero-cost counterexample"
+    },
+    {
+      "section": "replication-trade",
+      "recording": 58,
+      "start_seconds": 535,
+      "end_seconds": 842,
+      "topic": "Complete fairprice50/7,cheapcall6,boundedLPoutput,onecallrescaling and reverse-replication cashflows"
+    },
+    {
+      "section": "replication-trade",
+      "recording": 64,
+      "start_seconds": 1430,
+      "end_seconds": 1910,
+      "topic": "R LP and nonnegative splitvariables, normalizedcost versus rescaledonecall cashflows"
+    },
+    {
+      "section": "replication-trade",
+      "recording": 65,
+      "start_seconds": 1381,
+      "end_seconds": 1506,
+      "topic": "PairedPython LP optimum/rescaling and corrected rupee/paisa/sign interpretations"
+    },
+    {
+      "section": "state-prices",
+      "recording": 58,
+      "start_seconds": 1323,
+      "end_seconds": 1367,
+      "topic": "Fundamental theorem/riskneutral link, extended into precise positive-stateprice certificate"
+    },
+    {
+      "section": "amrit-workshop",
+      "recording": 63,
+      "start_seconds": 600,
+      "end_seconds": 1226,
+      "topic": "Complete Amritbond/stock/call workshop, replication, riskneutral probabilities, cheapcall reversal, two-state cashflow and LP comparison"
+    },
+    {
+      "section": "execution-and-synthesis",
+      "recording": 58,
+      "start_seconds": 842,
+      "end_seconds": 1323,
+      "topic": "Source automation/liquidity/marketadjustment/statisticalversusstateby-statearbitrage discussion with explicit execution/model limits"
+    },
+    {
+      "section": "execution-and-synthesis",
+      "recording": 58,
+      "start_seconds": 1367,
+      "end_seconds": 1633,
+      "topic": "Complete courseportfolio/mathmethod synthesis and transition to generalutility/parameteruncertainty/MonteCarlo/pathdependence"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch21_arbitrage.py",
+      "check": "Two-phase bounded LP, raw cashflow witnesses, both source markets, zero-cost counterexample, state prices and incompleteness"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch19_mean_variance.py",
+    "figures/ch21_prices_and_state_prices.py",
+    "assets/ch21-prices-and-state-prices.svg",
+    "assets/ch21-prices-and-state-prices-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
+      "code_sha256": {
+        "code/ch21_arbitrage.py": "ef20d09e3eebd41f9149ba7868f73821f9309d215b56fbee5a0703c83a0d988c"
+      },
+      "artifact_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f",
+        "figures/ch21_prices_and_state_prices.py": "43c6ea4b6545da19539959959c449bbcfca20cb750fa12513f44543bf8afc222",
+        "assets/ch21-prices-and-state-prices.svg": "920e67e6188f75ddedb85053f53b70621b1605756d57294ff19c8d0388b51e5b",
+        "assets/ch21-prices-and-state-prices-portrait.svg": "dfe01443b3b62ebbcfca376830e2ed8ad00d95fb355712bebe96bc9a3397cb77"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "62432e668c3603d1596c53cbffebea87f726c672148f6dfec04752e9f4161774"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
+      "code_sha256": {
+        "code/ch21_arbitrage.py": "ef20d09e3eebd41f9149ba7868f73821f9309d215b56fbee5a0703c83a0d988c"
+      },
+      "artifact_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f",
+        "figures/ch21_prices_and_state_prices.py": "43c6ea4b6545da19539959959c449bbcfca20cb750fa12513f44543bf8afc222",
+        "assets/ch21-prices-and-state-prices.svg": "920e67e6188f75ddedb85053f53b70621b1605756d57294ff19c8d0388b51e5b",
+        "assets/ch21-prices-and-state-prices-portrait.svg": "dfe01443b3b62ebbcfca376830e2ed8ad00d95fb355712bebe96bc9a3397cb77"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "99be88552e3507ed36cfe401092fff4bcb8a0eae7cee89030ec6bbb8f3cd4a7a"
+    }
+  ],
+  "limitations": [
+    "Finite exhaustive states, frictionless divisible unrestricted holdings and synchronous prices",
+    "Small vertex enumeration with work/rank/feasibility tolerances; not a general production LP solver",
+    "Numerical detection is separate from exact mathematical no-arbitrage certificates",
+    "R/SciPy interfaces documentary; no trading or data connection"
+  ],
+  "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
+  "full_scientific_review_rounds": 2
+}

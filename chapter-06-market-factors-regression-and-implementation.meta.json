@@ -1,0 +1,173 @@
+{
+  "chapter": 6,
+  "title": "Market factors, regression, and implementation",
+  "file": "chapter-06-market-factors-regression-and-implementation.html",
+  "source_recordings": [
+    16,
+    18,
+    19
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "excess-returns-and-beta",
+    "linear-projection",
+    "capm-and-alpha",
+    "factor-covariance",
+    "paired-linear-algebra-labs",
+    "returns-and-data-integrity",
+    "regression-laboratory",
+    "portfolio-cloud",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "excess-returns-and-beta",
+      "recording": 16,
+      "start_seconds": 245,
+      "end_seconds": 535,
+      "topic": "Excess returns, market covariance beta and illustrative arithmetic; total-risk and joint-covariance distinctions added"
+    },
+    {
+      "section": "linear-projection",
+      "recording": 16,
+      "start_seconds": 166,
+      "end_seconds": 245,
+      "topic": "Regression interpretation of factor exposure; population projection and residual-variance derivations added"
+    },
+    {
+      "section": "capm-and-alpha",
+      "recording": 16,
+      "start_seconds": 535,
+      "end_seconds": 840,
+      "topic": "CAPM alpha/efficiency discussion; conditional pricing proof and joint-hypothesis interpretation added"
+    },
+    {
+      "section": "factor-covariance",
+      "recording": 16,
+      "start_seconds": 15,
+      "end_seconds": 245,
+      "topic": "Data-selected versus economically chosen factor directions"
+    },
+    {
+      "section": "factor-covariance",
+      "recording": 16,
+      "start_seconds": 840,
+      "end_seconds": 1035,
+      "topic": "General factor model, dimensional/storage motivation and course synthesis; covariance/exposure derivations and residual assumptions added"
+    },
+    {
+      "section": "paired-linear-algebra-labs",
+      "recording": 18,
+      "start_seconds": 15,
+      "end_seconds": 719,
+      "topic": "R dot/matvec, bond and downloaded-holdings values, native comparison; fixed reproducible data and label contract added"
+    },
+    {
+      "section": "paired-linear-algebra-labs",
+      "recording": 19,
+      "start_seconds": 15,
+      "end_seconds": 650,
+      "topic": "Python dot/bond/holdings/matvec lab and dataset structure"
+    },
+    {
+      "section": "returns-and-data-integrity",
+      "recording": 18,
+      "start_seconds": 719,
+      "end_seconds": 866,
+      "topic": "Log returns, threshold filtering, raw/normalized price plots; exact portfolio-return and data-integrity distinctions added"
+    },
+    {
+      "section": "returns-and-data-integrity",
+      "recording": 19,
+      "start_seconds": 713,
+      "end_seconds": 853,
+      "topic": "Adjusted-price/log-return lab, filtering and rebased growth"
+    },
+    {
+      "section": "portfolio-cloud",
+      "recording": 18,
+      "start_seconds": 866,
+      "end_seconds": 1121,
+      "topic": "Random weight generation, reproducibility, sample means/volatility and frontier preview; sampling and efficiency distinctions added"
+    },
+    {
+      "section": "portfolio-cloud",
+      "recording": 19,
+      "start_seconds": 650,
+      "end_seconds": 713,
+      "topic": "Mean-variance constraints and matrix implementation preview"
+    },
+    {
+      "section": "portfolio-cloud",
+      "recording": 19,
+      "start_seconds": 853,
+      "end_seconds": 1022,
+      "topic": "Ten-thousand-portfolio cloud, negative sample means and frontier interpretation"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch06_factors_and_data.py",
+      "check": "Joint covariance, factor decomposition, OLS recovery and identification, price/return/holdings identities, log-return gap and reproducible portfolio sampling"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch06_data_and_cloud.py",
+    "assets/ch06-data-cloud.svg",
+    "assets/ch06-data-cloud-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "af5b5da7b7123e3292eb6d14a5c1011ae6f40670e0fc4aa15673fd94660fdd48",
+      "code_sha256": {
+        "code/ch06_factors_and_data.py": "073ecbc89448aa1ce522b2a90d92f8fcbdb2d636c0d787c89ba026b16c1342cb"
+      },
+      "artifact_sha256": {
+        "figures/ch06_data_and_cloud.py": "bcd1f4e70a5feb4bea17a9e297e33f77d00a496a18fb935e78bb35bc4d3663fb",
+        "assets/ch06-data-cloud.svg": "5ab0c79dcc996efad3c1ecf2e8ef55c70f62da687f475bc865e312d6df8d3ecb",
+        "assets/ch06-data-cloud-portrait.svg": "525a951f356bc5c58467fb2755c90d1421d7fac38abf3334d1aaeaa525aaf225"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "6060525b5dd6cb312f75e96893b38aa1335a6b0f669ababc8b03b64ed37e7718",
+      "nonblocking_disposition": "Replaced independent residual with residual uncorrelated with market; full revised chapter reviewed in R2."
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "43e8f55a65b6f45bdaea98fe3a236d036ed35ff3d09f33fb80a0ab5988c245f6",
+      "code_sha256": {
+        "code/ch06_factors_and_data.py": "073ecbc89448aa1ce522b2a90d92f8fcbdb2d636c0d787c89ba026b16c1342cb"
+      },
+      "artifact_sha256": {
+        "figures/ch06_data_and_cloud.py": "bcd1f4e70a5feb4bea17a9e297e33f77d00a496a18fb935e78bb35bc4d3663fb",
+        "assets/ch06-data-cloud.svg": "5ab0c79dcc996efad3c1ecf2e8ef55c70f62da687f475bc865e312d6df8d3ecb",
+        "assets/ch06-data-cloud-portrait.svg": "525a951f356bc5c58467fb2755c90d1421d7fac38abf3334d1aaeaa525aaf225"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "cc0f4e219bfce1e46c6c731104c2b579b84741165b1c2fe0f1278168b59b71bc",
+      "nonblocking_disposition": "Empty 2D response panel may return empty coefficients. Outside one-or-more-response teaching use; retained as documented API boundary."
+    }
+  ],
+  "limitations": [
+    "Synthetic inputs, not empirical market or efficiency evidence",
+    "Conditional CAPM derivation does not infer market equilibrium from regression",
+    "Machine transcripts, not comprehensive audiovisual verification",
+    "R semantics explained; Python companion executed",
+    "Moderate finite teaching inputs; numerical rank and range limits retained"
+  ],
+  "body_sha256": "43e8f55a65b6f45bdaea98fe3a236d036ed35ff3d09f33fb80a0ab5988c245f6",
+  "full_scientific_review_rounds": 2
+}

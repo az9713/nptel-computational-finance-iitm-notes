@@ -1,0 +1,144 @@
+{
+  "chapter": 10,
+  "title": "Financial equations as inverse problems",
+  "file": "chapter-10-financial-equations-as-inverse-problems.html",
+  "source_recordings": [
+    29,
+    30
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "forward-and-inverse",
+    "yield-existence",
+    "implied-volatility",
+    "bracketing",
+    "bisection",
+    "interpreting-the-answer",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "forward-and-inverse",
+      "recording": 29,
+      "start_seconds": 174,
+      "end_seconds": 948,
+      "topic": "Forward/inverse pricing, single YTM versus curve, five-year semiannual bond; explicit full-price/date and nominal-yield conventions, special analytic inverse boundary"
+    },
+    {
+      "section": "yield-existence",
+      "recording": 29,
+      "start_seconds": 621,
+      "end_seconds": 771,
+      "topic": "Price/yield direction and positive-payment uniqueness; derivative/endpoint existence proof and signed-cashflow multiple-root boundary"
+    },
+    {
+      "section": "implied-volatility",
+      "recording": 30,
+      "start_seconds": 16,
+      "end_seconds": 489,
+      "topic": "IV equation and source call fixture, strike/maturity smile; declared conventions, finite-tree nonidentification counterexample and no universal smile/market-IV claim"
+    },
+    {
+      "section": "bracketing",
+      "recording": 30,
+      "start_seconds": 489,
+      "end_seconds": 976,
+      "topic": "IVT continuity/opposite signs, separate uniqueness, actual bond/vol brackets; nonfinite/domain/sign-product and discontinuity qualifications"
+    },
+    {
+      "section": "bisection",
+      "recording": 30,
+      "start_seconds": 976,
+      "end_seconds": 1608,
+      "topic": "Generic bisection, invariant, midpoint halves and logarithmic counts, bond iteration table and option fit; precise width/error/count conventions and numerical failure/reporting boundaries"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch10_inverse_pricing.py",
+      "check": "Yield and finite-CRR inversion, bisection brackets/counts, quote uncertainty, flat volatility nonidentification and hypothesis counterexamples"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch10_inverse_maps.py",
+    "assets/ch10-inverse-maps.svg",
+    "assets/ch10-inverse-maps-portrait.svg",
+    "code/ch08_binomial_valuation.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "2f3386959ab21d0d3723701175db221b40c252ebcf43f1d51d4dc9f1543809cb",
+      "code_sha256": {
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "artifact_sha256": {
+        "figures/ch10_inverse_maps.py": "e22ce93df539bd5ad59395754d2c9516fa627930b76b61cbfdf1b5dedadf4c9e",
+        "assets/ch10-inverse-maps.svg": "ec1489c446846de9678c7770e7598cc4a6739d8f9efc7c3b712cc37bb6a6cc83",
+        "assets/ch10-inverse-maps-portrait.svg": "dbe691a3f37c7636cbb3a5c822b4c6a7feb0a587dfd269cdb116f095ddeb19dd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "e3d0eb903eb0230c85e56074f3efe49816ff5cd0ad30ff6f920ce6e2e786b18c",
+      "nonblocking_disposition": "Both malformed quoted-price subscripts repaired after R1; revised full body awaits R2."
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "e9e0b098758585ab15831a9903ac2488425daff4299c6bcd11bc5188b82f15b4",
+      "code_sha256": {
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "artifact_sha256": {
+        "figures/ch10_inverse_maps.py": "e22ce93df539bd5ad59395754d2c9516fa627930b76b61cbfdf1b5dedadf4c9e",
+        "assets/ch10-inverse-maps.svg": "ec1489c446846de9678c7770e7598cc4a6739d8f9efc7c3b712cc37bb6a6cc83",
+        "assets/ch10-inverse-maps-portrait.svg": "dbe691a3f37c7636cbb3a5c822b4c6a7feb0a587dfd269cdb116f095ddeb19dd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "3e70ae07468db0ac14ff6893a00de9d4417cc43bec6181c4e35df2f555956f75",
+      "nonblocking_disposition": "Stopping reason prose clarified after R2; targeted addendum will bind the new body."
+    },
+    {
+      "round": "2-addendum",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Targeted closure of one stopping-label paragraph after two full independent rounds",
+      "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+      "code_sha256": {
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "artifact_sha256": {
+        "figures/ch10_inverse_maps.py": "e22ce93df539bd5ad59395754d2c9516fa627930b76b61cbfdf1b5dedadf4c9e",
+        "assets/ch10-inverse-maps.svg": "ec1489c446846de9678c7770e7598cc4a6739d8f9efc7c3b712cc37bb6a6cc83",
+        "assets/ch10-inverse-maps-portrait.svg": "dbe691a3f37c7636cbb3a5c822b4c6a7feb0a587dfd269cdb116f095ddeb19dd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "2750e3d7015fd03a1b8722248b1da51f2e91ab7611b5514e97cd3d3ebaf643f4"
+    }
+  ],
+  "limitations": [
+    "Declared historical-source inputs reused without independent quote authentication",
+    "Finite 50-step no-dividend CRR model and calendar-day convention",
+    "Conditional exact-arithmetic bracketing theorem; numerical signs not interval-certified",
+    "Moderate fixtures, not a production parameter-range audit",
+    "Public Chapter8 module required"
+  ],
+  "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+  "full_scientific_review_rounds": 2
+}

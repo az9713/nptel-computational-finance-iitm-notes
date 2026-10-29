@@ -1,0 +1,193 @@
+{
+  "chapter": 17,
+  "title": "Finite differences and early exercise",
+  "file": "chapter-17-finite-differences-and-early-exercise.html",
+  "source_recordings": [
+    48,
+    49,
+    50
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "grid-task",
+    "explicit-stencil",
+    "monotonicity-and-stability",
+    "grid-workshop",
+    "american-obstacle",
+    "refinement-and-boundary",
+    "grid-greeks",
+    "implicit-preview",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "grid-task",
+      "recording": 48,
+      "start_seconds": 207,
+      "end_seconds": 502,
+      "topic": "Time direction, numerical domain and rectangular grid with explicit index meanings"
+    },
+    {
+      "section": "explicit-stencil",
+      "recording": 48,
+      "start_seconds": 502,
+      "end_seconds": 1058,
+      "topic": "Full centered-space/backward-calendar-time stencil derivation, coefficients and approximate discount sum"
+    },
+    {
+      "section": "explicit-stencil",
+      "recording": 48,
+      "start_seconds": 1058,
+      "end_seconds": 1234,
+      "topic": "Complete European call initialization, boundary updates and array implementation logic"
+    },
+    {
+      "section": "monotonicity-and-stability",
+      "recording": 48,
+      "start_seconds": 906,
+      "end_seconds": 1058,
+      "topic": "Necessary qualification of numerical weights; added global monotonicity, time restriction and one-sided drift repair"
+    },
+    {
+      "section": "grid-workshop",
+      "recording": 50,
+      "start_seconds": 757,
+      "end_seconds": 1136,
+      "topic": "Complete grid spacings, spot index and upper-domain heuristic with explicit strike change"
+    },
+    {
+      "section": "grid-workshop",
+      "recording": 50,
+      "start_seconds": 1136,
+      "end_seconds": 1338,
+      "topic": "Complete node25 coefficient/sum exercise plus global stability failure and reproducible repaired diagnostic"
+    },
+    {
+      "section": "american-obstacle",
+      "recording": 48,
+      "start_seconds": 15,
+      "end_seconds": 207,
+      "topic": "American right and continuation-equation qualification"
+    },
+    {
+      "section": "american-obstacle",
+      "recording": 49,
+      "start_seconds": 45,
+      "end_seconds": 283,
+      "topic": "Complete max-continuation/intrinsic algorithm, free boundary and exercise premium with exact obstacle signs"
+    },
+    {
+      "section": "american-obstacle",
+      "recording": 50,
+      "start_seconds": 1338,
+      "end_seconds": 1502,
+      "topic": "Complete supplied-continuation27.10 versus intrinsic27.5 illustration at strike90 and spot62.5"
+    },
+    {
+      "section": "refinement-and-boundary",
+      "recording": 49,
+      "start_seconds": 190,
+      "end_seconds": 384,
+      "topic": "American versus European put and independent binomial check, with actual controlled refinement and boundary data"
+    },
+    {
+      "section": "refinement-and-boundary",
+      "recording": 49,
+      "start_seconds": 490,
+      "end_seconds": 571,
+      "topic": "European closed-form/tree/PDE cross-check and the precision limits of rounded agreement"
+    },
+    {
+      "section": "grid-greeks",
+      "recording": 49,
+      "start_seconds": 384,
+      "end_seconds": 490,
+      "topic": "All four Greek definitions and actual data requirements; numerical delta/gamma/theta and additional volatility repricings"
+    },
+    {
+      "section": "implicit-preview",
+      "recording": 48,
+      "start_seconds": 1234,
+      "end_seconds": 1300,
+      "topic": "Implicit/Crank–Nicolson preview elaborated into actual matrix equations and qualified mode stability; American coupled-constraint distinction"
+    },
+    {
+      "section": "limits",
+      "recording": 49,
+      "start_seconds": 571,
+      "end_seconds": 795,
+      "topic": "Complete course synthesis: Taylor methods, triangular versus rectangular recursion, cross-checks, payoff functions and later optimization/simulation"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch17_finite_differences.py",
+      "check": "Global stencil and instability diagnostic, monotone explicit projection, independent European/CRR benchmarks, domain refinement and Greeks"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch08_binomial_valuation.py",
+    "code/ch16_black_scholes.py",
+    "figures/ch17_american_put_and_exercise.py",
+    "assets/ch17-american-put-and-exercise.svg",
+    "assets/ch17-american-put-and-exercise-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "65539275175c9c67e5fddb68c04b2d54c575a78dde5081b8c1a2ed4d5740bf1b",
+      "code_sha256": {
+        "code/ch17_finite_differences.py": "d3949ef39ac42abbf3665be0a7d08600e6bce2690045f6f4d9198f3e718297a7"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "figures/ch17_american_put_and_exercise.py": "417cb2264140b3b5d25e8865fb8313f73543eba7367fa32828dd1cead0e44fc4",
+        "assets/ch17-american-put-and-exercise.svg": "98d54a7b7bf92d00e18c6864eb4f70733763ffff3ffa8cc980c6afb9d3106e5d",
+        "assets/ch17-american-put-and-exercise-portrait.svg": "73929a0fee7054ac38a9f7e16cf9f3b093baef5dc5acf6724aa2de25c76f7ba8"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "2fddd7ebcd5e73138253bd463348acf7567eec344880a1aca84453f5f6d6293d"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
+      "code_sha256": {
+        "code/ch17_finite_differences.py": "d3949ef39ac42abbf3665be0a7d08600e6bce2690045f6f4d9198f3e718297a7"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "figures/ch17_american_put_and_exercise.py": "417cb2264140b3b5d25e8865fb8313f73543eba7367fa32828dd1cead0e44fc4",
+        "assets/ch17-american-put-and-exercise.svg": "98d54a7b7bf92d00e18c6864eb4f70733763ffff3ffa8cc980c6afb9d3106e5d",
+        "assets/ch17-american-put-and-exercise-portrait.svg": "73929a0fee7054ac38a9f7e16cf9f3b093baef5dc5acf6724aa2de25c76f7ba8"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "c8bda0dbac0af717c58b55fc08c25902f56ddefe3b6bd51dd97a2e1a59543589",
+      "resolved_nonblocking_findings": [
+        "Explicit O(N) exercise-transition storage in addition to O(M) rolling price arrays; exact historical-body reconstruction independently checked"
+      ]
+    }
+  ],
+  "limitations": [
+    "Nonnegative rate, no dividends, constant coefficients",
+    "Explicit grid-exercise approximation and finite-domain boundary error",
+    "Implicit and Crank–Nicolson equations are a mathematical preview, not locally executed alternative solvers",
+    "Refinement evidence is not a certified continuous American price or free-boundary enclosure"
+  ],
+  "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
+  "full_scientific_review_rounds": 2
+}

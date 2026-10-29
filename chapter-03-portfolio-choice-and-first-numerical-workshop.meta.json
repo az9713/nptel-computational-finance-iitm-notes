@@ -1,0 +1,129 @@
+{
+  "chapter": 3,
+  "title": "Portfolio choice and the first numerical workshop",
+  "file": "chapter-03-portfolio-choice-and-first-numerical-workshop.html",
+  "source_recordings": [
+    7,
+    8,
+    9
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "portfolio-model",
+    "analytic-allocation",
+    "grid-search",
+    "lagrange",
+    "sensitivity-and-scope",
+    "bond-workshop",
+    "interpolation-and-logarithm",
+    "executable-lab",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "portfolio-model",
+      "recording": 7,
+      "start_seconds": 51,
+      "end_seconds": 400,
+      "topic": "Safe/risky weights, mean/variance, constraints, and preference criterion"
+    },
+    {
+      "section": "analytic-allocation",
+      "recording": 7,
+      "start_seconds": 729,
+      "end_seconds": 905,
+      "topic": "Substitution, strict concavity, analytic solution, and explicit constraint completion"
+    },
+    {
+      "section": "grid-search",
+      "recording": 7,
+      "start_seconds": 600,
+      "end_seconds": 1117,
+      "topic": "Grid search, refinement, analytic comparison, and dimension cost"
+    },
+    {
+      "section": "lagrange",
+      "recording": 7,
+      "start_seconds": 1117,
+      "end_seconds": 1673,
+      "topic": "Lagrange equations, multiplier interpretation, linear system, and multi-asset extension"
+    },
+    {
+      "section": "sensitivity-and-scope",
+      "recording": 7,
+      "start_seconds": 1458,
+      "end_seconds": 1818,
+      "topic": "Parameter sensitivity, covariance/general-objective preview, and explicit model boundaries"
+    },
+    {
+      "section": "bond-workshop",
+      "recording": 8,
+      "start_seconds": 66,
+      "end_seconds": 808,
+      "topic": "Bond payment mapping, comparable yield, rate shock, and nominal compounding workshop"
+    },
+    {
+      "section": "interpolation-and-logarithm",
+      "recording": 9,
+      "start_seconds": 15,
+      "end_seconds": 744,
+      "topic": "Portfolio workshop, linear rate interpolation, logarithm polynomials and finite remainder"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch03_portfolio_workshop.py",
+      "check": "Exact rational allocation, constrained corners, grid error identity, units, multiplier residuals, bond prices, and logarithm remainders"
+    }
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
+      "code_sha256": {
+        "code/ch03_portfolio_workshop.py": "3031a62bcde248d7d3e6aaaa59b55d8aacdf55b6691c4d2bd12bea436ab0ca8c"
+      },
+      "artifact_sha256": {
+        "figures/ch03_allocation.py": "d308a86fdede17c906e55481fd13ba3d60ac3cb4923e306891949e7e475bf06b",
+        "assets/ch03-allocation.svg": "2050735046ef37d4fda34dcc2686eb02d168a196a781bd8fc35343deed2186b8",
+        "assets/ch03-allocation-portrait.svg": "61546f1f8d6c22a52eea64394a6df6e89717a91f67171023f3757ba9edef06a9"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "0ca2a356a4cdd449845219de3f5ca74db2cbdb750c2e2a6c382551aa5d80e3cf"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
+      "code_sha256": {
+        "code/ch03_portfolio_workshop.py": "3031a62bcde248d7d3e6aaaa59b55d8aacdf55b6691c4d2bd12bea436ab0ca8c"
+      },
+      "artifact_sha256": {
+        "figures/ch03_allocation.py": "d308a86fdede17c906e55481fd13ba3d60ac3cb4923e306891949e7e475bf06b",
+        "assets/ch03-allocation.svg": "2050735046ef37d4fda34dcc2686eb02d168a196a781bd8fc35343deed2186b8",
+        "assets/ch03-allocation-portrait.svg": "61546f1f8d6c22a52eea64394a6df6e89717a91f67171023f3757ba9edef06a9"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "e61eb93c84811e1aa7294ac704d88871b7d3925e207acad367bc91114c57f4cf"
+    }
+  ],
+  "limitations": [
+    "Illustrative financial inputs, not market estimates",
+    "Machine transcription uncertainty; not comprehensive audiovisual review",
+    "Teaching kernels do not certify extreme-range floating-point behavior"
+  ],
+  "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
+  "full_scientific_review_rounds": 2
+}

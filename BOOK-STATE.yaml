@@ -1,0 +1,25 @@
+phase: sequential-chapter-authoring
+objective: Complete all 76 playlist recordings as a reviewed computational-finance textbook and publish the finished edition.
+authorization: User approved defaults and autonomous completion, commit, push, and GitHub Pages.
+gates:
+  specification: passed_internal_under_user_autonomous_authorization
+  architecture: provisional_pending_transcript_reading
+  pilot: passed_two_full_independent_reviews_plus_terminology_addendum
+  chapters: pending
+  final_integrity: pending
+  publication: pending
+source_recordings: 76
+completed_chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+current_chapter: 22
+current_section: pending_final_lab_source_reading
+source_status:
+  playlist: acquired
+  official_course: verified
+  youtube_caption_api: IP_blocked
+  youtube_caption_download: HTTP_429
+  nptel_downloads: all_transcript_audio_urls_null
+  fallback: workspace_local_faster_whisper_small_en
+  audio: all_76_downloaded
+  integrity_repair: recording2_reacquired_clean_transcript_regenerated_all76_source_audit_passed
+review_standard: Two independent science-editor rounds per chapter; repair findings; latest verdict zero blocking.
+next_action: Read recordings75and76 fully; recover74MHtable; finalize22outline; complete22to24 with two full independent reviews each; final integrity/export/commit/push/Pages. See HANDOFF.md.

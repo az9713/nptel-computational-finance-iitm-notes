@@ -1,0 +1,182 @@
+{
+  "chapter": 11,
+  "title": "Newton, secant, and safeguarded calibration",
+  "file": "chapter-11-newton-secant-and-safeguarded-calibration.html",
+  "source_recordings": [
+    31,
+    32,
+    34
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "newton-step",
+    "local-convergence",
+    "secant-step",
+    "safeguarded-hybrid",
+    "worked-calibrations",
+    "conditioning-and-units",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "newton-step",
+      "recording": 31,
+      "start_seconds": 100,
+      "end_seconds": 298,
+      "topic": "Taylor/tangent Newton proposal and derivative interface"
+    },
+    {
+      "section": "newton-step",
+      "recording": 31,
+      "start_seconds": 678,
+      "end_seconds": 977,
+      "topic": "Bond derivative and iteration table; exact retained iterates and explicit update/evaluation/tolerance counts"
+    },
+    {
+      "section": "local-convergence",
+      "recording": 31,
+      "start_seconds": 242,
+      "end_seconds": 678,
+      "topic": "Quadratic behavior, derivative/loop stopping checks and budgets; local Taylor proof, repeated-root and floating-progress qualifications"
+    },
+    {
+      "section": "local-convergence",
+      "recording": 31,
+      "start_seconds": 977,
+      "end_seconds": 1179,
+      "topic": "Newton failure boundaries, nearly zero derivative and unavailable symbolic derivative; cycle/domain examples and accurate derivative-source alternatives"
+    },
+    {
+      "section": "secant-step",
+      "recording": 32,
+      "start_seconds": 16,
+      "end_seconds": 1020,
+      "topic": "Derivative-free secant geometry/update, caching and evaluation costs, local order, denominator/equality and failure discussion; divided-difference proof and unit-aware safeguards"
+    },
+    {
+      "section": "safeguarded-hybrid",
+      "recording": 32,
+      "start_seconds": 961,
+      "end_seconds": 1265,
+      "topic": "No-bracket failures, hybrid progress/fallback and Brent/R/Python library calls; proved central-half contraction, explicit stopping criteria and actual conservative-policy cost"
+    },
+    {
+      "section": "worked-calibrations",
+      "recording": 34,
+      "start_seconds": 102,
+      "end_seconds": 991,
+      "topic": "Four-year6%semiannualbond101.75 equation, bracket, derivative and Newton; corrected22.25 and recomputed counts"
+    },
+    {
+      "section": "worked-calibrations",
+      "recording": 34,
+      "start_seconds": 991,
+      "end_seconds": 1472,
+      "topic": "Two-monthcallS20000K20200T60/365r.055n40price576.77, bisection/secant; all unrounded iterates and stopping/evaluation accounting"
+    },
+    {
+      "section": "conditioning-and-units",
+      "recording": 32,
+      "start_seconds": 1265,
+      "end_seconds": 1709,
+      "topic": "General root sensitivity, low-vega/illiquid option interpretation and conditioning versus numerical stability; units/residual scaling and no blanket data discard"
+    },
+    {
+      "section": "conditioning-and-units",
+      "recording": 34,
+      "start_seconds": 1472,
+      "end_seconds": 1813,
+      "topic": "Near/farstrike price perturbation comparison; internally generated σ.18pairedquotes, actual reinverted bands and finite-bump limits"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch11_newton_secant.py",
+      "check": "Newton and cached secant convergence/failures, safeguarded bracket contraction, full workshop inversions and paired-strike sensitivity"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch11_steps_and_brackets.py",
+    "assets/ch11-steps-and-brackets.svg",
+    "assets/ch11-steps-and-brackets-portrait.svg",
+    "code/ch08_binomial_valuation.py",
+    "code/ch10_inverse_pricing.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "code_sha256": {
+        "code/ch11_newton_secant.py": "130bd58e32fdfc0cfa5d5b192bdd87a66b92fcda3cba6b5a306ba2f2c1fc58cf"
+      },
+      "artifact_sha256": {
+        "figures/ch11_steps_and_brackets.py": "a150a70d248fd375c5579aadacfff8418783ba35aeb8eff52c67bce3d4ca18db",
+        "assets/ch11-steps-and-brackets.svg": "87342745fc7b9c90069fc995ef847ff6cc9998c7d66ec7acab72f19f9ebbcd0f",
+        "assets/ch11-steps-and-brackets-portrait.svg": "8e85e50a1180ec8351ef4d46544af6ff0d117d865abd1b70ca12d2e5781c5113",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "7f9b7cb7cbb8ead6804ecb4f8349ba6e7df76e31dae766e4d8dcd4e7f600e92b"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "code_sha256": {
+        "code/ch11_newton_secant.py": "130bd58e32fdfc0cfa5d5b192bdd87a66b92fcda3cba6b5a306ba2f2c1fc58cf"
+      },
+      "artifact_sha256": {
+        "figures/ch11_steps_and_brackets.py": "a150a70d248fd375c5579aadacfff8418783ba35aeb8eff52c67bce3d4ca18db",
+        "assets/ch11-steps-and-brackets.svg": "87342745fc7b9c90069fc995ef847ff6cc9998c7d66ec7acab72f19f9ebbcd0f",
+        "assets/ch11-steps-and-brackets-portrait.svg": "8e85e50a1180ec8351ef4d46544af6ff0d117d865abd1b70ca12d2e5781c5113",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "cf69e3c9725c0a309d11a2827b3aeb0c7437584764878ac97e2731c3fbe037e7"
+    },
+    {
+      "round": 3,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Targeted docstring closure after full round 2",
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "code_sha256": {
+        "code/ch11_newton_secant.py": "936a8072710062c128fec7ca3054b812daa85321685b92599571af7fed42696b"
+      },
+      "artifact_sha256": {
+        "figures/ch11_steps_and_brackets.py": "a150a70d248fd375c5579aadacfff8418783ba35aeb8eff52c67bce3d4ca18db",
+        "assets/ch11-steps-and-brackets.svg": "87342745fc7b9c90069fc995ef847ff6cc9998c7d66ec7acab72f19f9ebbcd0f",
+        "assets/ch11-steps-and-brackets-portrait.svg": "8e85e50a1180ec8351ef4d46544af6ff0d117d865abd1b70ca12d2e5781c5113",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "6c381975fa0b85f5371e0b5add536c7f06583f58742ab53729f9acc1a91aa247"
+    }
+  ],
+  "limitations": [
+    "Local smooth simple-root convergence assumptions; finite CRR kinks and noise can matter",
+    "Transparent teaching hybrid with conservative acceptance, not full Brent algorithm",
+    "Synthetic declared quotes and internally generated paired prices, not authenticated market data",
+    "R/SciPy semantics documented, no library execution unless separately recorded",
+    "Ordinary floating-point moderate fixtures; public Chapter8/10 modules required"
+  ],
+  "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+  "full_scientific_review_rounds": 2
+}

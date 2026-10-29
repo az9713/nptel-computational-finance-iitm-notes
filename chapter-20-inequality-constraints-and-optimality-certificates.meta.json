@@ -1,0 +1,216 @@
+{
+  "chapter": 20,
+  "title": "Inequality constraints and optimality certificates",
+  "file": "chapter-20-inequality-constraints-and-optimality-certificates.html",
+  "source_recordings": [
+    57,
+    59,
+    60,
+    61
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "admissible-trades",
+    "existence",
+    "curvature",
+    "consumer-shadow-price",
+    "kkt",
+    "bliss-cases",
+    "portfolio-certificate",
+    "solver-interfaces",
+    "barrier",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "admissible-trades",
+      "recording": 57,
+      "start_seconds": 16,
+      "end_seconds": 1107,
+      "topic": "Borrowed-share short sale, risks/financing, negative weights, institution-specific mandates and linear limits, with corrected target-feasibility distinction"
+    },
+    {
+      "section": "existence",
+      "recording": 59,
+      "start_seconds": 15,
+      "end_seconds": 1044,
+      "topic": "Optimization types, existence/nonattainment, Weierstrass, boundaries, firstorder test and explicit10x-x²/x³ examples"
+    },
+    {
+      "section": "curvature",
+      "recording": 59,
+      "start_seconds": 1044,
+      "end_seconds": 1593,
+      "topic": "Secondorder tests, inconclusive cases, concavity/localglobal distinction, two-variablebliss, Hessian determinant and higherdim eigenvalues"
+    },
+    {
+      "section": "curvature",
+      "recording": 60,
+      "start_seconds": 883,
+      "end_seconds": 1065,
+      "topic": "Constrained secondorder/bordered-Hessian preview, convex feasible sets and concavity sufficiency with explicit limits"
+    },
+    {
+      "section": "consumer-shadow-price",
+      "recording": 60,
+      "start_seconds": 15,
+      "end_seconds": 883,
+      "topic": "Complete threegood logutility/budget model, binding argument, Lagrangian, exact quantities/multiplier, value function and envelope"
+    },
+    {
+      "section": "kkt",
+      "recording": 57,
+      "start_seconds": 1107,
+      "end_seconds": 1400,
+      "topic": "KKT requirements, complementary slackness and QP standard form, corrected positive-multiplier implication"
+    },
+    {
+      "section": "kkt",
+      "recording": 61,
+      "start_seconds": 376,
+      "end_seconds": 936,
+      "topic": "Sign conventions, min/max conversion, emissions-story limitations, KKT feasibility/sign/complementarity and economic checks"
+    },
+    {
+      "section": "bliss-cases",
+      "recording": 61,
+      "start_seconds": 15,
+      "end_seconds": 376,
+      "topic": "Blisspointwithbudget40slack versusbudget6binding and full numerical examples"
+    },
+    {
+      "section": "bliss-cases",
+      "recording": 61,
+      "start_seconds": 936,
+      "end_seconds": 1200,
+      "topic": "General active/slack case derivation, prices5/10 incomes25/50, multipliers and envelope with consistent normalization"
+    },
+    {
+      "section": "portfolio-certificate",
+      "recording": 57,
+      "start_seconds": 1400,
+      "end_seconds": 1539,
+      "topic": "Same-target10/11.5percent unrestricted versus longonly, binding B weight and variancecost"
+    },
+    {
+      "section": "portfolio-certificate",
+      "recording": 64,
+      "start_seconds": 1048,
+      "end_seconds": 1339,
+      "topic": "Complete R no-short QP case and target comparison"
+    },
+    {
+      "section": "portfolio-certificate",
+      "recording": 65,
+      "start_seconds": 1078,
+      "end_seconds": 1288,
+      "topic": "Complete pairedPython no-short QP and matching/nonmatching targets"
+    },
+    {
+      "section": "solver-interfaces",
+      "recording": 57,
+      "start_seconds": 1249,
+      "end_seconds": 1400,
+      "topic": "QP standard-form coefficient/sign mapping and package convention requirements"
+    },
+    {
+      "section": "solver-interfaces",
+      "recording": 61,
+      "start_seconds": 1200,
+      "end_seconds": 1378,
+      "topic": "Naive case proliferation, LP/QP distinctions, convex KKT claims with qualifications and solver input/output interpretation"
+    },
+    {
+      "section": "barrier",
+      "recording": 64,
+      "start_seconds": 1910,
+      "end_seconds": 2213,
+      "topic": "Complete R interiorpoint/logbarrier motivation and comparison, analyticNewton/strictfeasibility/finitebarrier qualifications supplied"
+    },
+    {
+      "section": "barrier",
+      "recording": 65,
+      "start_seconds": 1506,
+      "end_seconds": 1682,
+      "topic": "Complete pairedPython barrier demonstration, corrected approximation and computationalcost interpretation"
+    },
+    {
+      "section": "exercises",
+      "recording": 61,
+      "start_seconds": 459,
+      "end_seconds": 732,
+      "topic": "Min/max sign conversion and emissions illustration, with explicit original abatement model and ambiguous-cost limitation"
+    },
+    {
+      "section": "sara-workshop",
+      "recording": 63,
+      "start_seconds": 15,
+      "end_seconds": 600,
+      "topic": "Complete Sara13percent no-short workshop: actual displayed covariance recovered, equality baseline, activeface guess, all KKT multipliers and objective sensitivity"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch20_constrained_portfolios.py",
+      "check": "Both source portfolio KKT witnesses, exact scalar longonly reduction, feasible Newton centralpath, numerical dualbounds and all tutorial cases"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch19_mean_variance.py",
+    "figures/ch20_active_constraints.py",
+    "assets/ch20-active-constraints.svg",
+    "assets/ch20-active-constraints-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
+      "code_sha256": {
+        "code/ch20_constrained_portfolios.py": "31b5892d8673230a931964dc09e6aed6c211135e54a5260eb5836c12f5c2e46d"
+      },
+      "artifact_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f",
+        "figures/ch20_active_constraints.py": "e714c298089823ecc4e31b4deb036d8604435debd6470e4223df43100d80179f",
+        "assets/ch20-active-constraints.svg": "d113c245ef4529faa6e57b44c713b2c64e0ba720cf01a0805b47da8cb87657d6",
+        "assets/ch20-active-constraints-portrait.svg": "cfb71d5c3ffb94b097fb39ecafeca2827e51abacfdf978b5b590cf5c2069742e"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "664c8d206392390a0b7e77545174572225ee18be49498823b7a54ea68c42ee6d"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
+      "code_sha256": {
+        "code/ch20_constrained_portfolios.py": "31b5892d8673230a931964dc09e6aed6c211135e54a5260eb5836c12f5c2e46d"
+      },
+      "artifact_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f",
+        "figures/ch20_active_constraints.py": "e714c298089823ecc4e31b4deb036d8604435debd6470e4223df43100d80179f",
+        "assets/ch20-active-constraints.svg": "d113c245ef4529faa6e57b44c713b2c64e0ba720cf01a0805b47da8cb87657d6",
+        "assets/ch20-active-constraints-portrait.svg": "cfb71d5c3ffb94b097fb39ecafeca2827e51abacfdf978b5b590cf5c2069742e"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "f0f5c3945577e82916ee2bfcf28adae418d9b65c1c104e25330ec907d8234f9f"
+    }
+  ],
+  "limitations": [
+    "Specialized fixed-threeasset QP and known nullspace, not a general solver",
+    "Strictly feasible domain required for barrier continuation",
+    "R/Python quadprog interfaces documented; package runtimes not executed",
+    "Floating residuals and gap estimates are not formal interval certificates"
+  ],
+  "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
+  "full_scientific_review_rounds": 2
+}

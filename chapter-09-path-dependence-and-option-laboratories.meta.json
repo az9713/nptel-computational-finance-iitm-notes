@@ -1,0 +1,143 @@
+{
+  "chapter": 9,
+  "title": "Path dependence and option laboratories",
+  "file": "chapter-09-path-dependence-and-option-laboratories.html",
+  "source_recordings": [
+    25,
+    27,
+    28
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "path-information",
+    "augmented-state",
+    "vectorized-lab",
+    "multi-leg-workshop",
+    "reusable-laboratory",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "path-information",
+      "recording": 25,
+      "start_seconds": 60,
+      "end_seconds": 315,
+      "topic": "Asian average, barrier activation/knockout, lookback extrema and same endpoint/different path; fully specified original contracts and four-path table"
+    },
+    {
+      "section": "augmented-state",
+      "recording": 25,
+      "start_seconds": 202,
+      "end_seconds": 602,
+      "topic": "Failure of stock-only recombination, full-path Monte Carlo preview, weekly synthesis; augmented-state exact lattice correction, pathQdiscount, monitoring conventions and complement proof"
+    },
+    {
+      "section": "vectorized-lab",
+      "recording": 27,
+      "start_seconds": 15,
+      "end_seconds": 507,
+      "topic": "R runtime context, grid/pmax/payoff graphs, strategy arrays and writer mirror"
+    },
+    {
+      "section": "vectorized-lab",
+      "recording": 28,
+      "start_seconds": 15,
+      "end_seconds": 784,
+      "topic": "Python notebook/NumPy grid/maximum, plotted call/put/straddle/protection/covered and short mirror; endpoints/shapes and economic zero-sum boundaries added"
+    },
+    {
+      "section": "multi-leg-workshop",
+      "recording": 27,
+      "start_seconds": 507,
+      "end_seconds": 708,
+      "topic": "Multi-leg strategy homework, straddle premiums/profit thresholds and probability question; full strangle/spread/butterfly solutions and physical/Q distinctions"
+    },
+    {
+      "section": "multi-leg-workshop",
+      "recording": 28,
+      "start_seconds": 752,
+      "end_seconds": 937,
+      "topic": "Homework strategies and long-straddle paid premiums/profitable-region probabilities, corrected moneyness terminology"
+    },
+    {
+      "section": "reusable-laboratory",
+      "recording": 27,
+      "start_seconds": 708,
+      "end_seconds": 1696,
+      "topic": "R bond loop/vector, callbacks/grid, binomial weights/one-period/recursive/rolling engines, leaf counter and European/American comparison; conventions/index/state qualifications"
+    },
+    {
+      "section": "reusable-laboratory",
+      "recording": 28,
+      "start_seconds": 937,
+      "end_seconds": 1827,
+      "topic": "Python annual bond date/rate examples, callbacks, generic sum, spot sensitivity, recursive leaf count, iterative/exercise engine and runtime claims; fixed reproducible fixtures"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch09_paths_and_option_labs.py",
+      "check": "Exact history pricing versus augmented rational Asian state, barrier complement, vector strategies, paired lab bond/tree fixtures and physical versus pricing profit probability"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch09_paths_and_spreads.py",
+    "assets/ch09-paths-and-spreads.svg",
+    "assets/ch09-paths-and-spreads-portrait.svg",
+    "code/ch08_binomial_valuation.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
+      "code_sha256": {
+        "code/ch09_paths_and_option_labs.py": "6782436f67d3d9c8bc84105684a9ff2e759e3bf174429401484a215415d83b9e"
+      },
+      "artifact_sha256": {
+        "figures/ch09_paths_and_spreads.py": "4c4b296f1765a438c45237518ec6d3e848e86a36af3f688984b656b31bdaa890",
+        "assets/ch09-paths-and-spreads.svg": "b7fab1b991249bf408515127b4eb1561c4e33a111571e4c2b977ddb0c449235f",
+        "assets/ch09-paths-and-spreads-portrait.svg": "98a674a912d7b105f3e0e21a8e96d138a6224e56da7fc424abd6fd2c140d8e03",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "08de97e24bd4b6b5e7162125cf97870ef476d76d2b52dc7af2ad1b92db63c0f6"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
+      "code_sha256": {
+        "code/ch09_paths_and_option_labs.py": "6782436f67d3d9c8bc84105684a9ff2e759e3bf174429401484a215415d83b9e"
+      },
+      "artifact_sha256": {
+        "figures/ch09_paths_and_spreads.py": "4c4b296f1765a438c45237518ec6d3e848e86a36af3f688984b656b31bdaa890",
+        "assets/ch09-paths-and-spreads.svg": "b7fab1b991249bf408515127b4eb1561c4e33a111571e4c2b977ddb0c449235f",
+        "assets/ch09-paths-and-spreads-portrait.svg": "98a674a912d7b105f3e0e21a8e96d138a6224e56da7fc424abd6fd2c140d8e03",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "5462d460e3d660ea9a7e87490b78309ed5787c461b7e0b5598e1825342f6b3e3"
+    }
+  ],
+  "limitations": [
+    "Explicitly discrete monitoring and averaging including time zero",
+    "Exhaustive enumeration capped at12steps; exact rational Asian state not claimed quadratic",
+    "R semantics and examples documented; only Python executed",
+    "Moderate synthetic fixtures; no market data or universal numerical-range claims",
+    "Public Chapter8 companion required as local dependency"
+  ],
+  "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
+  "full_scientific_review_rounds": 2
+}

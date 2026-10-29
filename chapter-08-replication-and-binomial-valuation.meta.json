@@ -1,0 +1,156 @@
+{
+  "chapter": 8,
+  "title": "Replication and binomial valuation",
+  "file": "chapter-08-replication-and-binomial-valuation.html",
+  "source_recordings": [
+    23,
+    24,
+    26
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "two-state-market",
+    "replication",
+    "pricing-probabilities",
+    "lattice-state",
+    "crr-scaling",
+    "implementation",
+    "early-exercise",
+    "worked-workshop",
+    "limits",
+    "exercises",
+    "primary-sources"
+  ],
+  "coverage": [
+    {
+      "section": "two-state-market",
+      "recording": 23,
+      "start_seconds": 217,
+      "end_seconds": 560,
+      "topic": "Two-state model and strict no-arbitrage; equality cases and sufficiency proof added"
+    },
+    {
+      "section": "replication",
+      "recording": 23,
+      "start_seconds": 531,
+      "end_seconds": 1201,
+      "topic": "Lecture call100u1.2d.9K110G1.1, hedge equations, arbitrage pricing and put comparison; exact bank decimals and spanning/completeness qualification"
+    },
+    {
+      "section": "pricing-probabilities",
+      "recording": 23,
+      "start_seconds": 1201,
+      "end_seconds": 1880,
+      "topic": "Risk-neutral weights, discounted expectation and generic callback; derive equivalence to replication and distinguish physical probability and expected return"
+    },
+    {
+      "section": "lattice-state",
+      "recording": 24,
+      "start_seconds": 96,
+      "end_seconds": 844,
+      "topic": "Equal periods, recombination, terminal states and backward induction; self-financing hedge induction and terminal binomial counting proof added"
+    },
+    {
+      "section": "crr-scaling",
+      "recording": 24,
+      "start_seconds": 232,
+      "end_seconds": 731,
+      "topic": "Volatility/time-scaled CRR factors and three-step illustration; explicit reconstructed parameters, no-arbitrage step restriction and unrounded values"
+    },
+    {
+      "section": "implementation",
+      "recording": 24,
+      "start_seconds": 844,
+      "end_seconds": 1277,
+      "topic": "Naive recursive and iterative pricing; integer-state memoization, exact counts, rolling invariant, ascending overwrite order and interface/range boundaries"
+    },
+    {
+      "section": "early-exercise",
+      "recording": 24,
+      "start_seconds": 1277,
+      "end_seconds": 1474,
+      "topic": "European versus grid-American rollback, continuation/exercise comparison; finite stopping induction, call nonnegative-rate proof and negative-rate counterexample"
+    },
+    {
+      "section": "worked-workshop",
+      "recording": 26,
+      "start_seconds": 44,
+      "end_seconds": 1010,
+      "topic": "Different-strike holder/writer payoffs, protective/covered examples and discount-factor parity exercise"
+    },
+    {
+      "section": "worked-workshop",
+      "recording": 26,
+      "start_seconds": 1010,
+      "end_seconds": 1362,
+      "topic": "Copper company one-step hedge versus risk-neutral price"
+    },
+    {
+      "section": "worked-workshop",
+      "recording": 26,
+      "start_seconds": 1362,
+      "end_seconds": 2014,
+      "topic": "Two-step European call by rollback/terminal sum and American put node decisions versus European put"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch08_binomial_valuation.py",
+      "check": "One-step hedge, pricing weights, recursion versus rollback versus binomial sums, CRR scaling, workshop and early-exercise boundaries"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch08_two_step_tree.py",
+    "assets/ch08-two-step-tree.svg",
+    "assets/ch08-two-step-tree-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
+      "code_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "artifact_sha256": {
+        "figures/ch08_two_step_tree.py": "a01e508c816870cdc5ed89d9be5fb9448b5217575ec08e2873ada939ff400909",
+        "assets/ch08-two-step-tree.svg": "f8d55018b9b4a73c239e4b39fbbfcc43b67f371f352f2a75442004d97577104b",
+        "assets/ch08-two-step-tree-portrait.svg": "d0b2936c0312c0c09dba67362f8e36bcab330335360347aa18d920cebec8f17d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "4cf7d1ce89bf32913b168e7c900b6cb200879615d6d4569815cd0dda2b96765b"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
+      "code_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "artifact_sha256": {
+        "figures/ch08_two_step_tree.py": "a01e508c816870cdc5ed89d9be5fb9448b5217575ec08e2873ada939ff400909",
+        "assets/ch08-two-step-tree.svg": "f8d55018b9b4a73c239e4b39fbbfcc43b67f371f352f2a75442004d97577104b",
+        "assets/ch08-two-step-tree-portrait.svg": "d0b2936c0312c0c09dba67362f8e36bcab330335360347aa18d920cebec8f17d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "a125ba7777b5c73bc9844064bd68e0c442257439a4cf9cad9e4a98d86abf0c43"
+    }
+  ],
+  "limitations": [
+    "Frictionless no-dividend finite-state model; both branches possible",
+    "Grid exercise approximates continuously exercisable American claims",
+    "Moderate teaching trees, not a global numerical-range or production pricing library",
+    "Local machine transcripts; no full audiovisual verification"
+  ],
+  "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
+  "full_scientific_review_rounds": 2
+}

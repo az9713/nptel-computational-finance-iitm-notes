@@ -1,0 +1,3 @@
+# Tested numerical and figure-generation environment; reader needs no packages.
+numpy==2.2.6
+matplotlib==3.9.3

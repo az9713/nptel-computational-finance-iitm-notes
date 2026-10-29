@@ -1,0 +1,10 @@
+work/
+README.txt
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+node_modules/
+playwright-report/
+test-results/

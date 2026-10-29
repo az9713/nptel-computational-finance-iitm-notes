@@ -1,0 +1,256 @@
+{
+  "chapter": 14,
+  "title": "Portfolio objectives and expected utility",
+  "file": "chapter-14-portfolio-objectives-and-expected-utility.html",
+  "source_recordings": [
+    39,
+    41,
+    43
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "wealth-and-utility",
+    "risk-and-certainty",
+    "crra",
+    "utility-workshop",
+    "allocation-condition",
+    "continuous-returns",
+    "petersburg",
+    "risk-sharing",
+    "insurance-and-information",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "wealth-and-utility",
+      "recording": 39,
+      "start_seconds": 16,
+      "end_seconds": 244,
+      "topic": "Portfolio objective and correct gross-return terminal wealth"
+    },
+    {
+      "section": "wealth-and-utility",
+      "recording": 41,
+      "start_seconds": 426,
+      "end_seconds": 999,
+      "topic": "5/15 versus10 lottery, finite expected utility and linear/convex/log choices"
+    },
+    {
+      "section": "risk-and-certainty",
+      "recording": 39,
+      "start_seconds": 244,
+      "end_seconds": 572,
+      "topic": "Fair-gamble preferences and willingness-to-pay motivation distinguished from certainty equivalent"
+    },
+    {
+      "section": "risk-and-certainty",
+      "recording": 39,
+      "start_seconds": 781,
+      "end_seconds": 918,
+      "topic": "Expectedutility versusutilityofexpectedwealth and risk aversion"
+    },
+    {
+      "section": "risk-and-certainty",
+      "recording": 41,
+      "start_seconds": 999,
+      "end_seconds": 1125,
+      "topic": "Concave/log/exponential utility and risk attitude; finite Jensen proof, CE and utility-domain conditions"
+    },
+    {
+      "section": "crra",
+      "recording": 39,
+      "start_seconds": 918,
+      "end_seconds": 1035,
+      "topic": "CRRA family, corrected normalized gamma1limit, local risk aversion and scale-invariant fractions"
+    },
+    {
+      "section": "crra",
+      "recording": 41,
+      "start_seconds": 999,
+      "end_seconds": 1125,
+      "topic": "Concave utility examples and proper curvature comparison; local meanvariance expansion"
+    },
+    {
+      "section": "utility-workshop",
+      "recording": 43,
+      "start_seconds": 37,
+      "end_seconds": 306,
+      "topic": "W500alpha.4rf.045 grosswealth and three realized returns"
+    },
+    {
+      "section": "utility-workshop",
+      "recording": 43,
+      "start_seconds": 363,
+      "end_seconds": 750,
+      "topic": "Gamma3 canonicalutility, probabilityweighted expectation, expectedwealth526, exactCE/riskpremium and scale corrections"
+    },
+    {
+      "section": "allocation-condition",
+      "recording": 39,
+      "start_seconds": 1619,
+      "end_seconds": 1818,
+      "topic": "Grid allocation and higher-dimensional extension; original finite objective, strict-concavity certificate, endpoint/unique-root conditions and marginalutility pricing bridge"
+    },
+    {
+      "section": "continuous-returns",
+      "recording": 39,
+      "start_seconds": 1035,
+      "end_seconds": 1619,
+      "topic": "Continuous expectedutility, loggross-normal model and parameters; corrected gross/simple support, moment and nonuniversal normality/CLT claims"
+    },
+    {
+      "section": "continuous-returns",
+      "recording": 39,
+      "start_seconds": 1818,
+      "end_seconds": 1934,
+      "topic": "Parameter uncertainty and integration dimension/algorithm qualifications"
+    },
+    {
+      "section": "continuous-returns",
+      "recording": 43,
+      "start_seconds": 306,
+      "end_seconds": 363,
+      "topic": "Loggrossmu.09sigma.22 mean correction"
+    },
+    {
+      "section": "continuous-returns",
+      "recording": 43,
+      "start_seconds": 750,
+      "end_seconds": 883,
+      "topic": "Full continuous-integrand point with corrected coordinate-specific density and Jacobian"
+    },
+    {
+      "section": "petersburg",
+      "recording": 39,
+      "start_seconds": 572,
+      "end_seconds": 781,
+      "topic": "StPetersburg expectedmoney divergence and utility motivation"
+    },
+    {
+      "section": "petersburg",
+      "recording": 41,
+      "start_seconds": 113,
+      "end_seconds": 426,
+      "topic": "Complete firstheads payout/probability derivation, unlimited expectation and distinction from willingness to pay; explicit truncation/budget elaboration"
+    },
+    {
+      "section": "risk-sharing",
+      "recording": 41,
+      "start_seconds": 1125,
+      "end_seconds": 1585,
+      "topic": "Full versus1percent favorablegamble, certainty equivalent, share sale/proceeds and risksharing; explicit declaredCARAparameter and aggregate-risk qualifications"
+    },
+    {
+      "section": "insurance-and-information",
+      "recording": 41,
+      "start_seconds": 1585,
+      "end_seconds": 1687,
+      "topic": "Insurance loss200000 probability.001, corrected.999 complementaryprobability; declaredCARA reservationpremium and pooling conditions"
+    },
+    {
+      "section": "insurance-and-information",
+      "recording": 41,
+      "start_seconds": 1687,
+      "end_seconds": 1962,
+      "topic": "Belief/control constraints, adverse selection and moral hazard with explicit original finite participation/incentive mechanisms"
+    },
+    {
+      "section": "limits",
+      "recording": 39,
+      "start_seconds": 1678,
+      "end_seconds": 1934,
+      "topic": "Multiple correlated risky assets, optimization/state dimensional cost, parameteruncertainty and numericalmethod boundaries"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch14_expected_utility.py",
+      "check": "Finite utility/CE, full source workshop, certified-by-concavity scalar allocation, lognormal density coordinates, ticket fee, CARA sharing/insurance and failures"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch14_choice_and_sharing.py",
+    "assets/ch14-choice-and-sharing.svg",
+    "assets/ch14-choice-and-sharing-portrait.svg",
+    "code/ch08_binomial_valuation.py",
+    "code/ch10_inverse_pricing.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "86fc7d7adbd5383d85f4278328fd20dfb0b5836cbaf401cd3d6a909c4882a98f",
+      "code_sha256": {
+        "code/ch14_expected_utility.py": "ee7ed93e3c52710dbf303fafb0dbf718b4b2374b78de8b0c12eb9eab8e75a3c4"
+      },
+      "artifact_sha256": {
+        "figures/ch14_choice_and_sharing.py": "303a59834a17504cdb57dcfcb80fe1268e76a91c9211f64add27a5272292474a",
+        "assets/ch14-choice-and-sharing.svg": "712542fdd733c001bccdcda1267dfc9ecb53fd40357f681b0858613e9477b1fa",
+        "assets/ch14-choice-and-sharing-portrait.svg": "ddf480ee092af79cedb938712b5c26dce1272e5eb65020cd3a405ca818180b24",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "45839c8a827dfa3d8d4431858be312bbb382554b0a2e2c1876018769c7d32f3d"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
+      "code_sha256": {
+        "code/ch14_expected_utility.py": "ee7ed93e3c52710dbf303fafb0dbf718b4b2374b78de8b0c12eb9eab8e75a3c4"
+      },
+      "artifact_sha256": {
+        "figures/ch14_choice_and_sharing.py": "303a59834a17504cdb57dcfcb80fe1268e76a91c9211f64add27a5272292474a",
+        "assets/ch14-choice-and-sharing.svg": "712542fdd733c001bccdcda1267dfc9ecb53fd40357f681b0858613e9477b1fa",
+        "assets/ch14-choice-and-sharing-portrait.svg": "ddf480ee092af79cedb938712b5c26dce1272e5eb65020cd3a405ca818180b24",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "9d12fec8e906bd4ea1c86e4084e8998deefab63ab4fb9b13bc38f642bcf5c195"
+    },
+    {
+      "round": 3,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Targeted near-logarithmic CE-helper repair closure after full round2",
+      "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
+      "code_sha256": {
+        "code/ch14_expected_utility.py": "d7ad4c54483a2982ec68492ef2265c9dc90283cb70b5be77075ec69792170d0b"
+      },
+      "artifact_sha256": {
+        "figures/ch14_choice_and_sharing.py": "303a59834a17504cdb57dcfcb80fe1268e76a91c9211f64add27a5272292474a",
+        "assets/ch14-choice-and-sharing.svg": "712542fdd733c001bccdcda1267dfc9ecb53fd40357f681b0858613e9477b1fa",
+        "assets/ch14-choice-and-sharing-portrait.svg": "ddf480ee092af79cedb938712b5c26dce1272e5eb65020cd3a405ca818180b24",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "d791ced37cfe6e109cab7c79c61c6f9e490d1502d5d038fc26977a5769099acb"
+    }
+  ],
+  "limitations": [
+    "Declared probabilities and preferences, not empirical or personal calibration",
+    "Continuous utility integration developed separately; density-point arithmetic is coordinate specific",
+    "Moderate finite CRRA fixtures; not unrestricted extreme-parameter implementation",
+    "CARA sharing/insurance and information/incentive constructions use explicit simplified assumptions",
+    "Recording43 quadrature and supplied-price derivative spans also covered in chapter15",
+    "Near-logarithmic CE moment branch independently checked; extreme-value CRRA range remains outside teaching fixtures."
+  ],
+  "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
+  "full_scientific_review_rounds": 2
+}

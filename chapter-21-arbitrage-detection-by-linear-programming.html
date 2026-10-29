@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light"><title>Arbitrage detection by linear programming · Computational Finance 1</title>
+<link rel="stylesheet" href="assets/book.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="assets/mathjax-tex-svg.js"></script><script defer src="assets/book.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html">Computational Finance 1</a>
+<nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="code-lab.html">Code lab</a></nav></header>
+<div class="layout"><aside id="chapter-toc" class="toc" aria-label="On this page"></aside><main id="main">
+<div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
+<article id="chapter-content"><!-- BEGIN CHAPTER -->
+<h1>21. Arbitrage detection by linear programming</h1>
+<p class="lead">A call option is offered for six currency units. Its payoff can be reproduced by a bond-and-stock position costing $50/7$, so the call appears too cheap. Buying the call and selling its replica produces an initial receipt of $8/7$, with exactly zero net payoff in either modeled future state. We will express that trade as a linear program, recover its cashflows, and derive a positive-state-price certificate for the correctly priced market.</p>
+<p class="source-note">Source spine: the complete arbitrage lecture <a href="https://www.youtube.com/watch?v=PkYVRUjlXuw">58</a>, Amrit's worked problem in <a href="https://www.youtube.com/watch?v=jNhSse03YCc&amp;t=600s">63</a>, and the arbitrage portions of paired labs <a href="https://www.youtube.com/watch?v=mQrVU7B1J_s&amp;t=1339s">64</a> and <a href="https://www.youtube.com/watch?v=mTDzJe6eWhc&amp;t=1288s">65</a>. Recording 63's earlier Sara portfolio case is in Chapter 20. The complete two-phase detector, zero-cost counterexample, finite-state theorem proof, incomplete-market example, and public NumPy implementation are independent elaborations.</p>
+<h2 id="cashflow-model">21.1 Write holdings and cashflows in their proper units <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=16s">Recording 58, 0:16</a></h2>
+<p>There are $N$ traded assets and $M$ possible terminal states. Every listed state is economically possible; if physical probabilities are supplied, each state has positive probability. Let $p\in\mathbb R^N$ be today's price vector and let $A\in\mathbb R^{M\times N}$ be the matrix of terminal payoffs. A row of $A$ describes one state, and a column describes one asset. Prices and payoffs are quoted in a common currency, with each asset's number of units specified.</p>
+<p>A holdings vector $x\in\mathbb R^N$ contains quantities of the assets, such as bond units, shares, and option contracts. Its initial cost is $p^Tx$ and its terminal-payoff vector is $Ax$. These are holdings, not the initial-wealth fractions used in the preceding portfolio chapters: there is no requirement that their entries sum to one. A negative holding is a short position. The model assumes divisible holdings, unrestricted long/short trading at the same stated prices, no transaction costs, and no intervening cashflows.</p>
+<p>The lecture's one-period market has a bond priced at one that pays 1.05 in both states, a stock priced at 100 that pays 110 or 90, and a call with strike 100 that pays 10 or zero. In up/down state order and bond/stock/call asset order,</p>
+\[
+ A=\begin{pmatrix}1.05&110&10\\1.05&90&0\end{pmatrix},
+ \qquad p=(1,100,c)^T, \tag{21.1}
+\]
+<p>where $c$ is the quoted call price. Each call is for the single stock unit represented in this matrix; changing the contract multiplier would change both its payoff column and the holdings interpretation.</p>
+<p>An arbitrage is a holdings vector satisfying</p>
+\[
+ p^Tx\leq0,\qquad Ax\geq0,\qquad (-p^Tx,Ax)\ne0. \tag{21.2}
+\]
+<p>Vector inequalities apply componentwise. The final condition requires at least one strictly positive cashflow coordinate: either an initial receipt $-p^Tx&gt;0$, or a positive terminal payoff in at least one state. A strategy may earn zero in some states and still be an arbitrage. Requiring a strictly positive payoff in every state would miss valid examples; allowing every cashflow to be zero would incorrectly count the zero portfolio.</p>
+<p>Condition (21.2) is state by state. A zero-cost gamble with positive expected payoff can still lose in a possible state and is not an arbitrage by this definition. No physical probabilities are needed to check the inequalities. Probabilities enter later when we interpret a consistent pricing system, not when we replace a loss in one state by an average gain elsewhere.</p>
+<h2 id="bounded-lp">21.2 Bound a homogeneous search without changing whether arbitrage exists <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=423s">Recording 58, 7:03</a></h2>
+<p>A linear program, or LP, optimizes a linear objective subject to affine equalities and inequalities. The lecture proposes the cost-minimization problem</p>
+\[
+ v_1=\min_x p^Tx\quad\text{subject to}\quad
+ Ax\geq0,\qquad -1\leq x_i\leq1\quad(i=1,\ldots,N). \tag{21.3}
+\]
+<p>The feasible set contains zero and is closed and bounded, so the continuous objective attains a minimum and $v_1\leq0$. If $v_1&lt;0$, its minimizer is an arbitrage: assembling it receives money initially, while every future state has a nonnegative payoff. This is a sufficient detection result with a concrete holdings witness.</p>
+<p>The box bounds normalize position size. In this mathematical market, any finite arbitrage can be multiplied by a sufficiently small positive number so that every holding lies between minus one and one. The signs of all cashflows, including at least one strict gain, survive that scaling. Any positive finite bound for each asset would have the same existence property. The numerical optimum would change with the chosen normalization; it is not an intrinsic unlimited profit amount or a realistic collateral limit.</p>
+<p>Without the box, a negative-cost arbitrage makes cost minimization unbounded below: multiplying it by $\alpha\to\infty$ sends $p^T(\alpha x)$ to negative infinity while preserving nonnegative future payoffs. This statement specifically concerns negative initial cost. A zero-cost arbitrage with positive future payoffs does not by itself make the initial-cost objective negative or unbounded.</p>
+<p>Unlike a variance objective, the LP has no quadratic curvature to select a unique solution. Several holdings vectors can share the best value. A bounded nonempty polytope nevertheless has an optimal extreme point, also called a vertex, at which enough independent constraints bind to isolate the point. A small teaching implementation can enumerate candidate active bases and compare their feasible objective values. Large LP solvers use more effective algorithms; vertex enumeration is not the definition of linear programming.</p>
+<h2 id="complete-detection">21.3 Repair the zero-cost blind spot <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=483s">Recording 58, 8:03</a></h2>
+<p>The converse “$v_1=0$ implies no arbitrage” needs care. Consider two state claims with payoff matrix $A=I_2$ and price vector $p=(1,0)^T$. Nonnegative future payoffs require $x_1,x_2\geq0$, so the minimum initial cost is zero. Yet $x=(0,1)^T$ is a free claim paying $(0,1)^T$. It is an arbitrage under (21.2). The initial-cost objective cannot distinguish this trade from doing nothing.</p>
+<p>Add a second bounded LP that searches for a positive future payoff while ruling out an initial payment:</p>
+\[
+ v_2=\max_x \mathbf1_M^TAx\quad\text{subject to}\quad
+ Ax\geq0,\quad p^Tx\leq0,\quad -1\leq x_i\leq1. \tag{21.4}
+\]
+<p>Here $\mathbf1_M$ is the vector of $M$ ones. Its objective is the sum of terminal payoffs across the modeled states, used only to detect whether a nonnegative payoff vector is nonzero. It is not an expectation: no state probabilities are supplied by the sum. The feasible set again contains zero, so $v_2\geq0$.</p>
+<p>In exact arithmetic with exact optimization, arbitrage exists if and only if $v_1&lt;0$ or $v_2&gt;0$. One direction follows immediately from either LP's constraints. For the converse, scale any arbitrage into the box. If its initial cost is negative, it makes $v_1&lt;0$. If its initial cost is zero, at least one future payoff must be positive, so its nonnegative payoff sum makes $v_2&gt;0$. These exhaust definition (21.2).</p>
+<p>For the state-claim counterexample, the second optimum is one, attained by $(0,1)^T$, while the first optimum is zero. Thus both phases are useful even in a tiny market. In the source's correctly priced bond/stock/call case, zero numerical LP values will be accompanied below by a separate strictly positive state-price certificate. That certificate supplies the mathematical no-arbitrage conclusion that a rounded zero output alone cannot establish.</p>
+<p>Floating implementations need tolerances for feasibility and strict gains. A cost near $-10^{-16}$ from a solve with roundoff is not automatically a trade earning that amount. The public code reports raw costs and state payoffs and says “none detected at tolerance” when its numerical search finds no qualifying candidate. The exact algebraic certificates for the source examples are established separately in the text.</p>
+<h2 id="replication-trade">21.4 Recover the LP trade by reversing a replica <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=535s">Recording 58, 8:55</a> <a class="timestamp" href="https://www.youtube.com/watch?v=mQrVU7B1J_s&amp;t=1430s">Recording 64, 23:50</a></h2>
+<p>First price the call by replication. Let $b$ be bond units and $h$ stock shares in a portfolio with the call's terminal payoff. The two equations are $1.05b+110h=10$ and $1.05b+90h=0$. Subtracting gives $20h=10$, so $h=1/2$ and $b=-300/7$. Its initial cost is $b+100h=50/7$. If the call traded at a different price, the call and its identical-payoff replica would have inconsistent prices.</p>
+<p>When the quoted call price is six, buy one call and take the negative of the replica. The holdings are</p>
+\[
+ x_{\rm cheap}=(300/7,\,-1/2,\,1)^T.
+\]
+<p>The resulting cashflow table is exact. A positive initial cashflow is a receipt, so it equals the negative of the initial cost.</p>
+<table><thead><tr><th>Position</th><th>Initial cashflow</th><th>Up-state payoff</th><th>Down-state payoff</th></tr></thead><tbody>
+<tr><td>$300/7$ bond units</td><td>$-300/7$</td><td>45</td><td>45</td></tr>
+<tr><td>Short $1/2$ stock share</td><td>50</td><td>−55</td><td>−45</td></tr>
+<tr><td>One call</td><td>−6</td><td>10</td><td>0</td></tr>
+<tr><td>Total</td><td>$8/7$</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p>The initial receipt is $50/7-6=8/7$, with no terminal obligation in either state. The two future payoffs cancel because the replica was built to match them, not because of a particular probability forecast.</p>
+<p>This trade lies outside the unit box because its bond holding exceeds one. Multiplying it by $7/300$ gives</p>
+\[
+ \widehat x=(1,\,-7/600,\,7/300)^T,\qquad
+ p^T\widehat x=-2/75=-0.026666666667,\qquad A\widehat x=0.
+\]
+<p>The executed first LP returns this normalized optimum at the source's cheap price. Scaling it back to one call gives the preceding table. The small normalized receipt and the larger one-call receipt are the same direction in different sizes; confusing their units explains neither a new strategy nor a different profit opportunity.</p>
+<p>If instead the call price were eight—an additional teaching case—sell the call and buy the replica. The holdings are $-x_{\rm cheap}$, its future payoff is still zero, and its initial cost is $50/7-8=-6/7$. The direction of the arbitrage changes when the call crosses its replication price.</p>
+<p>Figure 21.1 varies the quoted call price while keeping the payoff matrix fixed. The reported receipt is the optimum under the declared position box. Those bounds matter to its magnitude; they are not exchange trading limits or a claim of scalable liquidity.</p>
+<figure><picture><source media="(max-width: 650px)" srcset="assets/ch21-prices-and-state-prices-portrait.svg"><img src="assets/ch21-prices-and-state-prices.svg" alt="Computed bounded initial receipts vanish at the replication price; bond and stock state-price equations intersect at a pair inconsistent with a call quoted at six."></picture><figcaption>Figure 21.1. Original computations. Left: 42 call-price inputs, including the exact replication price, with unit bounds on each holding. Right: the bond and stock determine a unique state-price pair; the additional requirement from a call price of six misses that intersection. The state-price interpretation is derived next.</figcaption></figure>
+<h2 id="state-prices">21.5 Price every traded payoff with a strictly positive state-price vector <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=1323s">Recording 58, 22:03</a></h2>
+<p>A state price $s_i$ assigns today's value to one currency unit paid only in terminal state $i$. Such a state claim need not itself be traded; the vector can describe a consistent extension of prices to state-contingent payoffs. A state-price vector $s\in\mathbb R^M$ prices the traded assets consistently when</p>
+\[
+ A^Ts=p. \tag{21.5}
+\]
+<p>Strict positivity means $s_i&gt;0$ for every economically possible state. It immediately supplies a no-arbitrage certificate. For any holdings $x$, consistency gives $p^Tx=s^TAx$. If $Ax\geq0$ and is nonzero, its positive state-price weighted sum is strictly positive, contradicting the nonpositive-cost requirement of an arbitrage. If $Ax=0$, consistency instead forces cost zero, ruling out a negative-cost zero-payoff trade. Thus (21.2) is impossible.</p>
+<p>The same reasoning implies the law of one price: two attainable identical payoff vectors must have identical prices. Otherwise buy the cheaper portfolio and sell the dearer, receiving money initially and cancelling every future payoff. The law of one price alone is weaker than no arbitrage. In the free-state-claim counterexample, each payoff has a well-defined linear price, yet a nonzero nonnegative payoff has price zero. Strictly positive state prices rule out that possibility; merely nonnegative ones do not.</p>
+<p>For the correctly priced lecture market, the bond and stock impose</p>
+\[
+ 1.05(s_u+s_d)=1,\qquad 110s_u+90s_d=100.
+\]
+<p>Solving gives $s_u=5/7$ and $s_d=5/21$, both strictly positive. The call's consistent price is then $10s_u+0s_d=50/7$. At a quote of six, its payoff column would require $s_u=0.6$, contradicting the pair already fixed by bond and stock. This is the dual pricing explanation of the explicit arbitrage trade.</p>
+<p>A state-price vector is not generally a probability vector. Suppose a bond costs $B_0&gt;0$ and pays the same amount $B_1&gt;0$ in every terminal state. Its pricing equation gives $\sum_i s_i=B_0/B_1=:D$, where $D$ is the one-period discount factor. Define the risk-neutral probabilities $Q_i=s_i/D$. They are positive and sum to one, and (21.5) becomes</p>
+\[
+ p_j=D\sum_{i=1}^M Q_iA_{ij}=D\,E_Q[A_{\cdot j}]. \tag{21.6}
+\]
+<p>In the lecture market, $D=20/21$ and $(Q_u,Q_d)=(3/4,1/4)$. The discounted expected stock payoff is therefore $D[(3/4)110+(1/4)90]=100$. This reproduces the risk-neutral pricing calculation of Chapter 8 and explains its relation to a state-price certificate.</p>
+<p>If physical probabilities $\pi_i&gt;0$ are separately specified, a stochastic discount factor is the positive random variable with state values $m_i^{\rm sdf}=s_i/\pi_i$. Then $p_j=E_\pi[m^{\rm sdf}A_{\cdot j}]$. State prices already contain the probability weighting; the discount factor random variable divides that weighting out. The normalized $Q_i$, the physical $\pi_i$, and the state prices $s_i$ are different objects. None of these formulas says that the physical probability of an up move is three quarters.</p>
+<p>The finite one-period statement is given in <a href="https://www.princeton.edu/~markus/teaching/Eco525/01%20OnePeriodModel%20StatePrices%20SDF%20EMM_a.pdf">Brunnermeier's Princeton Eco 525 notes, slides 1-39 through 1-42</a>. <a href="https://www.ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/219406be97b96bc540e0be6aa778c0b7_MIT15_450F10_lec01.pdf">Kogan's MIT 15.450 lecture, printed slides 10–14</a>, distinguishes a state-price density from unweighted state prices and connects positivity to no arbitrage. We have proved the certificate direction directly; the finite converse is next.</p>
+<h2 id="finite-theorem">21.6 Prove the finite-state converse by a closest-point argument</h2>
+<p>The finite fundamental theorem of asset pricing says that, for this unrestricted one-period market, no arbitrage is equivalent to the existence of $s&gt;0$ satisfying (21.5). We have proved that such prices exclude arbitrage. To prove their existence from no arbitrage, collect all initial receipts and terminal payoffs into one linear map:</p>
+\[
+ K=\begin{pmatrix}-p^T\\A\end{pmatrix}\in\mathbb R^{(M+1)\times N},
+ \qquad \mathcal L=\{Kx:x\in\mathbb R^N\}.
+\]
+<p>The set $\mathcal L$ is the subspace of attainable cashflow vectors. No arbitrage means $\mathcal L\cap\mathbb R_+^{M+1}=\{0\}$, where $\mathbb R_+^{M+1}$ is the nonnegative orthant. In particular, $\mathcal L$ is disjoint from the unit simplex $\mathcal C=\{z:z\geq0,\mathbf1_{M+1}^Tz=1\}$. This simplex is an auxiliary normalization of cashflow directions, not a probability model.</p>
+<p>Let $P_{\mathcal L}$ denote Euclidean orthogonal projection onto $\mathcal L$, obtained by projecting onto an orthonormal basis of that subspace. Every finite-dimensional subspace is closed. The continuous squared-distance function $\|(I-P_{\mathcal L})z\|^2$ therefore attains a minimum on the compact simplex $\mathcal C$. Let its minimizer be $z_0$, let $\ell_0=P_{\mathcal L}z_0$, and define $y=z_0-\ell_0$. The minimum distance is strictly positive: otherwise $z_0$ would belong to both sets. Thus $y\ne0$, and by projection $y$ is orthogonal to $\mathcal L$.</p>
+<p>For any $z\in\mathcal C$, the line segment $z_0+t(z-z_0)$ stays in $\mathcal C$ for $0\leq t\leq1$. Its squared distance cannot decrease to first order at $t=0$, giving</p>
+\[
+ y^T(z-z_0)\geq0.
+\]
+<p>Here the gradient of squared distance is $2(I-P_{\mathcal L})z_0=2y$. Also $y^Tz_0=y^T(\ell_0+y)=\|y\|^2$, since $y\perp\ell_0$. Choose $z$ to be each coordinate unit vector, all of which belong to $\mathcal C$. We obtain</p>
+\[
+ y_i\geq\|y\|^2&gt;0,\qquad i=0,\ldots,M.
+\]
+<p>This constructs a strictly positive linear functional orthogonal to every attainable cashflow. Since every column of $K$ lies in $\mathcal L$, $K^Ty=0$. Splitting $y=(y_0,y_{\rm future})$ into its initial and terminal coordinates gives $-py_0+A^Ty_{\rm future}=0$. Divide by the strictly positive $y_0$ and set $s=y_{\rm future}/y_0$. Then $s&gt;0$ and $A^Ts=p$, exactly the required state-price vector.</p>
+<p>The proof uses only finite-dimensional projection, compactness, and a one-sided derivative along a feasible segment. It explains the geometric alternative: either an attainable nonzero nonnegative cashflow exists, or a strictly positive pricing functional annihilates every attainable net cashflow. It also explains why completeness is not needed for the existence statement. Infinite-state or continuous-trading versions need additional hypotheses and are not established by this finite proof.</p>
+<h2 id="completeness">21.7 Use completeness for uniqueness, not for the existence of pricing</h2>
+<p>A finite market is complete if every terminal payoff vector $g\in\mathbb R^M$ can be replicated: there is an $x$ with $Ax=g$. Equivalently, the columns of $A$ span $\mathbb R^M$, or $\operatorname{rank}(A)=M$. The bond and stock columns in (21.1) already span its two states, because the stock payoffs differ while the bond payoffs are equal. The call is redundant for spanning, though its quote can still introduce an inconsistency.</p>
+<p>Under no arbitrage, completeness is equivalent to uniqueness of the positive state-price vector. If $A$ has full row rank, $A^T$ is injective, so two vectors satisfying $A^Ts=p$ must coincide. Conversely, if the rank is smaller than $M$, choose a nonzero $v_s\in\ker A^T$. Starting from a positive state-price vector $s$, sufficiently small positive $\epsilon$ makes both $s+\epsilon v_s$ and $s-\epsilon v_s$ remain strictly positive. Both price all assets identically and are distinct. Finite state dimension ensures that a single small enough $\epsilon$ protects every component.</p>
+<p>Uniqueness of state prices does not imply uniqueness of the replicating holdings when redundant assets are present. Several portfolios can generate the same payoff; no arbitrage makes their prices agree. Completeness concerns whether every payoff is attainable, while redundancy concerns whether holdings can differ without changing a payoff.</p>
+<p>For an original incomplete-market example, take three states and only a bond and a stock:</p>
+\[
+ A_0=\begin{pmatrix}1&0\\1&1\\1&2\end{pmatrix},\qquad p_0=(1,1)^T.
+\]
+<p>The pricing equations are $s_1+s_2+s_3=1$ and $s_2+2s_3=1$. Thus all strictly positive solutions have the form $s=(a,1-2a,a)^T$ with $0&lt;a&lt;1/2$. Every such vector certifies no arbitrage, even though the two-dimensional payoff span does not cover all three states. The prices alone leave a family of risk-neutral probabilities here; the bond discount is one.</p>
+<p>Now add a claim paying $g=(0,0,1)^T$. It is not replicable by the original two assets: a payoff $\alpha(1,1,1)+\beta(0,1,2)$ that is zero in the first two states must have $\alpha=\beta=0$, and hence cannot pay one in the third. Its consistent price under a state-price vector is $s^Tg=a$. The exact arbitrage-free extension prices form the open interval $(0,1/2)$.</p>
+<p>The strict endpoints matter. At price zero, the claim can be bought for free and pays positively in the third state. At price $1/2$, buy half a stock and sell one claim: initial cost is zero, and the terminal payoff is $(0,1/2,0)^T$, positive only in the middle state. Both are arbitrages that a nonnegative-but-not-strict state-price vector would fail to exclude. For an interior price, the extended market has a strictly positive state-price vector and no arbitrage. Thus an interval of plausible quotes is not automatically closed at its edges.</p>
+<p><a href="https://www.princeton.edu/~markus/teaching/Eco525/01%20OnePeriodModel%20StatePrices%20SDF%20EMM_a.pdf">Brunnermeier's slides 1-42–1-43</a> illustrate multiple state prices in an incomplete payoff space. The rank/null-space proof and three-state claim here make that distinction computationally explicit. No-arbitrage guarantees at least one positive pricing rule; completeness determines whether that rule is unique.</p>
+<h2 id="amrit-workshop">21.8 Reproduce the complete monsoon-state worked problem <a class="timestamp" href="https://www.youtube.com/watch?v=jNhSse03YCc&amp;t=600s">Recording 63, 10:00</a></h2>
+<p>Amrit's example uses a different bond price and a different season-dependent stock. In good/poor monsoon order, its payoff matrix and price vector are</p>
+\[
+ A_{\rm A}=\begin{pmatrix}1&100&20\\1&60&0\end{pmatrix},
+ \qquad p_{\rm A}=(0.92,80,c_{\rm A})^T.
+\]
+<p>The call strike is 80. The bond pays one in either state, so its one-season gross return is $1/0.92$, and its discount factor is 0.92. A season has not been identified with a year; no annualization is implicit.</p>
+<p>Replicating the call with $b_{\rm A}$ bond units and $h_{\rm A}$ shares requires $b_{\rm A}+100h_{\rm A}=20$ and $b_{\rm A}+60h_{\rm A}=0$. Subtraction gives $h_{\rm A}=1/2$, then $b_{\rm A}=-30$. The replica costs $-30(0.92)+(1/2)80=12.4$.</p>
+<p>The state-price route gives the same result independently. The equations $s_{\rm good}+s_{\rm poor}=0.92$ and $100s_{\rm good}+60s_{\rm poor}=80$ yield $(s_{\rm good},s_{\rm poor})=(0.62,0.30)$. Both are positive, and the call price is $20(0.62)=12.4$. Dividing by the discount gives risk-neutral probabilities $(31/46,15/46)$, approximately $(0.673913043478,0.326086956522)$. These probabilities need not be meteorological forecasts.</p>
+<p>At the source's cheap quote $c_{\rm A}=11.5$, buy the call and sell its replica. The resulting holdings are $(30,-1/2,1)$:</p>
+<table><thead><tr><th>Position</th><th>Initial cashflow</th><th>Good-monsoon payoff</th><th>Poor-monsoon payoff</th></tr></thead><tbody>
+<tr><td>30 bond units</td><td>−27.6</td><td>30</td><td>30</td></tr>
+<tr><td>Short $1/2$ share</td><td>40</td><td>−50</td><td>−30</td></tr>
+<tr><td>One call</td><td>−11.5</td><td>20</td><td>0</td></tr>
+<tr><td>Total</td><td>0.9</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p>The initial cost is $-0.9$, equivalently a positive receipt of 0.9. The share position is negative one half, as the two state equations verify. Multiplying the holdings by $1/30$ fits the unit box: $(1,-1/60,1/30)$ has initial cost $-0.03$ and zero terminal payoffs. The executed LP reproduces that normalized cost. At the fair price 12.4, the positive state-price vector instead certifies no arbitrage.</p>
+<p>The worked problem illustrates three complementary checks: replication constructs an explicit trade, the LP searches over admissible holdings, and state prices certify consistency when no trade exists. A solver can return a holdings witness as well as a detection value; it is not restricted to answering only whether an opportunity exists. Each route checks a different part of the calculation, making their agreement more informative than repeating one formula in several cells.</p>
+<h2 id="implementation">21.9 Implement the same LP in three explicit representations <a class="timestamp" href="https://www.youtube.com/watch?v=mQrVU7B1J_s&amp;t=1430s">Recording 64, 23:50</a> <a class="timestamp" href="https://www.youtube.com/watch?v=mTDzJe6eWhc&amp;t=1381s">Recording 65, 23:01</a></h2>
+<p>The <a href="https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf">official R <code>lpSolve</code> manual, pp. 2–3</a>, specifies row constraints and assumes every decision variable is nonnegative. Directly supplying signed holdings would therefore change the admissible trades. Split them as $x=u-v$ with $u,v\geq0$. The unit box can be represented by $u_i+v_i\leq1$. This is equivalent after projection to $|x_i|\leq1$: one direction follows from $|u_i-v_i|\leq u_i+v_i$; the converse chooses $u_i=(x_i)_+$ and $v_i=(-x_i)_+$.</p>
+<p>Using the ordered decision vector $(u,v)\in\mathbb R^{2N}$, the initial-cost objective has coefficients $(p,-p)$, the payoff matrix is $[A,-A]$, and the pair-bound matrix is $[I_N,I_N]$. The following complete R translation shows both phases for the already specified arrays. It is documentary; no local R execution is claimed.</p>
+<pre><code class="language-r">two_phase &lt;- function(A, p) {
+  M &lt;- nrow(A)
+  N &lt;- ncol(A)
+  cost &lt;- c(p, -p)
+  H &lt;- rbind(cbind(A, -A), cbind(diag(N), diag(N)))
+  directions &lt;- c(rep("&gt;=", M), rep("&lt;=", N))
+  rhs &lt;- c(rep(0, M), rep(1, N))
+  first &lt;- lpSolve::lp("min", cost, H, directions, rhs)
+  terminal_sum &lt;- c(colSums(A), -colSums(A))
+  second &lt;- lpSolve::lp("max", terminal_sum, rbind(H, cost),
+                        c(directions, "&lt;="), c(rhs, 0))
+  if (first$status != 0 || second$status != 0) {
+    stop("LP did not return an optimal solution")
+  }
+  recover &lt;- function(fit) {
+    fit$solution[seq_len(N)] - fit$solution[N + seq_len(N)]
+  }
+  list(first_value = first$objval, first_holdings = recover(first),
+       second_value = second$objval, second_holdings = recover(second))
+}</code></pre>
+<p>The <a href="https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html">official SciPy <code>linprog(method="highs")</code> documentation</a> instead uses row inequalities $A_{\rm ub}x\leq b_{\rm ub}$ and allows explicit variable bounds. Its default bounds are nonnegative, so the signed holdings box must be supplied. In this documentary Python translation, $M,N=A.\text{shape}$:</p>
+<pre><code class="language-text"># SciPy interface illustration; not a local SciPy runtime claim.
+from scipy.optimize import linprog
+bounds = [(-1.0, 1.0)] * N
+first = linprog(p, A_ub=-A, b_ub=np.zeros(M),
+                bounds=bounds, method="highs")
+second = linprog(-A.sum(axis=0), A_ub=np.vstack((-A, p)),
+                 b_ub=np.zeros(M + 1), bounds=bounds, method="highs")
+if not first.success or not second.success:
+    raise RuntimeError("Inspect the solver status before using its holdings")
+# first.fun is v1; -second.fun is v2.</code></pre>
+<p>The executed companion <a href="code/ch21_arbitrage.py">ch21_arbitrage.py</a> uses a small NumPy vertex enumerator, avoiding an external LP-runtime claim. It takes finite price/payoff arrays with matching dimensions, bounds the holdings, scales inequality rows, and enumerates sets of $N$ numerically independent active rows. Each candidate is solved, tested against every inequality, and compared by objective. The implementation permits one through five variables and at most 100,000 candidate bases, rejecting larger enumeration requests. It is a teaching solver for resolved small examples.</p>
+<p>Why is enumeration sufficient in exact arithmetic? A linear objective attains a minimum on a nonempty bounded polytope. If an optimal point's active constraint normals do not span the whole variable space, choose a nonzero direction orthogonal to them. Small moves in either sign remain feasible. Optimality forces the objective derivative in that direction to be zero. Move until a new inequality binds, which must happen because the polytope is bounded. The objective stays optimal and the rank of the active normals increases. Repeating reaches full rank, hence an optimal vertex determined by an independent active basis. This supplies the reason for the small enumeration, including lower-dimensional feasible faces.</p>
+<p>For the two-state, three-asset source problem, phase one has eight inequality rows including the box, giving $\binom83=56$ candidate bases. Phase two adds the price constraint, giving $\binom93=84$. Singular or infeasible bases are skipped. These counts describe this implementation's work, not the complexity of all LP algorithms.</p>
+<pre><code class="language-python">import sys
+import numpy as np
+
+sys.path.insert(0, "code")
+from ch21_arbitrage import LECTURE_A, detect  # noqa: E402
+
+cheap = detect(LECTURE_A, [1.0, 100.0, 6.0])
+np.testing.assert_allclose(cheap["cost"], -2 / 75, atol=1e-12)
+np.testing.assert_allclose(cheap["payoffs"], [0.0, 0.0], atol=1e-12)
+hidden = detect(np.eye(2), [1.0, 0.0])
+assert hidden["phase_one"].value == 0.0
+np.testing.assert_allclose(hidden["payoffs"], [0.0, 1.0], atol=1e-12)
+print(cheap["cost"], hidden["source"])</code></pre>
+<p>The LP enumerator checks row-scaled feasibility at tolerance $10^{-10}$ and numerical rank at $10^{-12}$. The detector separately uses a declared raw-currency gain/payoff tolerance, default $10^{-8}$, and reports the unrounded initial cost and state payoffs. The complete-market state-price helper requires full payoff row rank and returns a linear-fit vector together with its pricing residual; an inconsistent fit is not substituted for the input quotes. A nonpositive minimum-norm fit in an incomplete market would not prove absence of another positive fit, so that helper deliberately rejects incomplete payoff spans.</p>
+<p>The companion executes both source markets, cheap/fair/dear quotes, the zero-cost counterexample, the incomplete-market interval, currency rescalings, and invalid-input cases. It obtains no live prices and submits no orders. Near degeneracy, extreme scaling, or gains comparable to tolerances require stronger arithmetic and a more suitable solver. A numerical failure to detect an arbitrage is distinct from the exact positive-state-price proof.</p>
+<h2 id="execution-and-synthesis">21.10 Distinguish a model arbitrage from an executable trade <a class="timestamp" href="https://www.youtube.com/watch?v=PkYVRUjlXuw&amp;t=842s">Recording 58, 14:02</a></h2>
+<p>The cashflow proof establishes a result inside the specified market. Executing all its legs requires the relevant quotes and quantities to be available together. If the stock sale completes but the call purchase does not, the actual portfolio is no longer the zero-terminal-payoff vector in the table. Financing, short-borrow availability, settlement, contract multipliers, and collateral requirements can also change either its feasible holdings or its cashflows.</p>
+<p>A simple fee calculation illustrates the distinction without assuming any observed trading cost. Suppose the one-call cheap trade incurs a known total initial charge $F\geq0$, with its terminal payoffs otherwise unchanged. Its net receipt becomes $8/7-F$. This particular negative-cost arbitrage survives only for $F&lt;8/7$. At equality it has zero cashflow at every date; above that threshold it requires an initial payment. The threshold does not rule out every other possible trade in the market.</p>
+<p>With bid/ask quotes, the initial cost of nonnegative purchases $u$ and sales $v$ is $p_{\rm ask}^Tu-p_{\rm bid}^Tv$, rather than a common $p^T(u-v)$. Known fees or financing cashflows can be included explicitly in the corresponding rows and constraints. Borrowing or margin restrictions may change the admissible set. A claim of unlimited positive scaling belongs to the frictionless homogeneous model, not automatically to a market with finite depth or position-dependent costs.</p>
+<p>The listed states must cover the risks for which the guarantee is asserted. Adding a state with an unmodeled contractual shortfall can destroy nonnegativity. A positive expected return, sometimes used in statistical trading, is a different objective from the componentwise cashflow inequalities. The lecture's discussion of high-frequency automation motivates computational detection; it is not evidence that a one-time script installation produces an unattended risk-free income stream.</p>
+<p>The course's portfolio arc now joins several tools. Matrix algebra expresses payoffs and constraints; replication identifies economically interpretable trades; LP searches for cashflow inequalities; positive state prices certify consistency; and KKT/QP selects a mean–variance portfolio from a different feasible set. Expected utility remains the broader preference framework from Chapters 14–15. Correlation alone does not invalidate mean–variance algebra; distributional tails, preference domains, and parameter uncertainty determine when two moments cease to describe the intended utility problem adequately.</p>
+<p>These connections also explain the next step. Lattices, closed formulas, and finite-difference grids have already priced options under specified models. Monte Carlo will add sampling of random variables and paths, together with sampling uncertainty. It can estimate expectations and path-dependent prices, but a positive simulated mean is not a substitute for this chapter's state-by-state arbitrage definition.</p>
+<h2 id="exercises">21.11 Exercises with worked solutions</h2>
+<details class="exercise"><summary>Exercise 21.1 — Holdings, receipts, and an overpriced call</summary>
+<p>In the two-state lecture market, suppose the call price is eight. Construct a one-call arbitrage and compute its initial cost and both terminal payoffs. Why should the holdings not be required to sum to one?</p>
+<div class="solution"><p>The call replica has holdings $(-300/7,1/2)$ in bond/stock units and costs $50/7$. Sell one call and buy that replica, giving $x=(-300/7,1/2,-1)^T$. Its initial cost is $-300/7+50-8=-6/7$. The up-state payoff is $-45+55-10=0$ and the down-state payoff is $-45+45=0$. Thus there is an initial receipt $6/7$ and no terminal obligation. The entries count different asset units and do not represent fractions of one initial wealth. Imposing a sum-one condition would add a different, unjustified restriction and could exclude this trade.</p></div>
+</details>
+<details class="exercise"><summary>Exercise 21.2 — A zero LP value can conceal an arbitrage</summary>
+<p>For $A=I_2$ and $p=(1,0)^T$, solve both LP phases analytically. Can a nonnegative state-price vector still price these assets? What strict condition fails?</p>
+<div class="solution"><p>The first problem requires $x_1,x_2\geq0$ and both at most one. Its cost is $x_1$, so the minimum is zero. The second adds $x_1\leq0$, hence $x_1=0$, and maximizes $x_1+x_2$ by taking $x_2=1$. Its value is one, with free terminal payoff $(0,1)$. The pricing equation $A^Ts=p$ gives $s=(1,0)$, which is nonnegative but not strictly positive. It assigns zero value to a nonzero payoff in a possible state. The strict-positivity condition in the finite pricing theorem is therefore essential.</p></div>
+</details>
+<details class="exercise"><summary>Exercise 21.3 — Separate state prices, pricing probabilities, and physical probabilities</summary>
+<p>Recover the lecture's positive state prices from bond and stock, and normalize them into risk-neutral probabilities. As an additional illustration, suppose the physical probabilities of the two states are both one half. Find the stochastic discount factor and verify its mean equals the bond discount factor.</p>
+<div class="solution"><p>The bond gives $s_u+s_d=20/21$. Substitution into the stock equation gives $20s_u=100-90(20/21)=100/7$, hence $s_u=5/7$ and $s_d=5/21$. Dividing by $D=20/21$ gives $Q=(3/4,1/4)$. Under the separately imposed physical probabilities $\pi=(1/2,1/2)$, the discount-factor values are $m^{\rm sdf}=(s_u/\pi_u,s_d/\pi_d)=(10/7,10/21)$. Their physical mean is $\tfrac12(10/7+10/21)=20/21=D$. The call price can be computed as $10s_u=50/7$, as $D\,E_Q[\text{call payoff}]$, or as $E_\pi[m^{\rm sdf}\text{call payoff}]$. Equal physical probabilities here are an illustrative assumption, not something inferred from traded prices.</p></div>
+</details>
+<details class="exercise"><summary>Exercise 21.4 — Locate the source of strict positivity in the finite theorem</summary>
+<p>In the closest-point proof, why is the minimum distance positive, and why does orthogonality alone not suffice? Recover the equation that turns the separating vector into state prices.</p>
+<div class="solution"><p>The simplex is compact, the subspace is closed, and no arbitrage makes them disjoint. The continuous distance attains a minimum; a zero minimum would supply a common point, contradicting disjointness. Orthogonality of $y=z_0-P_{\mathcal L}z_0$ to the subspace gives $K^Ty=0$, but by itself says nothing about the signs of $y$. The minimum over the simplex also gives $y^T(z-z_0)\geq0$ for every simplex point. Since $y^Tz_0=\|y\|^2&gt;0$, choosing each coordinate unit vector gives $y_i\geq\|y\|^2&gt;0$. Now split $K^Ty=0$ as $-py_0+A^Ty_{\rm future}=0$ and divide by $y_0&gt;0$. The vector $s=y_{\rm future}/y_0$ is strictly positive and satisfies $A^Ts=p$. Including the initial receipt coordinate is what makes this normalization available.</p></div>
+</details>
+<details class="exercise"><summary>Exercise 21.5 — An incomplete market can have an open interval of no-arbitrage prices</summary>
+<p>For the three-state bond/stock example, derive every positive state-price vector and the allowed price of the claim $(0,0,1)^T$. Exhibit a zero-cost arbitrage at each endpoint. Would the existence of many positive state prices contradict the fundamental theorem?</p>
+<div class="solution"><p>The equations $s_1+s_2+s_3=1$ and $s_2+2s_3=1$ imply $s_1=s_3=a$ and $s_2=1-2a$. Strict positivity is exactly $0&lt;a&lt;1/2$. The new claim's consistent price is its third-state price, namely $a$, so every interior price has a positive certificate. At zero, buy the claim for free to obtain $(0,0,1)$. At $1/2$, buy half the stock and sell one claim; cost is $1/2-1/2=0$ and payoff is $(0,1/2,0)$. Thus neither endpoint is arbitrage-free. The fundamental theorem asserts existence, not uniqueness. Here the original market is incomplete; uniqueness of positive state prices would require a full state-payoff span.</p></div>
+</details>
+<details class="exercise"><summary>Exercise 21.6 — Reconstruct the second source market and its implementation boundary</summary>
+<p>For Amrit's market, recover the fair call price and the cheap-call trade at 11.5. What initial fee removes that particular arbitrage? Explain why using an LP interface's default nonnegative variables for the signed holdings would be an error, and prove the split-variable repair preserves the unit box.</p>
+<div class="solution"><p>The replication equations give half a share and minus 30 bonds, with cost $40-30(0.92)=12.4$. At quote 11.5, reverse the replica and buy the call: $(30,-1/2,1)$ costs $27.6-40+11.5=-0.9$ and pays $30-50+20=0$ in the good state and $30-30=0$ in the poor state. A known initial fee $F$ changes the receipt to $0.9-F$, so this particular negative-cost arbitrage disappears at $F\geq0.9$ if the terminal cashflows are otherwise unchanged.</p><p>The trade needs a negative stock holding; forcing all holdings nonnegative excludes it. Set $x=u-v$ with $u,v\geq0$. If $u_i+v_i\leq1$, then $|x_i|\leq u_i+v_i\leq1$. Conversely, for any $|x_i|\leq1$, choosing $u_i=(x_i)_+$ and $v_i=(-x_i)_+$ gives the same $x$ and pair sum $|x_i|\leq1$. For the stacked decision vector $\binom uv$, initial cost and terminal payoffs are $(p^T,-p^T)\binom uv$ and $[A,-A]\binom uv$. This repairs the representation; solver success still requires inspecting feasibility and cashflows, and no representation can supply missing executable quotes or liquidity.</p></div>
+</details>
+<h2 id="sources-and-reproduction">21.12 Sources, reproduction, and the scope of the conclusion</h2>
+<p>Run <code>python code/ch21_arbitrage.py</code> from the repository root. It prints both LP phases, holdings/cashflow diagnostics, both source markets and their state-price fits, the zero-cost counterexample, and the illustrative physical-probability discount factor. Its checks also cover an overpriced call, incomplete-market interior/endpoint prices, currency rescaling, and invalid inputs. Run <code>python figures/ch21_prices_and_state_prices.py</code> to regenerate both figure layouts. The public companion uses NumPy and the previously reviewed scalar validator; the documentary R/SciPy translations are separate from its execution evidence.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PkYVRUjlXuw">Recording 58</a>: the complete finite-market arbitrage definition, bounded initial-cost LP, replication reversal, execution/liquidity discussion, statistical-versus-statewise distinction, pricing-theorem connection, and course synthesis. The zero-cost blind spot is repaired explicitly rather than inherited from the source's zero-value interpretation.</li>
+<li><a href="https://www.youtube.com/watch?v=jNhSse03YCc&amp;t=600s">Recording 63, Amrit's worked problem</a>: the bond price 0.92, two stock states, complete replication/risk-neutral/LP calculations, and cheap-call cashflows. Its preceding Sara optimization problem is mapped to Chapter 20.</li>
+<li><a href="https://www.youtube.com/watch?v=mQrVU7B1J_s&amp;t=1339s">Recording 64, LP segment</a>, and <a href="https://www.youtube.com/watch?v=mTDzJe6eWhc&amp;t=1288s">recording 65, LP segment</a>: paired price/payoff assembly, signed positions, bounded optimum and rescaling. Every reported profit uses an explicit holding size and currency convention.</li>
+<li><a href="https://www.princeton.edu/~markus/teaching/Eco525/01%20OnePeriodModel%20StatePrices%20SDF%20EMM_a.pdf">Markus K. Brunnermeier, Princeton Eco 525, “One Period Model,” slides 1-39–1-43</a>: state prices, the finite fundamental theorem, and incomplete/complete payoff geometry. The finite converse and rank arguments are developed independently here.</li>
+<li><a href="https://www.ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/219406be97b96bc540e0be6aa778c0b7_MIT15_450F10_lec01.pdf">Leonid Kogan, MIT 15.450 (Fall 2010), “Arbitrage-Free Pricing Models,” printed slides 10–14</a>: arbitrage, the law of one price, positivity, and the distinction between state prices and a probability-normalized density. No continuous-trading theorem is claimed from this chapter's finite proof.</li>
+<li><a href="https://cran.r-project.org/web/packages/lpSolve/lpSolve.pdf">R <code>lpSolve</code> manual, pp. 2–3 and 6</a>, and <a href="https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html">SciPy HiGHS <code>linprog</code> documentation</a>: actual row/variable conventions, result fields, status and bounds. These support interface interpretation, not a claim of executing those packages.</li>
+</ul>
+<p>The theorem assumes an exhaustive finite state set and unrestricted frictionless linear trading. The numerical detector adds explicit finite-work, rank, feasibility, and strict-gain tolerances. A positive state-price formula or exact cashflow identity can establish the mathematical result for a declared case; an approximate LP or least-squares output alone cannot extend that guarantee to every possible quote perturbation, omitted state, or execution constraint. Those boundaries remain separate from the reproducible calculations.</p>
+<!-- END CHAPTER -->
+</article><nav class="page-turn" aria-label="Chapter navigation"><a href="chapter-20-inequality-constraints-and-optimality-certificates.html">Previous: Inequality constraints and optimality certificates</a></nav></main></div>
+<footer class="site-footer">Independent study edition. NPTEL course taught by Sourish Das and Bikramaditya Datta, Chennai Mathematical Institute and IIT Kanpur; coordinated by IIT Madras. Source recordings determine the topic sequence; added derivations and teaching examples are separately identified. See the source map and validation records for evidence and limits.</footer></body></html>

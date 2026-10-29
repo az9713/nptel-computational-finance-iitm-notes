@@ -1,0 +1,152 @@
+{
+  "chapter": 2,
+  "title": "Rates, approximations, and numerical reliability",
+  "file": "chapter-02-rates-approximations-numerical-reliability.html",
+  "body_sha256": "72a63175de3891e4a43c51b4f102420548a22ecb8238b5367cbcafa211d98356",
+  "source_recordings": [
+    4,
+    5,
+    6
+  ],
+  "status": "accepted",
+  "coverage": [
+    {
+      "section": "dated-rates",
+      "recording": 4,
+      "start_seconds": 15,
+      "end_seconds": 378,
+      "topic": "Maturity-specific discount factors, coupon/yield/spot distinctions"
+    },
+    {
+      "section": "interpolation",
+      "recording": 4,
+      "start_seconds": 378,
+      "end_seconds": 553,
+      "topic": "Linear and log-discount interpolation, error and price consequences"
+    },
+    {
+      "section": "compounding",
+      "recording": 4,
+      "start_seconds": 553,
+      "end_seconds": 978,
+      "topic": "Compounding conventions, continuous limit, returns"
+    },
+    {
+      "section": "taylor",
+      "recording": 5,
+      "start_seconds": 16,
+      "end_seconds": 292,
+      "topic": "Taylor polynomials, remainder, discount approximation"
+    },
+    {
+      "section": "stopping",
+      "recording": 5,
+      "start_seconds": 292,
+      "end_seconds": 1053,
+      "topic": "Term recurrence, stopping rule, sensitivity applications"
+    },
+    {
+      "section": "rounding",
+      "recording": 6,
+      "start_seconds": 15,
+      "end_seconds": 410,
+      "topic": "Truncation, discretization, binary rounding, cancellation"
+    },
+    {
+      "section": "conditioning",
+      "recording": 6,
+      "start_seconds": 410,
+      "end_seconds": 768,
+      "topic": "Nearly parallel equations, conditioning, stability"
+    }
+  ],
+  "teaching_constructions": [
+    "Synthetic treasurer bond",
+    "Log-discount comparison",
+    "Rolle interpolation proof",
+    "Bounded-domain exponential tail contract",
+    "Exact rational and high-precision numerical checks",
+    "Six worked exercises"
+  ],
+  "clarifications": [
+    "Coupon and yield are not zero rates",
+    "An upward sovereign curve alone does not identify default risk",
+    "A term threshold is not in general a tail bound",
+    "A closed form is not necessarily a stable evaluation algorithm",
+    "Exact numerical equality has legitimate uses",
+    "Conditioning differs from algorithmic stability"
+  ],
+  "code": [
+    {
+      "path": "code/ch02_numerical_reliability.py",
+      "check": "Assertions, Fraction identities, and Decimal comparisons; stdout recorded"
+    }
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "body_sha256": "408559c3e7db7b37ce777335c0877d60f1653a7c2f85a767f4b974fc31e2723d",
+      "code_sha256": {
+        "code/ch02_numerical_reliability.py": "1db6312e79fdbfb009f970b7f55a659ba5d2c2e7a7f30b29226bb5e755fc71f4"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision",
+      "report_sha256": "e3aaba9791de5a66456b1edf713e53b104c90d503f8ebf8ccbcd48a13b2ef6b4",
+      "repairs": [
+        "B1: added measured 80-digit Decimal comparisons and corrected inference",
+        "N1: corrected par-yield source attribution to yield to maturity",
+        "N2: narrowed public function type contract to Python float",
+        "N3: replaced forward Taylor invocation with a local integral bound"
+      ]
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "d32672e22ac55c0623653d321f06e83e02da8a1b9e09827ff023730a415ef16c",
+      "code_sha256": {
+        "code/ch02_numerical_reliability.py": "5f88b0b4e166f19340d70e5dc651275b26ad5f7ad4511c09b688ac2e0ce21b7b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "9fc2fe70f5d122bfeeeacb0fca21ebe518e9971c5abd52487980b7bc03a5c569",
+      "nonblocking_dispositions": {
+        "N1": "Coupon and face-value definitions refined; verified in targeted addendum",
+        "N2": "Underflow retained as explicit non-certification boundary; no general total-error guarantee",
+        "N3": "Extreme-magnitude helper behavior remains outside the synthetic examples and general-library scope"
+      }
+    },
+    {
+      "round": 3,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Targeted terminology addendum to full round2; not a third full review",
+      "body_sha256": "72a63175de3891e4a43c51b4f102420548a22ecb8238b5367cbcafa211d98356",
+      "code_sha256": {
+        "code/ch02_numerical_reliability.py": "5f88b0b4e166f19340d70e5dc651275b26ad5f7ad4511c09b688ac2e0ce21b7b"
+      },
+      "blocking_findings": 0,
+      "verdict": "prior full acceptance carries forward",
+      "report_sha256": "6d1bcbe46b499d1c52bf050a89db4dda2f5b433522a0804961b2f792fad0ce36"
+    }
+  ],
+  "limitations": [
+    "Machine transcript uncertainty",
+    "No comprehensive audiovisual review",
+    "Finite execution checks are not formal verification"
+  ],
+  "full_scientific_review_rounds": 2,
+  "selected_frame_checks": [
+    {
+      "recording": 6,
+      "second": 470,
+      "observation": "Slide coefficients and original/perturbed solutions match the chapter."
+    }
+  ]
+}

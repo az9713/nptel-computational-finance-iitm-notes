@@ -1,0 +1,189 @@
+{
+  "chapter": 13,
+  "title": "Bond calculus, duration, and convexity",
+  "file": "chapter-13-bond-calculus-duration-and-convexity.html",
+  "source_recordings": [
+    37,
+    38,
+    42
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "finite-differences",
+    "step-choice",
+    "analytic-duration",
+    "convexity-and-workshop",
+    "portfolio-shocks",
+    "clean-dirty",
+    "effective-repricing",
+    "limits",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "finite-differences",
+      "recording": 38,
+      "start_seconds": 381,
+      "end_seconds": 943,
+      "topic": "Forward/backward/centered first and second stencils with Taylor derivation and corrected lower argument"
+    },
+    {
+      "section": "finite-differences",
+      "recording": 42,
+      "start_seconds": 44,
+      "end_seconds": 739,
+      "topic": "Entire quartic1.5 workshop,h.2/.1, exact error identities and halving qualification"
+    },
+    {
+      "section": "step-choice",
+      "recording": 38,
+      "start_seconds": 943,
+      "end_seconds": 1423,
+      "topic": "Truncation/evaluation-error balance, finite precision, secant link and financial bump units; no universal step or absolute epsilon-underflow threshold"
+    },
+    {
+      "section": "analytic-duration",
+      "recording": 37,
+      "start_seconds": 198,
+      "end_seconds": 531,
+      "topic": "Signed price slope, positive modified/dollar duration, Macaulay weighted time and compounding relation with units/sign corrections"
+    },
+    {
+      "section": "analytic-duration",
+      "recording": 37,
+      "start_seconds": 844,
+      "end_seconds": 930,
+      "topic": "Fiveyear98.4bond calculated duration and sensitivity, not claimed10significantdigits from1bp bump"
+    },
+    {
+      "section": "convexity-and-workshop",
+      "recording": 37,
+      "start_seconds": 101,
+      "end_seconds": 198,
+      "topic": "Second-order Taylor price-change motivation"
+    },
+    {
+      "section": "convexity-and-workshop",
+      "recording": 37,
+      "start_seconds": 531,
+      "end_seconds": 710,
+      "topic": "Normalized convexity, price asymmetry and finite-shock qualifications"
+    },
+    {
+      "section": "convexity-and-workshop",
+      "recording": 37,
+      "start_seconds": 710,
+      "end_seconds": 930,
+      "topic": "Centered numerical duration/convexity and fiveyear example"
+    },
+    {
+      "section": "convexity-and-workshop",
+      "recording": 42,
+      "start_seconds": 739,
+      "end_seconds": 1371,
+      "topic": "Complete annual three-year bond workshop, analytic/numerical duration/convexity and corrected onepercentagepoint shock comparison"
+    },
+    {
+      "section": "portfolio-shocks",
+      "recording": 37,
+      "start_seconds": 633,
+      "end_seconds": 710,
+      "topic": "Value-weighted portfolio duration/convexity with common-shock, nonzero-value and short-position qualifications; explicit nonparallel contrast"
+    },
+    {
+      "section": "clean-dirty",
+      "recording": 37,
+      "start_seconds": 1075,
+      "end_seconds": 1304,
+      "topic": "Accrued interest and clean/full settlement prices, explicit fractional-period schedule and fixed-date derivative versus normalization/time-carry corrections"
+    },
+    {
+      "section": "effective-repricing",
+      "recording": 37,
+      "start_seconds": 930,
+      "end_seconds": 1075,
+      "topic": "Effective scenario repricing for interest-sensitive cash flows; minimal original callable example, non-smoothness and failure of fixed-flow convexity transfer"
+    },
+    {
+      "section": "limits",
+      "recording": 37,
+      "start_seconds": 1304,
+      "end_seconds": 1412,
+      "topic": "Full bond arc synthesis: price, inverse yield, sensitivities and settlement conventions"
+    },
+    {
+      "section": "limits",
+      "recording": 38,
+      "start_seconds": 16,
+      "end_seconds": 381,
+      "topic": "Calculus week motivation, derivative callbacks, expected-utility/integration preview and backward links"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch13_bond_calculus.py",
+      "check": "Analytic versus finite differences, complete quartic/bond workshop, portfolio/settlement/scenario repricing, error sweep and failure contracts"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch13_sensitivity_and_steps.py",
+    "assets/ch13-sensitivity-and-steps.svg",
+    "assets/ch13-sensitivity-and-steps-portrait.svg",
+    "code/ch08_binomial_valuation.py",
+    "code/ch10_inverse_pricing.py"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "227f0cb97b43f72a237956456815720b694d242f9ffc260698651a671977cda9",
+      "code_sha256": {
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "artifact_sha256": {
+        "figures/ch13_sensitivity_and_steps.py": "e962123e735a55e03d43d847ce43fd22f10ca4c5251dc32de94dc1ce5111fd28",
+        "assets/ch13-sensitivity-and-steps.svg": "7eb36ac4e78e8f35c06878d5bba9d6a9a4c4a8b3fc49b3d808ebc0892253278a",
+        "assets/ch13-sensitivity-and-steps-portrait.svg": "5eb70cecadc0078d170b2237c0c68e75b7b4307c8a2f3686be86bc61ea003e68",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "be7a0c04b2e646557489acaa0b8e232f0a4bb995db9d6dad51eb9cda2188cf4b"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "8a3957f07ab56ee315523a4a634a936e1b337f24b020158582d884e4cba2ba9d",
+      "code_sha256": {
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "artifact_sha256": {
+        "figures/ch13_sensitivity_and_steps.py": "e962123e735a55e03d43d847ce43fd22f10ca4c5251dc32de94dc1ce5111fd28",
+        "assets/ch13-sensitivity-and-steps.svg": "7eb36ac4e78e8f35c06878d5bba9d6a9a4c4a8b3fc49b3d808ebc0892253278a",
+        "assets/ch13-sensitivity-and-steps-portrait.svg": "5eb70cecadc0078d170b2237c0c68e75b7b4307c8a2f3686be86bc61ea003e68",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "1fbdf699a39dc96f2c489886a98db6916e7fce4a2db28e16943039a1c2f750cc"
+    }
+  ],
+  "limitations": [
+    "Fixed nonnegative known flows and stated nominal yield; moderate fixtures",
+    "Observed floating error sweeps are implementation dependent, not universal optimal bump",
+    "Fixed settlement accrued interest uses an explicit fractional-period convention",
+    "Callable example has deterministic continuous rates and a payoff-decision kink, not a stochastic mortgage model"
+  ],
+  "body_sha256": "8a3957f07ab56ee315523a4a634a936e1b337f24b020158582d884e4cba2ba9d",
+  "full_scientific_review_rounds": 2
+}

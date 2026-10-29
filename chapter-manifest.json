@@ -1,0 +1,307 @@
+{
+  "title": "Computational Finance 1",
+  "edition": "Independent textbook rewrite",
+  "instructors": [
+    "Sourish Das",
+    "Bikramaditya Datta"
+  ],
+  "institutions": [
+    "Chennai Mathematical Institute",
+    "IIT Kanpur"
+  ],
+  "coordinating_institute": "IIT Madras",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Financial models become executable algorithms",
+      "file": "chapter-01-financial-models-become-executable-algorithms.html",
+      "purpose": "Translate bonds, options, and portfolio decisions into inputs, outputs, invariants, and a reproducible Python/R workflow.",
+      "recordings": [
+        1,
+        2,
+        3,
+        10,
+        11
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 2,
+      "title": "Rates, approximations, and numerical reliability",
+      "file": "chapter-02-rates-approximations-numerical-reliability.html",
+      "purpose": "Discount cash flows consistently; interpolate curves; derive Taylor remainders; separate problem conditioning from algorithmic error. Pilot chapter.",
+      "recordings": [
+        4,
+        5,
+        6
+      ],
+      "status": "draft"
+    },
+    {
+      "number": 3,
+      "title": "Portfolio choice and the first numerical workshop",
+      "file": "chapter-03-portfolio-choice-and-first-numerical-workshop.html",
+      "purpose": "Solve safe/risky allocation by analytic and grid methods, then check the first bond, interpolation, and logarithm workshops.",
+      "recordings": [
+        7,
+        8,
+        9
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 4,
+      "title": "Linear systems and identifiable portfolio weights",
+      "file": "chapter-04-linear-systems-and-identifiable-portfolio-weights.html",
+      "purpose": "Develop matrix algebra, elimination, factorization, residuals, and ill-conditioned target-return constraints.",
+      "recordings": [
+        12,
+        14
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 5,
+      "title": "Covariance and the geometry of risk",
+      "file": "chapter-05-covariance-and-the-geometry-of-risk.html",
+      "purpose": "Build covariance from returns; prove positive semidefiniteness; interpret eigenvalues, diversification, and nearly null directions.",
+      "recordings": [
+        13,
+        15,
+        17
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 6,
+      "title": "Market factors, regression, and implementation",
+      "file": "chapter-06-market-factors-regression-and-implementation.html",
+      "purpose": "Explain CAPM assumptions, factor models, estimation, and paired R/Python matrix labs.",
+      "recordings": [
+        16,
+        18,
+        19
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 7,
+      "title": "Option payoffs and functions",
+      "file": "chapter-07-option-payoffs-and-functions.html",
+      "purpose": "Distinguish payoff from profit and value; define European/American claims; use piecewise functions and software functions.",
+      "recordings": [
+        20,
+        21,
+        22
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 8,
+      "title": "Replication and binomial valuation",
+      "file": "chapter-08-replication-and-binomial-valuation.html",
+      "purpose": "Derive one-period replication and risk-neutral weights; extend by backward induction; solve worked examples.",
+      "recordings": [
+        23,
+        24,
+        26
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 9,
+      "title": "Path dependence and option laboratories",
+      "file": "chapter-09-path-dependence-and-option-laboratories.html",
+      "purpose": "Explain exotic payoffs and implement valuation functions; distinguish path/state from terminal-price-only claims.",
+      "recordings": [
+        25,
+        27,
+        28
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 10,
+      "title": "Financial equations as inverse problems",
+      "file": "chapter-10-financial-equations-as-inverse-problems.html",
+      "purpose": "Separate price, yield, and implied volatility; derive bracketing and existence/identifiability; interpret volatility surfaces.",
+      "recordings": [
+        29,
+        30
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 11,
+      "title": "Newton, secant, and safeguarded calibration",
+      "file": "chapter-11-newton-secant-and-safeguarded-calibration.html",
+      "purpose": "Derive local convergence and failure modes; choose stopping rules with price/parameter meaning; solve worked problems.",
+      "recordings": [
+        31,
+        32,
+        34
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 12,
+      "title": "Constructing curves and volatility surfaces",
+      "file": "chapter-12-constructing-curves-and-volatility-surfaces.html",
+      "purpose": "Bootstrap and interpolate under consistent conventions; test basic static arbitrage and make R/Python implementations inspectable.",
+      "recordings": [
+        33,
+        35,
+        36
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 13,
+      "title": "Bond calculus, duration, and convexity",
+      "file": "chapter-13-bond-calculus-duration-and-convexity.html",
+      "purpose": "Differentiate prices under a specified yield convention; distinguish clean/dirty price; check finite-difference Greeks.",
+      "recordings": [
+        37,
+        38,
+        42
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 14,
+      "title": "Portfolio objectives and expected utility",
+      "file": "chapter-14-portfolio-objectives-and-expected-utility.html",
+      "purpose": "Derive first/second-order conditions and utility comparisons; make certainty equivalents and risk aversion explicit.",
+      "recordings": [
+        39,
+        41,
+        43
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 15,
+      "title": "Numerical integration for financial expectations",
+      "file": "chapter-15-numerical-integration-for-financial-expectations.html",
+      "purpose": "Derive trapezoidal and Simpson quadrature; analyze discretization errors and implement convergence diagnostics in R/Python.",
+      "recordings": [
+        40,
+        44,
+        45
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 16,
+      "title": "Geometric Brownian motion and Black–Scholes",
+      "file": "chapter-16-geometric-brownian-motion-and-black-scholes.html",
+      "purpose": "Derive lognormal transitions and model price; distinguish real-world and pricing measures; check limiting cases.",
+      "recordings": [
+        46,
+        47,
+        51
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 17,
+      "title": "Finite differences and early exercise",
+      "file": "chapter-17-finite-differences-and-early-exercise.html",
+      "purpose": "Derive the Black–Scholes grid, boundary conditions, stability restrictions, and American obstacle problem.",
+      "recordings": [
+        48,
+        49,
+        50
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 18,
+      "title": "A reproducible option-pricing laboratory",
+      "file": "chapter-18-a-reproducible-option-pricing-laboratory.html",
+      "purpose": "Reconcile binomial, GBM, and PDE implementations; test convergence rather than compare unexplained output.",
+      "recordings": [
+        52,
+        53
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 19,
+      "title": "Equality-constrained mean–variance portfolios",
+      "file": "chapter-19-equality-constrained-mean-variance-portfolios.html",
+      "purpose": "Solve the Markowitz block system and derive the efficient frontier/capital-market line under stated assumptions.",
+      "recordings": [
+        54,
+        55,
+        56,
+        62
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 20,
+      "title": "Inequality constraints and optimality certificates",
+      "file": "chapter-20-inequality-constraints-and-optimality-certificates.html",
+      "purpose": "Derive KKT conditions, active sets, and their limitations; apply the optimization tutorials.",
+      "recordings": [
+        57,
+        59,
+        60,
+        61
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 21,
+      "title": "Arbitrage detection by linear programming",
+      "file": "chapter-21-arbitrage-detection-by-linear-programming.html",
+      "purpose": "Formulate finite-market arbitrage consistently; connect primal portfolios and dual state prices; run R/Python checks.",
+      "recordings": [
+        58,
+        63,
+        64,
+        65
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 22,
+      "title": "Random walks, sampling, and Monte Carlo",
+      "file": "chapter-22-random-walks-sampling-and-monte-carlo.html",
+      "purpose": "Build random variables from a generator; derive Brownian scaling and Monte Carlo estimator variance; distinguish sampling and path error.",
+      "recordings": [
+        66,
+        67,
+        68,
+        72,
+        73
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 23,
+      "title": "Monte Carlo option prices and uncertain parameters",
+      "file": "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html",
+      "purpose": "Compute European payoffs with confidence intervals; use variance reduction; separate parameter uncertainty and simulation noise.",
+      "recordings": [
+        69,
+        70,
+        74
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 24,
+      "title": "Asian options and a complete numerical workflow",
+      "file": "chapter-24-asian-options-and-a-complete-numerical-workflow.html",
+      "purpose": "Integrate course synthesis, path-dependent Monte Carlo, R/Python/Colab labs, validation, and uncertainty reporting.",
+      "recordings": [
+        71,
+        75,
+        76
+      ],
+      "status": "pending"
+    }
+  ]
+}

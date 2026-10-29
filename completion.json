@@ -1,0 +1,242 @@
+{
+  "recordings_total": 76,
+  "chapters_planned": 24,
+  "chapters_written": 21,
+  "chapters_accepted": 21,
+  "complete": false,
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter-01-financial-models-become-executable-algorithms.html",
+      "status": "accepted",
+      "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+      "recordings": [
+        1,
+        2,
+        3,
+        10,
+        11
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "chapter-02-rates-approximations-numerical-reliability.html",
+      "status": "accepted",
+      "body_sha256": "72a63175de3891e4a43c51b4f102420548a22ecb8238b5367cbcafa211d98356",
+      "recordings": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "chapter-03-portfolio-choice-and-first-numerical-workshop.html",
+      "status": "accepted",
+      "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
+      "recordings": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "chapter-04-linear-systems-and-identifiable-portfolio-weights.html",
+      "status": "accepted",
+      "body_sha256": "b4a2c51912750f04ecc6590ce4d325e684423a9da30a2242b701d8a34997dba3",
+      "recordings": [
+        12,
+        14
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "chapter-05-covariance-and-the-geometry-of-risk.html",
+      "status": "accepted",
+      "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
+      "recordings": [
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "chapter-06-market-factors-regression-and-implementation.html",
+      "status": "accepted",
+      "body_sha256": "43e8f55a65b6f45bdaea98fe3a236d036ed35ff3d09f33fb80a0ab5988c245f6",
+      "recordings": [
+        16,
+        18,
+        19
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "chapter-07-option-payoffs-and-functions.html",
+      "status": "accepted",
+      "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+      "recordings": [
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "chapter-08-replication-and-binomial-valuation.html",
+      "status": "accepted",
+      "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
+      "recordings": [
+        23,
+        24,
+        26
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "chapter-09-path-dependence-and-option-laboratories.html",
+      "status": "accepted",
+      "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
+      "recordings": [
+        25,
+        27,
+        28
+      ]
+    },
+    {
+      "chapter": 10,
+      "file": "chapter-10-financial-equations-as-inverse-problems.html",
+      "status": "accepted",
+      "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+      "recordings": [
+        29,
+        30
+      ]
+    },
+    {
+      "chapter": 11,
+      "file": "chapter-11-newton-secant-and-safeguarded-calibration.html",
+      "status": "accepted",
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "recordings": [
+        31,
+        32,
+        34
+      ]
+    },
+    {
+      "chapter": 12,
+      "file": "chapter-12-constructing-curves-and-volatility-surfaces.html",
+      "status": "accepted",
+      "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
+      "recordings": [
+        33,
+        35,
+        36
+      ]
+    },
+    {
+      "chapter": 13,
+      "file": "chapter-13-bond-calculus-duration-and-convexity.html",
+      "status": "accepted",
+      "body_sha256": "8a3957f07ab56ee315523a4a634a936e1b337f24b020158582d884e4cba2ba9d",
+      "recordings": [
+        37,
+        38,
+        42
+      ]
+    },
+    {
+      "chapter": 14,
+      "file": "chapter-14-portfolio-objectives-and-expected-utility.html",
+      "status": "accepted",
+      "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
+      "recordings": [
+        39,
+        41,
+        43
+      ]
+    },
+    {
+      "chapter": 15,
+      "file": "chapter-15-numerical-integration-for-financial-expectations.html",
+      "status": "accepted",
+      "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
+      "recordings": [
+        40,
+        44,
+        45
+      ]
+    },
+    {
+      "chapter": 16,
+      "file": "chapter-16-geometric-brownian-motion-and-black-scholes.html",
+      "status": "accepted",
+      "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
+      "recordings": [
+        46,
+        47,
+        51
+      ]
+    },
+    {
+      "chapter": 17,
+      "file": "chapter-17-finite-differences-and-early-exercise.html",
+      "status": "accepted",
+      "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
+      "recordings": [
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "chapter": 18,
+      "file": "chapter-18-a-reproducible-option-pricing-laboratory.html",
+      "status": "accepted",
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "recordings": [
+        52,
+        53
+      ]
+    },
+    {
+      "chapter": 19,
+      "file": "chapter-19-equality-constrained-mean-variance-portfolios.html",
+      "status": "accepted",
+      "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+      "recordings": [
+        54,
+        55,
+        56,
+        62
+      ]
+    },
+    {
+      "chapter": 20,
+      "file": "chapter-20-inequality-constraints-and-optimality-certificates.html",
+      "status": "accepted",
+      "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
+      "recordings": [
+        57,
+        59,
+        60,
+        61
+      ]
+    },
+    {
+      "chapter": 21,
+      "file": "chapter-21-arbitrage-detection-by-linear-programming.html",
+      "status": "accepted",
+      "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
+      "recordings": [
+        58,
+        63,
+        64,
+        65
+      ]
+    }
+  ]
+}

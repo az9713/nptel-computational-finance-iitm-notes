@@ -1,0 +1,240 @@
+{
+  "chapter": 19,
+  "title": "Equality-constrained mean–variance portfolios",
+  "file": "chapter-19-equality-constrained-mean-variance-portfolios.html",
+  "source_recordings": [
+    54,
+    55,
+    56,
+    62
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "task",
+    "matrix-calculus",
+    "kkt-certificate",
+    "linear-solves",
+    "multipliers",
+    "frontier",
+    "risk-free-direction",
+    "utility",
+    "implementation",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "task",
+      "recording": 54,
+      "start_seconds": 15,
+      "end_seconds": 394,
+      "topic": "Week7 QP/LP overview, mean/variance objective and linear constraints"
+    },
+    {
+      "section": "task",
+      "recording": 62,
+      "start_seconds": 15,
+      "end_seconds": 503,
+      "topic": "Two-asset budget-only and target-return workshop, covariance construction and constraints"
+    },
+    {
+      "section": "matrix-calculus",
+      "recording": 55,
+      "start_seconds": 15,
+      "end_seconds": 480,
+      "topic": "Vector gradient, linear and quadratic differentials, symmetric covariance, Lagrangian stationarity"
+    },
+    {
+      "section": "kkt-certificate",
+      "recording": 55,
+      "start_seconds": 480,
+      "end_seconds": 840,
+      "topic": "Equality constraints, Lagrange multipliers, linear n+2 KKT system and interpretation, with global/unique conditions supplied"
+    },
+    {
+      "section": "linear-solves",
+      "recording": 55,
+      "start_seconds": 857,
+      "end_seconds": 979,
+      "topic": "Recovered displayed threeasset inputs, five unknowns, exact weights/multipliers and variance"
+    },
+    {
+      "section": "linear-solves",
+      "recording": 62,
+      "start_seconds": 800,
+      "end_seconds": 1109,
+      "topic": "Complete Revati diagonal-covariance equality derivation and 8percent target solution"
+    },
+    {
+      "section": "linear-solves",
+      "recording": 64,
+      "start_seconds": 15,
+      "end_seconds": 540,
+      "topic": "R equality KKT assembly, right-hand-side and indexing, weights/variance"
+    },
+    {
+      "section": "linear-solves",
+      "recording": 65,
+      "start_seconds": 16,
+      "end_seconds": 376,
+      "topic": "Paired Python equality KKT assembly, NumPy solve, extraction and checks"
+    },
+    {
+      "section": "multipliers",
+      "recording": 55,
+      "start_seconds": 775,
+      "end_seconds": 857,
+      "topic": "Shadow-price interpretation with half-variance factor2 correction and explicit envelope derivation"
+    },
+    {
+      "section": "multipliers",
+      "recording": 62,
+      "start_seconds": 503,
+      "end_seconds": 800,
+      "topic": "Budget-only multiplier identity, diversification and twoasset target .10 comparison"
+    },
+    {
+      "section": "frontier",
+      "recording": 56,
+      "start_seconds": 15,
+      "end_seconds": 449,
+      "topic": "Target frontiers, hyperbolic SD geometry, feasible region and two-fund separation"
+    },
+    {
+      "section": "frontier",
+      "recording": 62,
+      "start_seconds": 1109,
+      "end_seconds": 1288,
+      "topic": "Complete 4/8/12percent Revati target table, short weights and twofund midpoint"
+    },
+    {
+      "section": "frontier",
+      "recording": 64,
+      "start_seconds": 540,
+      "end_seconds": 790,
+      "topic": "R target table/grid and upper-branch interpretation"
+    },
+    {
+      "section": "frontier",
+      "recording": 65,
+      "start_seconds": 376,
+      "end_seconds": 766,
+      "topic": "Paired Python five targets, tabular reshaping, smooth grid and efficient branch"
+    },
+    {
+      "section": "risk-free-direction",
+      "recording": 56,
+      "start_seconds": 449,
+      "end_seconds": 735,
+      "topic": "Riskfree asset, tangency allocation, Sharpe/SD line, separation and equilibrium interpretation"
+    },
+    {
+      "section": "risk-free-direction",
+      "recording": 62,
+      "start_seconds": 1288,
+      "end_seconds": 1502,
+      "topic": "Complete Revati tangency and clientrisk workshop, exact fraction and allocations"
+    },
+    {
+      "section": "risk-free-direction",
+      "recording": 64,
+      "start_seconds": 790,
+      "end_seconds": 1048,
+      "topic": "R inverse direction, normalized tangency, capital market line"
+    },
+    {
+      "section": "risk-free-direction",
+      "recording": 65,
+      "start_seconds": 766,
+      "end_seconds": 1078,
+      "topic": "Paired Python tangency/CML and corrected Sharpe numbers/linear geometry"
+    },
+    {
+      "section": "utility",
+      "recording": 56,
+      "start_seconds": 735,
+      "end_seconds": 905,
+      "topic": "Quadratic utility, jointnormal moments, exact GaussianCARA extension, preference/domain conditions and generalintegration alternatives"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch19_mean_variance.py",
+      "check": "Equality KKT, exact cases, feasible perturbations, half-variance sensitivities, two-fund interpolation, risky exposures and constraint conditioning"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch19_frontiers.py",
+    "assets/ch19-frontiers.svg",
+    "assets/ch19-frontiers-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+      "code_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f"
+      },
+      "artifact_sha256": {
+        "figures/ch19_frontiers.py": "0a47d882cc522cf4a9d6201e63f96549e7d0e4f583fc9733c185582a68520fdb",
+        "assets/ch19-frontiers.svg": "33600442d62dfb4edf27632c208f81816ea5d2290e696ffba8400741fbb3cfaa",
+        "assets/ch19-frontiers-portrait.svg": "e9ee1fe3e3b79d98969039f9b94e1fa8cb7b98dd146a7e8d7e111d92daae5f07"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "9bc2929df635e22871b2344abde6df8cccdc1b82a8b945888c0a6ddf262c6a66"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r2",
+      "date": "2026-10-28",
+      "scope": "Full independent scientific/editorial review",
+      "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+      "code_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f"
+      },
+      "artifact_sha256": {
+        "figures/ch19_frontiers.py": "0a47d882cc522cf4a9d6201e63f96549e7d0e4f583fc9733c185582a68520fdb",
+        "assets/ch19-frontiers.svg": "33600442d62dfb4edf27632c208f81816ea5d2290e696ffba8400741fbb3cfaa",
+        "assets/ch19-frontiers-portrait.svg": "e9ee1fe3e3b79d98969039f9b94e1fa8cb7b98dd146a7e8d7e111d92daae5f07"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "7086c9a62cf10d95a2da8be3b8aae452896927a80f14698889326498564ee149"
+    },
+    {
+      "round": 3,
+      "reviewer": "independent Codex science-editor",
+      "review_task": "pilot_science_review_r1",
+      "date": "2026-10-28",
+      "scope": "Targeted reproduction-only addendum: create missing scratch output directory; scientific data/labels/current SVGs unchanged",
+      "full_scientific_review": false,
+      "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+      "code_sha256": {
+        "code/ch19_mean_variance.py": "f03a397b72a5fc9eb0f7d670c357a1cb6eb7810eb95a3ff957f3784c45fd844f"
+      },
+      "artifact_sha256": {
+        "figures/ch19_frontiers.py": "094435eef932a5889b04a99ffc1cf6fcf5a9cbbb68e47bb744a9b3eff1d9236d",
+        "assets/ch19-frontiers.svg": "33600442d62dfb4edf27632c208f81816ea5d2290e696ffba8400741fbb3cfaa",
+        "assets/ch19-frontiers-portrait.svg": "e9ee1fe3e3b79d98969039f9b94e1fa8cb7b98dd146a7e8d7e111d92daae5f07"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "46866e4790e29114211264758ba3de0d4d9fc47a7070723b73a3d6879d34a783"
+    }
+  ],
+  "limitations": [
+    "One-period unrestricted weights, known strictly positive-definite covariance, independent mean/budget constraints",
+    "Risk-free allocation assumes identical borrowing/lending rate",
+    "Normal utility benchmark is a model assumption, not empirical return evidence",
+    "R translation documentary; Python executed"
+  ],
+  "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+  "full_scientific_review_rounds": 2
+}
