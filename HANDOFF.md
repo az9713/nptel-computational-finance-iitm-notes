@@ -7,9 +7,9 @@ Checkpoint date: 2026-10-28. This is an incomplete-course checkpoint, not the fi
 
 - Chapters 1–21 are written and accepted, each with two full independent scientific reviews. Chapter 19 also has a narrowly scoped figure-generator startup repair addendum; its two full scientific rounds remain intact.
 - All 76 recordings have local machine transcripts. Recordings 1–74 are fully read. Recording 75's initial read was interrupted/truncated: restart it from character zero. Recording 76 has not been read.
-- Browser validation passed through Chapter 21 and the four navigation pages. Re-run after rebuilding navigation. Final release validation and GitHub Pages publication remain pending.
+- Browser validation passed through Chapter 21 and the four navigation pages, including a fresh run after rebuilding navigation for this checkpoint. All 21 complete programs and the embedded-code checker passed again. completion.json now correctly reports 21 accepted. Final release validation and GitHub Pages publication remain pending.
 - Chapters 22–24 have not been authored. The user expects completion of all recordings and eventual verified publication, with no approval loop.
-- Remote target: https://github.com/az9713/nptel-computational-finance-iitm-notes, branch main. The checkpoint commit and remote verification are recorded below after creation.
+- Remote: https://github.com/az9713/nptel-computational-finance-iitm-notes, branch main. The complete Chapters 1–21 checkpoint landed in commit e672bb84179cf8ab37f226fdf13da5d1eaa4366e; local HEAD and remote main were verified equal. This handoff follow-up records that verified checkpoint. No GitHub Pages site has been enabled.
 - Local ignored work/ holds essential sources, outlines, reviews, primary-reference research, video inspections, and execution evidence. It survives /clear on this workstation but is intentionally absent from GitHub. Do not delete it.
 
 ## Next task
