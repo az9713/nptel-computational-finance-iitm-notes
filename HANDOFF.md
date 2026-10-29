@@ -11,6 +11,7 @@ Checkpoint date: 2026-10-28. This is an incomplete-course checkpoint, not the fi
 - Chapters 22–24 have not been authored. The user expects completion of all recordings and eventual verified publication, with no approval loop.
 - Remote: https://github.com/az9713/nptel-computational-finance-iitm-notes, branch main. The complete Chapters 1–21 checkpoint landed in commit e672bb84179cf8ab37f226fdf13da5d1eaa4366e; local HEAD and remote main were verified equal. This handoff follow-up records that verified checkpoint. No GitHub Pages site has been enabled.
 - Local ignored work/ holds essential sources, outlines, reviews, primary-reference research, video inspections, and execution evidence. It survives /clear on this workstation but is intentionally absent from GitHub. Do not delete it.
+- Privacy follow-up: the user explicitly permits personal email, including existing Git commit metadata. Keep local tool configuration in ignored .serena/; do not publish workstation paths or private source/review material. The local privacy audit is work/personal-info-audit.json.
 
 ## Next task
 
