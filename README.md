@@ -4,7 +4,8 @@ An independent, source-grounded textbook rewrite of the NPTEL course coordinated
 
 **All 24 chapters are written and scientifically accepted**, covering all 76 recordings with 144 solved exercises. Each chapter has two full independent reviews matching its current scientific artifacts. Final publication verification is recorded separately from chapter acceptance.
 
-- [Open the reader](index.html)
+- [Read the published textbook](https://az9713.github.io/nptel-computational-finance-iitm-notes/)
+- [Open the local reader](index.html)
 - [Source map](source-map.html) and [completion inventory](completion.json)
 - [Executable programs](code-lab.html) and [primary references](references.html)
 - [Original playlist](https://www.youtube.com/playlist?list=PLyqSpQzTE6M_HO74zZkM7xBvLEtE1uIZ2)
