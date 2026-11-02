@@ -66,10 +66,12 @@
 <p>The companion uses <code>math.fsum</code> for the weighted sum. This improves accumulation of finite floating values, but cannot restore a missed peak or digits already lost inside a callback. Signed contributions can have a small net integral despite large absolute contributions, making relative accuracy demanding. There is no universal promise that increasing $n$ will achieve $10^{-10}$ accuracy for every integrand before arithmetic becomes relevant.</p>
 <pre><code class="language-python">import math
 
+
 def trapezoid(function, a, b, n):
     h = (b-a)/n
     interior = math.fsum(function(a+i*h) for i in range(1, n))
     return h*(.5*function(a)+interior+.5*function(b))
+
 
 estimate = trapezoid(math.exp, 0.0, 1.0, 20)
 error = estimate-math.expm1(1)

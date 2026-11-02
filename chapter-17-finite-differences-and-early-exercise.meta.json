@@ -180,14 +180,85 @@
       "resolved_nonblocking_findings": [
         "Explicit O(N) exercise-transition storage in addition to O(M) rolling price arrays; exact historical-body reconstruction independently checked"
       ]
+    },
+    {
+      "round": "r3-current-rejected",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch17-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
+      "code_sha256": {
+        "code/ch17_finite_differences.py": "d3949ef39ac42abbf3665be0a7d08600e6bce2690045f6f4d9198f3e718297a7"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "figures/ch17_american_put_and_exercise.py": "417cb2264140b3b5d25e8865fb8313f73543eba7367fa32828dd1cead0e44fc4",
+        "assets/ch17-american-put-and-exercise.svg": "98d54a7b7bf92d00e18c6864eb4f70733763ffff3ffa8cc980c6afb9d3106e5d",
+        "assets/ch17-american-put-and-exercise-portrait.svg": "73929a0fee7054ac38a9f7e16cf9f3b093baef5dc5acf6724aa2de25c76f7ba8"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision; unapproved",
+      "report_sha256": "b8d65ec139350477ee3a8f4817a88c4c3d92195a796467657506df64da07493a"
+    },
+    {
+      "round": "r4-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch17-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire repaired current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "09e0e3883a8b9d097b1cf287d45aa3866542a32a6d49c9d00e4e29685aefc803",
+      "code_sha256": {
+        "code/ch17_finite_differences.py": "5fb9fc92f782aeaf2f2f11d642a34c9617b01c0851edfadd7199727ae50f2767"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "figures/ch17_american_put_and_exercise.py": "417cb2264140b3b5d25e8865fb8313f73543eba7367fa32828dd1cead0e44fc4",
+        "assets/ch17-american-put-and-exercise.svg": "98d54a7b7bf92d00e18c6864eb4f70733763ffff3ffa8cc980c6afb9d3106e5d",
+        "assets/ch17-american-put-and-exercise-portrait.svg": "73929a0fee7054ac38a9f7e16cf9f3b093baef5dc5acf6724aa2de25c76f7ba8"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "19791098d9664e41dd41562f216ff96ebe3382269bbe221c5fd34c73ce3b1fa1"
+    },
+    {
+      "round": "5-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch17-r5-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "09e0e3883a8b9d097b1cf287d45aa3866542a32a6d49c9d00e4e29685aefc803",
+      "code_sha256": {
+        "code/ch17_finite_differences.py": "5fb9fc92f782aeaf2f2f11d642a34c9617b01c0851edfadd7199727ae50f2767"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "figures/ch17_american_put_and_exercise.py": "417cb2264140b3b5d25e8865fb8313f73543eba7367fa32828dd1cead0e44fc4",
+        "assets/ch17-american-put-and-exercise.svg": "98d54a7b7bf92d00e18c6864eb4f70733763ffff3ffa8cc980c6afb9d3106e5d",
+        "assets/ch17-american-put-and-exercise-portrait.svg": "73929a0fee7054ac38a9f7e16cf9f3b093baef5dc5acf6724aa2de25c76f7ba8"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "f84db7a78d78c2425bf3a06f1c09e6e196d518aab28efc598638691b131b739d"
     }
   ],
   "limitations": [
     "Nonnegative rate, no dividends, constant coefficients",
     "Explicit grid-exercise approximation and finite-domain boundary error",
     "Implicit and Crank–Nicolson equations are a mathematical preview, not locally executed alternative solvers",
-    "Refinement evidence is not a certified continuous American price or free-boundary enclosure"
+    "Refinement evidence is not a certified continuous American price or free-boundary enclosure",
+    "Exercise reporting uses scale-aware numerical ties; ambiguity can widen bands or produce unresolved NaN endpoints without changing the max-projection price update."
   ],
-  "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
-  "full_scientific_review_rounds": 2
+  "body_sha256": "09e0e3883a8b9d097b1cf287d45aa3866542a32a6d49c9d00e4e29685aefc803",
+  "full_scientific_review_rounds": 5,
+  "current_full_scientific_review_rounds": 2
 }

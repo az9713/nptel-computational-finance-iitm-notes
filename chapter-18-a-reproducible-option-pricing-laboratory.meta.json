@@ -194,6 +194,54 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "0fa4dafe5e44ba1b71a01ad837e784195166f0c7238799bfb9fd000c9716a27e"
+    },
+    {
+      "round": "3-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch18-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "code_sha256": {
+        "code/ch18_option_laboratory.py": "8bec3e5c3cbd6115f86eb3ff3d4736f348cb6958906ebf49828cfaeaea056afe"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "code/ch17_finite_differences.py": "5fb9fc92f782aeaf2f2f11d642a34c9617b01c0851edfadd7199727ae50f2767",
+        "figures/ch18_intermediates_and_boundaries.py": "e5a159c702a9496a45cfe4fcfbafcb6ba6ed6c0a5313f355b4e61863b4f55762",
+        "assets/ch18-intermediates-and-boundaries.svg": "06c989ac9f9ef2a1c229895459b4d2b90fb27123aa75840d8f2671aaf4767f5e",
+        "assets/ch18-intermediates-and-boundaries-portrait.svg": "e38eb8d0c07a38a19532f729241766e4fba25dbf8023cf5380b6a2cbde406127"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "ddb9563e9b6ce0dcd62319a80025adda4e4bc25ad15c52bebd3a1d2cf9aae9ad"
+    },
+    {
+      "round": "4-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch18-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "code_sha256": {
+        "code/ch18_option_laboratory.py": "8bec3e5c3cbd6115f86eb3ff3d4736f348cb6958906ebf49828cfaeaea056afe"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58",
+        "code/ch17_finite_differences.py": "5fb9fc92f782aeaf2f2f11d642a34c9617b01c0851edfadd7199727ae50f2767",
+        "figures/ch18_intermediates_and_boundaries.py": "e5a159c702a9496a45cfe4fcfbafcb6ba6ed6c0a5313f355b4e61863b4f55762",
+        "assets/ch18-intermediates-and-boundaries.svg": "06c989ac9f9ef2a1c229895459b4d2b90fb27123aa75840d8f2671aaf4767f5e",
+        "assets/ch18-intermediates-and-boundaries-portrait.svg": "e38eb8d0c07a38a19532f729241766e4fba25dbf8023cf5380b6a2cbde406127"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "e65cd2d57cbda4e68f6b1fe1719ff6940634c88ac1709162df5a07a254bb70af"
     }
   ],
   "limitations": [
@@ -203,5 +251,6 @@
     "European-only terminal sum and no-dividend constant-coefficient finite-domain grids"
   ],
   "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2
 }

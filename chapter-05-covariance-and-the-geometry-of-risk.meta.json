@@ -144,5 +144,9 @@
     "Finite-magnitude teaching code, not full numerical-range certification"
   ],
   "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording15 15–267: risk-direction/covariance motivation is developed in portfolio-quadratic and spectral-decomposition; anecdotes about portfolio sizes are omitted."
+  ]
 }

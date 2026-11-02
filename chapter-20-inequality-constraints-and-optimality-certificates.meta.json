@@ -212,5 +212,6 @@
     "Floating residuals and gap estimates are not formal interval certificates"
   ],
   "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2
 }

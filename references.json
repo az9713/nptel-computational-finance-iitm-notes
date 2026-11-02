@@ -10,9 +10,9 @@
     "supports": "The supplied sequence of 76 source recordings."
   },
   {
-    "title": "NIST DLMF Â§1.4(vi), Taylor's theorem for real variables",
+    "title": "NIST DLMF §1.4(vi), Taylor's theorem for real variables",
     "url": "https://dlmf.nist.gov/1.4.vi",
-    "supports": "Finite Taylor theorem and Lagrange/integral remainder forms, equations 1.4.35â€“1.4.37."
+    "supports": "Finite Taylor theorem and Lagrange/integral remainder forms, equations 1.4.35–1.4.37."
   },
   {
     "title": "David Goldberg, What Every Computer Scientist Should Know About Floating-Point Arithmetic",
@@ -27,12 +27,12 @@
   {
     "title": "Harry Markowitz, Portfolio Selection (1952)",
     "url": "https://doi.org/10.1111/j.1540-6261.1952.tb01525.x",
-    "supports": "Return beliefs and portfolio selection; expected returns, variance and covariance, especially pages 77 and 79â€“81."
+    "supports": "Return beliefs and portfolio selection; expected returns, variance and covariance, especially pages 77 and 79–81."
   },
   {
     "title": "Stephen Boyd and Lieven Vandenberghe, Convex Optimization (2004)",
     "url": "https://web.stanford.edu/~boyd/cvxbook/",
-    "supports": "Section 3.1.3 printed page 69: first-order convexity criteria; section 5.6 pages 251â€“252: perturbation interpretations of multipliers under stated assumptions."
+    "supports": "Section 3.1.3 printed page 69: first-order convexity criteria; section 5.6 pages 251–252: perturbation interpretations of multipliers under stated assumptions."
   },
   {
     "title": "Investor.gov bond overview",
@@ -87,12 +87,12 @@
   {
     "title": "Fama and French (2004), The Capital Asset Pricing Model: Theory and Evidence",
     "url": "https://mba.tuck.dartmouth.edu/bespeneckbo/default/AFA611-Eckbo%20web%20site/AFA611-S6B-FamaFrench-CAPM-JEP04.pdf",
-    "supports": "Printed pages 26â€“29: portfolio efficiency, market clearing and assumptions behind CAPM pricing restrictions."
+    "supports": "Printed pages 26–29: portfolio efficiency, market clearing and assumptions behind CAPM pricing restrictions."
   },
   {
     "title": "Fama (1991), Efficient Capital Markets: II",
     "url": "https://www.bu.edu/econ/files/2011/01/Fama2.pdf",
-    "supports": "Printed pages 1575â€“1576: joint testing of efficiency and an asset-pricing model."
+    "supports": "Printed pages 1575–1576: joint testing of efficiency and an asset-pricing model."
   },
   {
     "title": "NumPy 2.2 Dirichlet generator",
@@ -353,5 +353,60 @@
     "title": "SciPy HiGHS linprog official documentation",
     "url": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html",
     "supports": "Row <= constraints, explicit signed bounds, status and numericaltolerances; no SciPy runtime claim."
+  },
+  {
+    "title": "Karl Sigman (2006), Notes on Brownian Motion",
+    "url": "https://www.columbia.edu/~ks20/FE-Notes/4700-07-Notes-BM.pdf",
+    "supports": "Printed pages 2–4: IID central limit theorem, random-walk scaling and Brownian process properties."
+  },
+  {
+    "title": "Karl Sigman (2007), Acceptance-Rejection Method",
+    "url": "https://www.columbia.edu/~ks20/4703-Sigman/4703-07-Notes-ARM.pdf",
+    "supports": "Pages 1–2: global envelope, accepted conditional law and proposal cost; page4: beta target example."
+  },
+  {
+    "title": "Yibi Huang, STAT253/317 Lecture25",
+    "url": "https://www.stat.uchicago.edu/~yibi/teaching/stat317/2021/Lectures/Lecture25.pdf",
+    "supports": "Slides3–6: constant-drift independence conditional on endpoint and reflection crossing ratio; slides8–9: first-passage probability."
+  },
+  {
+    "title": "NumPy2.2 random-number stream compatibility policy",
+    "url": "https://numpy.org/doc/2.2/reference/random/compatibility.html",
+    "supports": "Generator, bit generator, seed, call sequence, build and environment conditions on detailed stream reproduction."
+  },
+  {
+    "title": "Haugh (2017), Simulation Efficiency and an Introduction to Variance Reduction Methods",
+    "url": "https://www.columbia.edu/~mh2078/MonteCarlo/MCS_Var_Red_Basic.pdf",
+    "supports": "Printed pages3–5 and7–9: independent-pilot controls, Asian geometric-payoff control proposal and antithetic construction; explicit proofs and experiments developed in chapters23–24."
+  },
+  {
+    "title": "Gelman et al., Bayesian Data Analysis, third edition, section3.2",
+    "url": "https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
+    "supports": "Printed pages64–66: normal-data prior/posterior/prediction; exact prior coordinate density and inverse-gamma convention specified and derived in chapter23."
+  },
+  {
+    "title": "Hastings (1970), Monte Carlo Sampling Methods Using Markov Chains and Their Applications",
+    "url": "https://doi.org/10.1093/biomet/57.1.97",
+    "supports": "Printed pages98–100 and104–105: accepted/rejected Markov transitions, serial dependence, batching and tractable-distribution checks."
+  },
+  {
+    "title": "R gamma-distribution documentation",
+    "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/GammaDist.html",
+    "supports": "Gamma shape/rate/scale and rgamma interface; documentary correspondence, not a chapter23 R-runtime claim."
+  },
+  {
+    "title": "Haugh (2017), IEOR E4703 Assignment2",
+    "url": "https://www.columbia.edu/~mh2078/MonteCarlo/Assign2_2017.pdf",
+    "supports": "First page questions3–4: Asian averages, independent-pilot control experiments and a geometric-payoff control; analytic expectation derived in chapter24."
+  },
+  {
+    "title": "CFTC Futures Glossary",
+    "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm",
+    "supports": "Over-the-counter and Asian-option terminology; definitions are used educationally, not as legal advice or current listing evidence."
+  },
+  {
+    "title": "Cboe Regulatory Circular RG16-044, February29 2016",
+    "url": "https://cdn.cboe.com/resources/regulation/circulars/regulatory/RG16-044.pdf",
+    "supports": "Dated pages1–3 describe Asian-style FLEX index settlement, monthly observation/calendar conventions and planned exchange-contract design; no claim of current listing or rules."
   }
 ]

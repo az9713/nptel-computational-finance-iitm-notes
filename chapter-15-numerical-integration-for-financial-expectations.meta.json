@@ -223,6 +223,54 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "5e8735b43f0b22ee1ab87904824659b9e4fcf5ed27b0d1b4c2d0719ecddfb7a2"
+    },
+    {
+      "round": "3-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch15-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "162f46c8ab7a9d5fc2a2f3619a75ade00d082508f8c28c620220958d33dfb548",
+      "code_sha256": {
+        "code/ch15_quadrature.py": "700bee729d5d06c02a248d52dc74ad1a2bdfe8687f382f9331d6cd82a9d1517e"
+      },
+      "artifact_sha256": {
+        "figures/ch15_convergence_and_allocation.py": "ba6135fd723255de72dd71649ede7fcb1e3d6fae51b8b20f284ad844749f9ee9",
+        "assets/ch15-convergence-and-allocation.svg": "baa48ee76e9577b6941a00544d32983ac279160090b75313a2f4b2c2649be28c",
+        "assets/ch15-convergence-and-allocation-portrait.svg": "4cc0b820d36a40719875fc022965dd36b41fb592d1fab0ac20ad2a6aaff6f5b6",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d",
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "52f4e2a13f03b6fc0adc4b6a33732d1232af600eab3b48122cbfae0d41dc7ddc"
+    },
+    {
+      "round": "4-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch15-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "162f46c8ab7a9d5fc2a2f3619a75ade00d082508f8c28c620220958d33dfb548",
+      "code_sha256": {
+        "code/ch15_quadrature.py": "700bee729d5d06c02a248d52dc74ad1a2bdfe8687f382f9331d6cd82a9d1517e"
+      },
+      "artifact_sha256": {
+        "figures/ch15_convergence_and_allocation.py": "ba6135fd723255de72dd71649ede7fcb1e3d6fae51b8b20f284ad844749f9ee9",
+        "assets/ch15-convergence-and-allocation.svg": "baa48ee76e9577b6941a00544d32983ac279160090b75313a2f4b2c2649be28c",
+        "assets/ch15-convergence-and-allocation-portrait.svg": "4cc0b820d36a40719875fc022965dd36b41fb592d1fab0ac20ad2a6aaff6f5b6",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d",
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "575377bdc7bdbdf50ab7fa4def3fa7eacb9d20747700d46d57dd9983e201ba98"
     }
   ],
   "limitations": [
@@ -232,6 +280,10 @@
     "Original polynomial table replaces incompletely narrated on-screen values; no invented recovery",
     "Continuous allocation from numerical derivative integration and strict-concavity argument, not interval-certified root"
   ],
-  "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
-  "full_scientific_review_rounds": 2
+  "body_sha256": "162f46c8ab7a9d5fc2a2f3619a75ade00d082508f8c28c620220958d33dfb548",
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording40 15–75: quadrature orientation and declared limited algorithm scope are covered by quadrature-contract/trapezoid/simpson; no claim about an exhaustive count of algorithms is adopted."
+  ]
 }

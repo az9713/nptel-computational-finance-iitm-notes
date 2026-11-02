@@ -1,0 +1,215 @@
+{
+  "chapter": 24,
+  "title": "Asian options and a complete numerical workflow",
+  "file": "chapter-24-asian-options-and-a-complete-numerical-workflow.html",
+  "source_recordings": [
+    71,
+    75,
+    76
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "contract-and-law",
+    "path-information",
+    "exact-grid-and-streaming",
+    "geometric-benchmark",
+    "sampling-and-pairs",
+    "geometric-control",
+    "dates-versus-precision",
+    "changing-the-model",
+    "error-and-method-synthesis",
+    "program-and-labs",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "contract-and-law",
+      "recording": 69,
+      "start_seconds": 1045,
+      "end_seconds": 1364,
+      "topic": "Arithmetic average contract, venue/design and insurance-cost discussion with explicit corrections"
+    },
+    {
+      "section": "path-information",
+      "recording": 74,
+      "start_seconds": 560,
+      "end_seconds": 756,
+      "topic": "Complete four-observation arithmetic/geometric comparison and qualified true-price versus estimator bound"
+    },
+    {
+      "section": "exact-grid-and-streaming",
+      "recording": 69,
+      "start_seconds": 1364,
+      "end_seconds": 1652,
+      "topic": "Path-state requirement, exact GBM inner loop, average/discount and N-by-m cost; augmented-state/storage qualification"
+    },
+    {
+      "section": "geometric-benchmark",
+      "recording": 69,
+      "start_seconds": 1652,
+      "end_seconds": 1792,
+      "topic": "Arithmetic/geometric simulation, geometric benchmark and observation-count refinement"
+    },
+    {
+      "section": "exact-grid-and-streaming",
+      "recording": 75,
+      "start_seconds": 1170,
+      "end_seconds": 1355,
+      "topic": "R log-path matrix, arithmetic row means, geometric log-average payoff and SE"
+    },
+    {
+      "section": "geometric-benchmark",
+      "recording": 75,
+      "start_seconds": 1355,
+      "end_seconds": 1445,
+      "topic": "R discrete geometric formula and observation/strike experiments"
+    },
+    {
+      "section": "exact-grid-and-streaming",
+      "recording": 76,
+      "start_seconds": 1197,
+      "end_seconds": 1361,
+      "topic": "Paired Python log-path matrix and arithmetic/geometric payoff construction"
+    },
+    {
+      "section": "geometric-benchmark",
+      "recording": 76,
+      "start_seconds": 1361,
+      "end_seconds": 1449,
+      "topic": "Python closed geometric benchmark, refinement and strike comparisons"
+    },
+    {
+      "section": "program-and-labs",
+      "recording": 76,
+      "start_seconds": 1449,
+      "end_seconds": 1480,
+      "topic": "Generic path sampler/payoff replacement and transition into the separately mapped inference laboratory"
+    },
+    {
+      "section": "error-and-method-synthesis",
+      "recording": 71,
+      "start_seconds": 15,
+      "end_seconds": 485,
+      "topic": "Full three-object course synthesis, numerical/statistical errors, reusable functions and independent crosschecks"
+    },
+    {
+      "section": "changing-the-model",
+      "recording": 71,
+      "start_seconds": 485,
+      "end_seconds": 595,
+      "topic": "Alternative distribution exploration qualified by finite exponential moments and risk-neutral compensation"
+    },
+    {
+      "section": "program-and-labs",
+      "recording": 71,
+      "start_seconds": 595,
+      "end_seconds": 690,
+      "topic": "Experimentation and complete computational workflow; closing remarks excluded from mathematical claims"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch24_asian_workflow.py",
+      "check": "Discrete date contracts, streaming/matrix parity, geometric moment/price benchmarks, antithetic independent-pilot controls, coupled schedules, initial observation identity, rare/zero-variance cases and compensated coin exact enumeration"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch22_sampling.py",
+    "code/ch23_pricing_and_inference.py",
+    "figures/ch24_paths_contracts_and_controls.py",
+    "assets/ch24-paths-and-controls.svg",
+    "assets/ch24-paths-and-controls-portrait.svg",
+    "assets/ch24-dates-and-precision.svg",
+    "assets/ch24-dates-and-precision-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch24-r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527",
+      "code_sha256": {
+        "code/ch24_asian_workflow.py": "fc0b7fe977de472589efa3b13b490806aa21f26dfae58bedaf720ce8a596de52"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232",
+        "figures/ch24_paths_contracts_and_controls.py": "b07cb05583fe6bdb878db3411305dcd755243b78471586c4596fb63063c88829",
+        "assets/ch24-paths-and-controls.svg": "162f0577bd39c24e34d276c4cc0866d20360f6fc2f6f757da0b2985626eba53a",
+        "assets/ch24-paths-and-controls-portrait.svg": "72ab9fbbb35b35c15962c79941c0a886d76052dbe8d7550d811e2eb2dcb431d6",
+        "assets/ch24-dates-and-precision.svg": "98a388225ee60006cc454702c4cd7797269a787bfc202076481eb94fa8ee321a",
+        "assets/ch24-dates-and-precision-portrait.svg": "393e18b21a5527f52f8498cac8e584b70e8994a78e4ae58075bf293b06071ea2"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "44fe989f43ce3758c861c94de05773c9f4b4f2129a94dd23027baacad53a88e9"
+    },
+    {
+      "round": 2,
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch24-r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527",
+      "code_sha256": {
+        "code/ch24_asian_workflow.py": "fc0b7fe977de472589efa3b13b490806aa21f26dfae58bedaf720ce8a596de52"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232",
+        "figures/ch24_paths_contracts_and_controls.py": "b07cb05583fe6bdb878db3411305dcd755243b78471586c4596fb63063c88829",
+        "assets/ch24-paths-and-controls.svg": "162f0577bd39c24e34d276c4cc0866d20360f6fc2f6f757da0b2985626eba53a",
+        "assets/ch24-paths-and-controls-portrait.svg": "72ab9fbbb35b35c15962c79941c0a886d76052dbe8d7550d811e2eb2dcb431d6",
+        "assets/ch24-dates-and-precision.svg": "98a388225ee60006cc454702c4cd7797269a787bfc202076481eb94fa8ee321a",
+        "assets/ch24-dates-and-precision-portrait.svg": "393e18b21a5527f52f8498cac8e584b70e8994a78e4ae58075bf293b06071ea2"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "3ade7d1a79b835b7113d44067d754002114ff63160142f5bf58b26db05a03de2"
+    }
+  ],
+  "body_sha256": "6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527",
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2,
+  "limitations": [
+    "Fixed-strike maturity-only Asian contracts on explicit equally weighted dates ending exactly at maturity",
+    "Positive volatility and moderate floating-point main sampling inputs; generic normal-log payoff helper includes degenerate limit cases",
+    "Normal geometric control applies only to its matching GBM law/date/settlement contract",
+    "Finite-grid compensated coin model is an original alternative, not exact GBM or market calibration",
+    "Estimated SE/normal whiskers are statistical diagnostics, not finite-sample certificates",
+    "R and notebook correspondence documentary; no R or cloud execution claimed",
+    "Cboe2016 circular is used as a dated contract-design example, not present-listing or current-rule evidence"
+  ],
+  "source_corrections": [
+    "Payoff shape does not force OTC venue; actual dated exchange-contract specification supplies qualification",
+    "Path-average payoff needs running state, not necessarily a stored whole history; stock-only recombination limitation does not make simulation the only method",
+    "Geometric average is exp(mean log prices), not geometric mean of log prices",
+    "Geometric closed form is date specific; arithmetic does not inherit the linear-normal reduction",
+    "Pathwise AM/GM ordering differs from a conditional Asian/European price inequality and from a finite sample comparison",
+    "Changing observation dates changes a discrete contract, whereas more paths improve its sampling precision",
+    "Root-N scaling is not a universal nonzero-error lower bound; zero sample SE need not prove true zero variance",
+    "Alternative innovations require finite exponential moments and a consistent pricing compensator"
+  ],
+  "original_additions": [
+    "Explicit geometric joint-normal and linear-work covariance derivations",
+    "Streaming-vs-matrix crosscheck and original same-terminal-price histories",
+    "Independent-pilot geometric controls, unit-control lower bound and actual fitted-observation counterexample",
+    "Coupled observation-contract differences and exact time-zero inclusion identity",
+    "Compensated fair-coin finite pricing model and exact enumeration",
+    "Rare-event versus genuine zero-variance diagnostics, negative-rate price-order counterexample and six full solved exercises"
+  ],
+  "coverage_notes": [
+    "Recording69European16–1045 and74European/MH/utility spans belong23; initial sampling in75/76 belongs22 and posterior/utility belongs23",
+    "Source69venue/exchange blanket claim is qualified with CFTC terminology and dated Cboe2016 design evidence; no contemporary listing inference",
+    "Source71 speculative future-course/personal closing remarks carry no mathematical or publication claim",
+    "Original source array/seed/date conventions and rounded outputs are not falsely reconstructed"
+  ]
+}

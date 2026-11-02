@@ -1,51 +1,34 @@
 # HANDOFF — Computational Finance 1
 
-**Read this first each new session, then AGENTS.md for standing conventions.**
-Checkpoint date: 2026-10-28. This is an incomplete-course checkpoint, not the final release.
+Read this first, then AGENTS.md and WORKFLOW.md. Checkpoint: 2026-11-02. Full publication remains pending; this is not a final release declaration.
 
-## Current state
+## Current authoritative state
 
-- Chapters 1–21 are written and accepted, each with two full independent scientific reviews. Chapter 19 also has a narrowly scoped figure-generator startup repair addendum; its two full scientific rounds remain intact.
-- All 76 recordings have local machine transcripts. Recordings 1–74 are fully read. Recording 75's initial read was interrupted/truncated: restart it from character zero. Recording 76 has not been read.
-- Browser validation passed through Chapter 21 and the four navigation pages, including a fresh run after rebuilding navigation for this checkpoint. All 21 complete programs and the embedded-code checker passed again. completion.json now correctly reports 21 accepted. Final release validation and GitHub Pages publication remain pending.
-- Chapters 22–24 have not been authored. The user expects completion of all recordings and eventual verified publication, with no approval loop.
-- Remote: https://github.com/az9713/nptel-computational-finance-iitm-notes, branch main. The complete Chapters 1–21 checkpoint landed in commit e672bb84179cf8ab37f226fdf13da5d1eaa4366e; local HEAD and remote main were verified equal. This handoff follow-up records that verified checkpoint. No GitHub Pages site has been enabled.
-- Local ignored work/ holds essential sources, outlines, reviews, primary-reference research, video inspections, and execution evidence. It survives /clear on this workstation but is intentionally absent from GitHub. Do not delete it.
-- Privacy follow-up: the user explicitly permits personal email, including existing Git commit metadata. Keep local tool configuration in ignored .serena/; do not publish workstation paths or private source/review material. The local privacy audit is work/personal-info-audit.json.
+All24 chapters are written and accepted with two full independent current-artifact reviews apiece. All76 recordings have local audio and machine transcripts, all76 are read in full, and the fresh source inventory reports no structural flags. Individual sidecars and generated completion.json are authoritative for acceptance.
 
-## Next task
+Chapter24 accepted body hash6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527. Both full independent reports ch24-r1.md and ch24-r2.md passed with zero blockers. Independent matrix simulations and high-precision integration matched the results; all four SVGs reproduced byte for byte, and every solution was actually inspected at desktop/mobile widths. The concurrent builder changed only the sidecar JSON byte formatting; both reviewers independently recorded parsed equality.
 
-**Read recordings 75 and 76 completely, record their scope, then finalize Chapter 22's outline before authoring.** Start with the matching files in work/sources/transcripts/; read in chunks of at most roughly 5,500 characters to avoid tool-output truncation. Update work/sources/read-ledger.json only after completing each source. Check the recording 74 video and recover the actual Metropolis–Hastings table before freezing Chapter 23.
+Chapter17's zero/near-zero-rate diagnostic repair is accepted after full independent R4/R5 reviews; Chapter18's changed dependency required full R3/R4 renewals, also accepted. Historical failed proposals, rejected reports and pre-repair artifacts remain preserved. Chapter23 is accepted after full repaired current R1/R2 reviews, with rejected first rounds preserved. Chapter22's repaired beta-square variance is37/700 and both full renewed reviews passed.
 
-After source reading, complete Chapter 22, then 23, then 24 using the full independent review gates. Finish whole-book checks, documentation, source-free export, commit/push, Pages publication, and live verification. Do not stop at a partial chapter milestone or mark the overall goal complete early.
+## Next work
 
-## Where to read things
+All chapter scientific gates and book-level passes are complete. The source-free build/all24program execution and final offline --browser --release checks now pass. Inspect the final staged tree, commit/push and verify live GitHub Pages publication. Do not use --release or declare the goal complete before the full course and release evidence are ready. Publication is authorized; no additional approval loop is required.
 
-- WORKFLOW.md and AGENTS.md — production and verification conventions.
-- BOOK-STATE.yaml, chapter-manifest.json, individual *.meta.json — live chapter state and actual source coverage.
-- work/plan/architecture.md — evolving mixed-recording partitions; work/plan/chNN-outline.md — outlines for accepted chapters.
-- work/sources/read-ledger.json — full-read evidence and detailed corrections for final recordings.
-- work/reviews/chNN-r1.md and chNN-r2.md — full scientific review evidence. Chapter 19's additional report is work/reviews/ch19-reproduction-addendum.md.
-- work/checkpoint-resume-notes.md — unresolved scientific issues and final-block details that must be carried into the remaining chapters.
+The manifest, internal final architecture and notation are reconciled. All24programs and25exact embedded blocks execute; all144chapter diagnostics pass with explicit false-positive/advisory dispositions. The structural audit confirms76mapped sources,144solutions and all24full current private-report gates. Public export rebuild and link checks pass; final --browser --release validation passed all28reader pages and the exact current scientific/private-report gates. release-validation.json summarizes the completed content checks without private reports. work/book-passes.md records the course-wide editorial audit.
 
-## Source partitions to preserve
+## Evidence and reproduction
 
-- Chapter 22 primary recordings: 66, 67, 68, 72, 73.
-- Chapter 23 primary recordings: 69, 70, 74. Recording 69: European MC through about 1045 seconds. Recording 74: European MC 15–560 seconds and MH/utility 756–1681 seconds.
-- Chapter 24 primary recordings: 71, 75, 76. Secondary Asian material: recording 69 at 1045–1792 seconds, recording 74 at 560–756 seconds. Revisit lab partitions after fully reading 75 and 76.
+- WORKFLOW.md and AGENTS.md define scientific and publication requirements.
+- work/authoring-contract.md records scope, style calibration and permitted autonomy.
+- work/plan/architecture.md has the final primary assignments and mixed-recording partitions; chapter-specific outlines and notation live alongside it.
+- work/sources/read-ledger.json and source-validation-summary.json record76/76 reading and source limitations.
+- work/reviews/ preserves every full report, rejection, repair and reproduction check; these are private and must not be staged.
+- tools/review_evidence.py checks exact raw between-marker body bytes, code, scientific imported dependencies, generators and SVGs. Two distinct full current zero-blocking reviews are required. Targeted closures cannot substitute for full scientific review. Eleven synthetic regression checks pass.
+- Release validation additionally checks actual private report hashes. Public clones verify attestations and reproducibility, not private editorial judgment. Chapter19 has one narrowly limited infrastructure addendum for ignored output-directory creation; it is not a new scientific round.
+- Source74 actual MH table is recovered in private video frames/provenance: kernel values2.4,2,2.2,1.6,.8 at.008,.010,.011,.012,.014; proposal trace.012,.008,.014,.011 with uniforms.53,.91,.67,.24 retains.012,.008,.008,.011.
 
-## Scratch and reproduction
+## Publication boundary
 
-- No persistent JavaScript globals are required. Recreate fs, child_process, crypto imports and read files from disk. Transcript strings previously held in Node memory must be reloaded.
-- tools/build_book.py preserves bodies between chapter markers and generates navigation, references, code listings, and completion.json. Do not regenerate accepted prose.
-- Public figures/chNN_*.py generate public SVG figures and local diagnostics. Public code/chNN_*.py contain numerical programs. These generators are durable; local work/figures and browser screenshots are diagnostic outputs.
-- work/update_author_state.py and work/accept_unchanged_chapter.py are local helpers. Inspect before use; do not rerun acceptance on an already accepted chapter.
-- work/fetch_video63.py, fetch_video70.py, fetch_video73.py, fetch_video74.py use yt-dlp's visionos route for low-resolution visual verification. Videos and frame provenance live in work/sources/video-inspection/. Keep caches/temp/profile paths under work/.
-- Python 3.13 is installed; Chrome is installed. Prefer the validator's explicit Chrome executable configuration if Playwright's managed/channel browser is missing. Cross-program Python imports executed with -I must add the program's parent directory to sys.path.
+Remote: https://github.com/az9713/nptel-computational-finance-iitm-notes, branch main. At this checkpoint local HEAD is52e7233505432eec22baac7d97ac87eb6f6ccdd1. Reverify remote state before pushing. Pages was not enabled at the last confirmed check; do not infer current state.
 
-## Remaining release issues
-
-- Correct punctuation mojibake in references.json without silently changing accepted scientific bodies.
-- Final validation reports must bind the final rebuilt files; a self-hashing publication report must exclude its own entry.
-- The final public export must exclude work/, raw sources, credentials, and private local paths. Preserve their local evidence rather than deleting it.
-- A fresh clone lacks private review reports; document that boundary. Do not present historical browser checks as proof of a later changed file.
+Keep raw audio/video, transcripts, downloaded references, models, author briefs, review reports, local paths, credentials and tool configuration out of public commits. Preserve ignored work/ locally. Explicitly stage intended public files and inspect the staged tree. Historical commit-email retention was explicitly permitted in prior user instructions; use public noreply identity for new commits and publish no personal contact information in the deliverable. Final publication evidence must bind final files and exclude its own digest to avoid self-reference.

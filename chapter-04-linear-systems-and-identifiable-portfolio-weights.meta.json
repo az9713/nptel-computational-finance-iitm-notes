@@ -126,5 +126,9 @@
     "figures/ch04_feasible_weights.py",
     "assets/ch04-feasible-weights.svg"
   ],
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording12 15–767: roadmap revisits discounted cash flows, Lagrange systems, scaling and conditioning (Chapter4), covariance/eigenstructure (Chapter5), CAPM/factors (Chapter6). Those mechanisms are developed in their own sections. Greetings, industry anecdotes, optional resource recommendations and future-course narration are omitted; no additional mathematical derivation is left uncovered in this introductory span."
+  ]
 }

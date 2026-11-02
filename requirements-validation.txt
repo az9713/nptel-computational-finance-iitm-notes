@@ -1,0 +1,4 @@
+# Additional packages used by the book's validation commands.
+-r requirements.txt
+pycodestyle==2.14.0
+playwright==1.57.0

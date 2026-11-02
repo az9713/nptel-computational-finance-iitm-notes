@@ -168,6 +168,52 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "6c381975fa0b85f5371e0b5add536c7f06583f58742ab53729f9acc1a91aa247"
+    },
+    {
+      "round": "3-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch11-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "code_sha256": {
+        "code/ch11_newton_secant.py": "936a8072710062c128fec7ca3054b812daa85321685b92599571af7fed42696b"
+      },
+      "artifact_sha256": {
+        "figures/ch11_steps_and_brackets.py": "a150a70d248fd375c5579aadacfff8418783ba35aeb8eff52c67bce3d4ca18db",
+        "assets/ch11-steps-and-brackets.svg": "87342745fc7b9c90069fc995ef847ff6cc9998c7d66ec7acab72f19f9ebbcd0f",
+        "assets/ch11-steps-and-brackets-portrait.svg": "8e85e50a1180ec8351ef4d46544af6ff0d117d865abd1b70ca12d2e5781c5113",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "c5aa7d5852c1ab911a1331cef74ece1b6e81b3ef885014c706e4df6f521e8257"
+    },
+    {
+      "round": "4-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch11-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "code_sha256": {
+        "code/ch11_newton_secant.py": "936a8072710062c128fec7ca3054b812daa85321685b92599571af7fed42696b"
+      },
+      "artifact_sha256": {
+        "figures/ch11_steps_and_brackets.py": "a150a70d248fd375c5579aadacfff8418783ba35aeb8eff52c67bce3d4ca18db",
+        "assets/ch11-steps-and-brackets.svg": "87342745fc7b9c90069fc995ef847ff6cc9998c7d66ec7acab72f19f9ebbcd0f",
+        "assets/ch11-steps-and-brackets-portrait.svg": "8e85e50a1180ec8351ef4d46544af6ff0d117d865abd1b70ca12d2e5781c5113",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "0a5fc8bba3731a4e62f53d058c21ccc6e8b4d05b97436c6b596713bba8711a69"
     }
   ],
   "limitations": [
@@ -178,5 +224,10 @@
     "Ordinary floating-point moderate fixtures; public Chapter8/10 modules required"
   ],
   "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording31 15–100: tangent/slope motivation and qualified comparison with bisection is developed in newton-step and local-convergence; unqualified claims of universal speed are not adopted.",
+    "Final source-introduction audit: recording34 15–102: worked-problem orientation to yield/implied-volatility is developed in worked-calibrations; problem-session administration is omitted."
+  ]
 }

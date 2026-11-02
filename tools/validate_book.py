@@ -9,9 +9,12 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 from urllib.parse import parse_qs, unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from review_evidence import accepted_evidence, local_reports  # noqa: E402
 
 
 class Page(HTMLParser):
@@ -65,6 +68,7 @@ def static_check(release):
         if re.search(r'\[(?:PROOF NEEDED|CITATION NEEDED|NUMBER NOT YET|AUTHOR DECISION)', text):
             problems.append(f'{name}: unresolved authoring placeholder')
     if release:
+        reports = local_reports(ROOT)
         for chapter in manifest['chapters']:
             path = ROOT / chapter['file']
             meta_path = path.with_suffix('.meta.json')
@@ -72,13 +76,10 @@ def static_check(release):
                 problems.append(f'Chapter {chapter["number"]}: missing manuscript or sidecar')
                 continue
             meta = json.loads(meta_path.read_text(encoding='utf-8'))
-            body = path.read_text(encoding='utf-8').split('<!-- BEGIN CHAPTER -->')[1].split('<!-- END CHAPTER -->')[0]
-            digest = hashlib.sha256(body.encode('utf-8')).hexdigest()
-            reviews = meta.get('reviews', [])
-            if meta.get('status') != 'accepted' or len(reviews) < 2:
-                problems.append(f'Chapter {chapter["number"]}: two review rounds and acceptance required')
-            elif reviews[-1].get('body_sha256') != digest or reviews[-1].get('blocking_findings') != 0:
-                problems.append(f'Chapter {chapter["number"]}: latest scientific review is stale or blocking')
+            try:
+                accepted_evidence(meta, path.read_bytes(), ROOT, reports=reports)
+            except ValueError as error:
+                problems.append(f'Chapter {chapter["number"]}: {error}')
     return paths, problems
 
 

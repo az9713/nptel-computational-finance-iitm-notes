@@ -12,3 +12,26 @@ The course uses a source-grounded author → independent review → repair → s
 `chapter-manifest.json` defines the thematic plan. `source-manifest.json` records the 76 playlist entries. Individual chapter sidecars record actual coverage and scientific acceptance. `completion.json` is generated; rebuild it after acceptance changes. Execution and browser reports have narrower scopes than scientific review.
 
 Raw source material and detailed editorial evidence remain in ignored `work/`. Public references and timestamp links support provenance without redistributing the recordings or transcripts. Cached source material on the original workstation survives a conversation clear, but is not recoverable from a fresh Git clone.
+
+The builder checks two distinct full current-artifact approvals, including every
+declared program, imported scientific dependency, generator and SVG. A latest
+targeted closure cannot replace a stale full round. Body hashes retain exact
+between-marker bytes, including line endings. Current blocking findings prevent
+acceptance even if other current reports approve.
+
+The release validator additionally requires the original private reports to be
+present and match their recorded hashes and artifact bindings. Public-clone
+builds verify the published attestations; they cannot independently reperform
+the private editorial judgment. This boundary is intentional.
+
+A separately identified infrastructure addendum can bridge only the supported
+one-line creation of the ignored figure-output directory. Removing that exact
+line must restore the historical generator hash. It cannot bridge changed
+scientific bodies, numerical programs, or SVGs, and it does not count as another
+full scientific round. Chapter19 records this exception explicitly.
+
+Run the gate's synthetic regression checks with
+`python -I tools/test_review_evidence.py`. They test stale/targeted histories,
+duplicate reviewers, missing bindings/reports, raw body changes, current
+blockers, imported dependencies, and the narrowly limited infrastructure case;
+they do not establish a chapter's scientific correctness.

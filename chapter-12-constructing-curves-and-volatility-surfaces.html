@@ -151,7 +151,7 @@ fit[c("root", "f.root", "iter", "estim.prec")]
 import sys
 
 sys.path.insert(0, str(Path("code").resolve()))
-from ch12_curves_and_surfaces import source_lab_table
+from ch12_curves_and_surfaces import source_lab_table  # noqa: E402
 
 for years, coupon, price, fitted_yield, residual in source_lab_table():
     print(f"{years:2d} years: price={price:.9f}, "

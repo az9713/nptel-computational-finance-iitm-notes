@@ -171,5 +171,6 @@
     "R/SciPy interfaces documentary; no trading or data connection"
   ],
   "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2
 }

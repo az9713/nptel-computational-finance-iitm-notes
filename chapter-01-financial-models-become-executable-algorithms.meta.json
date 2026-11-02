@@ -124,6 +124,46 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "16bf272b83e014e18aca11db951563847c92546ba7d6885212ded2e26835edc8"
+    },
+    {
+      "round": "current-r3",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch02_current_r3",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "2c1f3c4ba9d26ba85069305c9a8874e9f3fc5609e915ca7a5e7eb2dd028e2010",
+      "code_sha256": {
+        "code/ch01_cashflows.py": "332cc2a791575f2c6c7ead7816cca96033de4077d484b1f71424108382b09667"
+      },
+      "artifact_sha256": {
+        "figures/ch01_cashflow_trace.py": "1a6ae1c755209c0ff82e14ff8d84251435520bf23701134eb7a33ecdc9f10bb3",
+        "assets/ch01-cashflow-trace.svg": "2e4090b6ff528ce6cefe07891cb505886aeebf264a8223e3b20df12bd61d3cd7",
+        "assets/ch01-cashflow-trace-portrait.svg": "0fc968f271b7beeb888182dcaa9c8bcb4cbffd8e248090859646228a6828ac24"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "e808bef4ef0c7e3c59a05c5f1be95f6e58e68656e37144195d2935389cf2a272"
+    },
+    {
+      "round": "current-r4",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "2c1f3c4ba9d26ba85069305c9a8874e9f3fc5609e915ca7a5e7eb2dd028e2010",
+      "code_sha256": {
+        "code/ch01_cashflows.py": "332cc2a791575f2c6c7ead7816cca96033de4077d484b1f71424108382b09667"
+      },
+      "artifact_sha256": {
+        "figures/ch01_cashflow_trace.py": "1a6ae1c755209c0ff82e14ff8d84251435520bf23701134eb7a33ecdc9f10bb3",
+        "assets/ch01-cashflow-trace.svg": "2e4090b6ff528ce6cefe07891cb505886aeebf264a8223e3b20df12bd61d3cd7",
+        "assets/ch01-cashflow-trace-portrait.svg": "0fc968f271b7beeb888182dcaa9c8bcb4cbffd8e248090859646228a6828ac24"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "eefc1b16a8471b4db6a18701ccd9f63244e92e39f89a4d06f3742d727f6a9a48"
     }
   ],
   "limitations": [
@@ -132,7 +172,7 @@
     "R semantics explained; execution evidence is for the Python companion",
     "Moderate-magnitude floating-point teaching implementation, not global range certification"
   ],
-  "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+  "body_sha256": "2c1f3c4ba9d26ba85069305c9a8874e9f3fc5609e915ca7a5e7eb2dd028e2010",
   "selected_frame_checks": [
     {
       "recording": 11,
@@ -140,5 +180,17 @@
       "observation": "Displayed time vectors1,2,3 and1..5; chapter explicitly assumes annual rate/year units despite conflicting narrated horizon"
     }
   ],
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 4,
+  "reviewed_artifacts": [
+    "figures/ch01_cashflow_trace.py",
+    "assets/ch01-cashflow-trace.svg",
+    "assets/ch01-cashflow-trace-portrait.svg"
+  ],
+  "review_refresh_reason": "Original Figure1.1 added to meet standing production requirement; preserve historical full rounds and require two full current-artifact reviews.",
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording2 15–229: instructor/course orientation and time-value motivation are covered in Chapter1 financial-questions/bond-contract; greetings and biography are omitted.",
+    "Final source-introduction audit: recording10 15–103: hosted R-runtime setup is addressed by paired-laboratories/notebook-reproducibility; changing menu procedures and unverified automatic-version assurances are not frozen as facts.",
+    "Final source-introduction audit: recording11 15–98: hosted Python notebook setup is addressed by paired-laboratories/notebook-reproducibility; installation/menu assurances are not current software guarantees."
+  ]
 }

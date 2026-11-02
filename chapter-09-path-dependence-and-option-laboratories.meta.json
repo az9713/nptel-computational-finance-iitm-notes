@@ -139,5 +139,9 @@
     "Public Chapter8 companion required as local dependency"
   ],
   "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording25 15–60: orientation from European to other path-dependent contracts is developed in path-information; greetings are omitted."
+  ]
 }

@@ -1,0 +1,297 @@
+{
+  "chapter": 22,
+  "title": "Random walks, sampling, and Monte Carlo",
+  "file": "chapter-22-random-walks-sampling-and-monte-carlo.html",
+  "source_recordings": [
+    66,
+    67,
+    68,
+    72,
+    73
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "expectation-contract",
+    "sampling-error",
+    "path-cost",
+    "walk-scaling",
+    "brownian-gbm",
+    "inverse-terminal",
+    "rejection",
+    "barrier-normalization",
+    "paired-labs",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "expectation-contract",
+      "recording": 66,
+      "start_seconds": 15,
+      "end_seconds": 348,
+      "topic": "Path-dependent claims, uncertain portfolio expectations and sampler/target motivation"
+    },
+    {
+      "section": "sampling-error",
+      "recording": 66,
+      "start_seconds": 524,
+      "end_seconds": 756,
+      "topic": "Generic Monte Carlo mean, LLN/CLT and explicit finite-variance/IID qualifications"
+    },
+    {
+      "section": "path-cost",
+      "recording": 66,
+      "start_seconds": 348,
+      "end_seconds": 524,
+      "topic": "Asian stock-state insufficiency, tree paths and tensor growth"
+    },
+    {
+      "section": "path-cost",
+      "recording": 66,
+      "start_seconds": 756,
+      "end_seconds": 989,
+      "topic": "Tenfold precision cost, qualified dimension-eight comparison and alternatives to Monte Carlo"
+    },
+    {
+      "section": "walk-scaling",
+      "recording": 67,
+      "start_seconds": 15,
+      "end_seconds": 524,
+      "topic": "Fair walk moments, endpoint support and empirical/theoretical distinction; source slips corrected"
+    },
+    {
+      "section": "brownian-gbm",
+      "recording": 67,
+      "start_seconds": 607,
+      "end_seconds": 1394,
+      "topic": "Diffusion scaling, Brownian process/independent increments, lognormal transition, drift correction, simulation and physical/pricing measures"
+    },
+    {
+      "section": "inverse-terminal",
+      "recording": 68,
+      "start_seconds": 247,
+      "end_seconds": 594,
+      "topic": "Direct lognormal inverse transform and terminal-versus-path computational cost"
+    },
+    {
+      "section": "expectation-contract",
+      "recording": 68,
+      "start_seconds": 16,
+      "end_seconds": 247,
+      "topic": "Generic sampler/integrand contract across European/Asian/barrier claims"
+    },
+    {
+      "section": "rejection",
+      "recording": 68,
+      "start_seconds": 678,
+      "end_seconds": 942,
+      "topic": "Global envelope, rejection algorithm and probability/cost proof; arbitrary bounds corrected"
+    },
+    {
+      "section": "barrier-normalization",
+      "recording": 68,
+      "start_seconds": 594,
+      "end_seconds": 708,
+      "topic": "Barrier event and conditional endpoint law, developed with explicit survival probability"
+    },
+    {
+      "section": "paired-labs",
+      "recording": 68,
+      "start_seconds": 942,
+      "end_seconds": 1052,
+      "topic": "Sampler as function argument and generic expectation workflow"
+    },
+    {
+      "section": "path-cost",
+      "recording": 72,
+      "start_seconds": 15,
+      "end_seconds": 479,
+      "topic": "Complete lattice path/node/multiplicity and tensor-grid worked examples"
+    },
+    {
+      "section": "sampling-error",
+      "recording": 72,
+      "start_seconds": 479,
+      "end_seconds": 715,
+      "topic": "SE reduction budget and comparison of improvement exponents"
+    },
+    {
+      "section": "walk-scaling",
+      "recording": 72,
+      "start_seconds": 715,
+      "end_seconds": 1058,
+      "topic": "900-step walk and fixed-horizon diffusion scaling worked problems"
+    },
+    {
+      "section": "brownian-gbm",
+      "recording": 72,
+      "start_seconds": 1058,
+      "end_seconds": 1416,
+      "topic": "Brownian increment variance and S40 GBM log/price moment workshop"
+    },
+    {
+      "section": "inverse-terminal",
+      "recording": 73,
+      "start_seconds": 15,
+      "end_seconds": 488,
+      "topic": "Complete inverse-transform rounded-quantile and coupled two-step workshop"
+    },
+    {
+      "section": "rejection",
+      "recording": 73,
+      "start_seconds": 488,
+      "end_seconds": 622,
+      "topic": "Complete acceptance table, realized versus expected rate and proposal cost"
+    },
+    {
+      "section": "paired-labs",
+      "recording": 75,
+      "start_seconds": 16,
+      "end_seconds": 1027,
+      "topic": "R/Colab unscaled/scaled walks, GBM path and terminal law, inverse lognormal and beta rejection"
+    },
+    {
+      "section": "paired-labs",
+      "recording": 76,
+      "start_seconds": 15,
+      "end_seconds": 1042,
+      "topic": "Python/Colab walks, Brownian scaling, GBM path/moments/probabilities, lognormal/rejection and generic estimator"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch22_sampling.py",
+      "check": "Walk/GBM/inverse/rejection workshops, beta moments and continuously monitored barrier normalization"
+    }
+  ],
+  "reviewed_artifacts": [
+    "figures/ch22_sampling_geometry.py",
+    "assets/ch22-walk-and-error.svg",
+    "assets/ch22-walk-and-error-portrait.svg",
+    "assets/ch22-rejection-and-survival.svg",
+    "assets/ch22-rejection-and-survival-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": "initial-r1",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "054333982ec809df8cf0f742221862a52ff47cffd6896085c672816b23024abd",
+      "code_sha256": {
+        "code/ch22_sampling.py": "fe79d196246a21698a79644cfefdeecfeb52f4de3c7bc845a60f86ad8f613eef"
+      },
+      "artifact_sha256": {
+        "figures/ch22_sampling_geometry.py": "c408c3f7157318eb0ce0f90bb1ea258018da38ec5a0ce6dc02ca052d3811e601",
+        "assets/ch22-walk-and-error.svg": "3023d61c4d4f5509a312075d778b40bb22800458f68a05200fe0d20ac76eb4db",
+        "assets/ch22-walk-and-error-portrait.svg": "765aed000837914a95fdd5c02d5e6c74ef13ce78bccff3910349e59126185500",
+        "assets/ch22-rejection-and-survival.svg": "1a47f57a6a58ad18a7a2a8c79be8d6d36a7072d708d98c7b2d656de9a6a38acf",
+        "assets/ch22-rejection-and-survival-portrait.svg": "ed44de06a6d0a3e536e8757cdc07485aaefab02d0ccdeb262f61ac6f65be01df"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision; not approved",
+      "report_sha256": "331209777107241552e602d2b365c9b6f8b73b829b006a7736a06b74d90272d9"
+    },
+    {
+      "round": "initial-r2",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "054333982ec809df8cf0f742221862a52ff47cffd6896085c672816b23024abd",
+      "code_sha256": {
+        "code/ch22_sampling.py": "fe79d196246a21698a79644cfefdeecfeb52f4de3c7bc845a60f86ad8f613eef"
+      },
+      "artifact_sha256": {
+        "figures/ch22_sampling_geometry.py": "c408c3f7157318eb0ce0f90bb1ea258018da38ec5a0ce6dc02ca052d3811e601",
+        "assets/ch22-walk-and-error.svg": "3023d61c4d4f5509a312075d778b40bb22800458f68a05200fe0d20ac76eb4db",
+        "assets/ch22-walk-and-error-portrait.svg": "765aed000837914a95fdd5c02d5e6c74ef13ce78bccff3910349e59126185500",
+        "assets/ch22-rejection-and-survival.svg": "1a47f57a6a58ad18a7a2a8c79be8d6d36a7072d708d98c7b2d656de9a6a38acf",
+        "assets/ch22-rejection-and-survival-portrait.svg": "ed44de06a6d0a3e536e8757cdc07485aaefab02d0ccdeb262f61ac6f65be01df"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision; not approved",
+      "report_sha256": "44fe6f1184a5b05dfd0ed696cc9fa909b3d5415d1a8798bf5352fd6f6d1578d6"
+    },
+    {
+      "round": "current-r1",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "69053e60a45e908b52fc5b9d39c5c3c7ed50a9fa7d8d059d295d33a8aeb2a9ff",
+      "code_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b"
+      },
+      "artifact_sha256": {
+        "figures/ch22_sampling_geometry.py": "709694cf8198716280ad6242b805eb5e40350578c3b86a4cfb4af637ec753466",
+        "assets/ch22-walk-and-error.svg": "2abd154ec58c26ee4d9a7d1de3d6372d143377e98a5b758499854bba61995703",
+        "assets/ch22-walk-and-error-portrait.svg": "15103914dc3a1f5f52bafc7f987fd93297b5fec1736f69997a41d2085eb5214b",
+        "assets/ch22-rejection-and-survival.svg": "1a47f57a6a58ad18a7a2a8c79be8d6d36a7072d708d98c7b2d656de9a6a38acf",
+        "assets/ch22-rejection-and-survival-portrait.svg": "ed44de06a6d0a3e536e8757cdc07485aaefab02d0ccdeb262f61ac6f65be01df"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "72ca91fe7ffac37d2cf0eb81823ee8d0a61f74f2b22d3fd3a3c453b55b3cce14"
+    },
+    {
+      "round": "current-r2",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "69053e60a45e908b52fc5b9d39c5c3c7ed50a9fa7d8d059d295d33a8aeb2a9ff",
+      "code_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b"
+      },
+      "artifact_sha256": {
+        "figures/ch22_sampling_geometry.py": "709694cf8198716280ad6242b805eb5e40350578c3b86a4cfb4af637ec753466",
+        "assets/ch22-walk-and-error.svg": "2abd154ec58c26ee4d9a7d1de3d6372d143377e98a5b758499854bba61995703",
+        "assets/ch22-walk-and-error-portrait.svg": "15103914dc3a1f5f52bafc7f987fd93297b5fec1736f69997a41d2085eb5214b",
+        "assets/ch22-rejection-and-survival.svg": "1a47f57a6a58ad18a7a2a8c79be8d6d36a7072d708d98c7b2d656de9a6a38acf",
+        "assets/ch22-rejection-and-survival-portrait.svg": "ed44de06a6d0a3e536e8757cdc07485aaefab02d0ccdeb262f61ac6f65be01df"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "c249d45b8e9d754a30628e30c03b592eda8e3d7d84f35fe2900d18dd026d4084"
+    }
+  ],
+  "body_sha256": "69053e60a45e908b52fc5b9d39c5c3c7ed50a9fa7d8d059d295d33a8aeb2a9ff",
+  "full_scientific_review_rounds": 4,
+  "limitations": [
+    "IID finite-variance estimator assumptions",
+    "Synthetic moderate-scale floating-point inputs",
+    "Constant-coefficient continuous GBM barrier; no rebate",
+    "R interfaces documentary; no R execution claimed"
+  ],
+  "source_corrections": [
+    "Finite variance and IID are required for stated standard errors; no universal dimension-eight crossover",
+    "Stock-state-only recombination is insufficient for an Asian average; state augmentation is possible",
+    "Mean zero is not certain return; a 1000-unit-step walk cannot exceed absolute1000",
+    "Finite coin walks approximate rather than equal Brownian grid laws; no marginal-CLT-to-process-proof jump",
+    "GBM log variance differs from price variance; correct sqrt(dt) and half-sigma-square drift",
+    "Quantiles of printed rounded uniforms differ from exact convenient normal values",
+    "Envelope bounds must hold globally; normalized and unnormalized acceptance rates differ",
+    "Conditional barrier endpoint averaging requires survival probability; analytic conditional weighting derived"
+  ],
+  "original_additions": [
+    "Explicit finite-variance consistency proof and estimator/error contract",
+    "Beta squared-moment benchmark and invalid-envelope symmetry counterexample",
+    "Brownian bridge density ratio, image benchmark and conditional-variance proof for declared barrier case",
+    "Original PCG64 seeded numerical runs and analytic distribution figures",
+    "Six derivation/computation/diagnosis exercises with full solutions"
+  ],
+  "coverage_notes": [
+    "Recording67 historical anecdotes524-607 are omitted from the mathematical exposition; no Einstein relativity-paper claim is inherited.",
+    "Recording75 European1027-1170 and posterior/utility1445-2068 go to23; Asian1170-1445 goes to24.",
+    "Recording76 European1042-1197 and posterior/utility1480-2022 go to23; Asian1197-1480 goes to24.",
+    "Final source-introduction audit: recording67 524–607: Brownian historical anecdote is intentionally omitted; the mathematical process begins in brownian-gbm. The source attribution to an Einstein relativity paper is not adopted."
+  ],
+  "current_full_scientific_review_rounds": 2
+}

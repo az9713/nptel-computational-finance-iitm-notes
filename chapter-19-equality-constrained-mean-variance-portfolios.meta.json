@@ -236,5 +236,17 @@
     "R translation documentary; Python executed"
   ],
   "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "infrastructure_addenda": [
+    {
+      "kind": "ignored-output-directory-creation",
+      "path": "figures/ch19_frontiers.py",
+      "added_line": "    (ROOT / 'work/figures').mkdir(parents=True, exist_ok=True)\n",
+      "before_sha256": "0a47d882cc522cf4a9d6201e63f96549e7d0e4f583fc9733c185582a68520fdb",
+      "after_sha256": "094435eef932a5889b04a99ffc1cf6fcf5a9cbbb68e47bb744a9b3eff1d9236d",
+      "report_sha256": "46866e4790e29114211264758ba3de0d4d9fc47a7070723b73a3d6879d34a783",
+      "full_scientific_review": false
+    }
+  ],
+  "current_full_scientific_review_rounds": 2
 }

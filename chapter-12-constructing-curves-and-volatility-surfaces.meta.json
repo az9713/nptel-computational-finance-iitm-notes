@@ -168,6 +168,50 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "2fc32d2376198512506eb7158e1e37b834592761c2fd0ccdf6923721f153fe66"
+    },
+    {
+      "round": "current-r3",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "fe1a00f2709a5d9d2dbd578f6aa6bf3352f229332ac6e644a2dc8952648fe227",
+      "code_sha256": {
+        "code/ch12_curves_and_surfaces.py": "770a9ed22565626aefbb1f4f5184e7486174591fae6daf7c5af188dd0a459a0a"
+      },
+      "artifact_sha256": {
+        "figures/ch12_curve_objects.py": "c396979fdaf32d631d4bcc2b297802266c724b3b2c79069ffb69c847a9b3711d",
+        "assets/ch12-curve-objects.svg": "0767a1d6321ecbbaa369aa0d1032dbd62416624074ac86a861f4142d1b49d78b",
+        "assets/ch12-curve-objects-portrait.svg": "adfe3c3024c218ec51b7d147e73a593c0031133b74034547464e415210c5dedd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "65afca7a1176beaa214933a35eb5a36348abfd2ca645b072857f6938feba80c5"
+    },
+    {
+      "round": "current-r4",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "fe1a00f2709a5d9d2dbd578f6aa6bf3352f229332ac6e644a2dc8952648fe227",
+      "code_sha256": {
+        "code/ch12_curves_and_surfaces.py": "770a9ed22565626aefbb1f4f5184e7486174591fae6daf7c5af188dd0a459a0a"
+      },
+      "artifact_sha256": {
+        "figures/ch12_curve_objects.py": "c396979fdaf32d631d4bcc2b297802266c724b3b2c79069ffb69c847a9b3711d",
+        "assets/ch12-curve-objects.svg": "0767a1d6321ecbbaa369aa0d1032dbd62416624074ac86a861f4142d1b49d78b",
+        "assets/ch12-curve-objects-portrait.svg": "adfe3c3024c218ec51b7d147e73a593c0031133b74034547464e415210c5dedd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "e40c47c009b381595fea87539847de5e1d151fc6d086800540cdfc938ac47838"
     }
   ],
   "limitations": [
@@ -176,6 +220,11 @@
     "Necessary finite-grid checks, not complete market arbitrage or quote authentication",
     "R and SciPy interfaces documented rather than locally executed"
   ],
-  "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
-  "full_scientific_review_rounds": 2
+  "body_sha256": "fe1a00f2709a5d9d2dbd578f6aa6bf3352f229332ac6e644a2dc8952648fe227",
+  "full_scientific_review_rounds": 4,
+  "review_refresh_reason": "Embedded Python formatting/import-lint repair; AST unchanged, but accepted body changed and two full current-artifact reviews are required.",
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording33 15–70: curve-construction recap is developed in curve-object/bootstrap; no distinct result is omitted."
+  ]
 }

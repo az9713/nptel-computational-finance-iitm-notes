@@ -1,6 +1,6 @@
 {
-  "checked_at_utc": "2026-10-29T05:21:36.232676+00:00",
-  "release_gate": false,
+  "checked_at_utc": "2026-11-02T19:54:04.004274+00:00",
+  "release_gate": true,
   "files_checked": [
     "index.html",
     "source-map.html",
@@ -26,16 +26,19 @@
     "chapter-18-a-reproducible-option-pricing-laboratory.html",
     "chapter-19-equality-constrained-mean-variance-portfolios.html",
     "chapter-20-inequality-constraints-and-optimality-certificates.html",
-    "chapter-21-arbitrage-detection-by-linear-programming.html"
+    "chapter-21-arbitrage-detection-by-linear-programming.html",
+    "chapter-22-random-walks-sampling-and-monte-carlo.html",
+    "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html",
+    "chapter-24-asian-options-and-a-complete-numerical-workflow.html"
   ],
   "static_problems": [],
   "file_sha256": {
-    "index.html": "5df6f0c8a12ca1cb4bc361a1bcb2f0318b60bb01be2dc582fbb785a4e9b21148",
-    "source-map.html": "d1bf52d5456ed55a037012d1b5220a2cc347e870835921db6ab2c3f7c7b7664b",
-    "references.html": "d7577308dffbe8ef1723807b3d12d039a2e8e9937abf9b06b21d2e647af5a08c",
-    "code-lab.html": "6f71ee57180961ac43fb4d3015695d21ccc7c246d627ad28ba1c06d6db9b7063",
-    "chapter-01-financial-models-become-executable-algorithms.html": "890cd39fe840906190c47ba998fe07b40da76d7656139e0c9be72f53868fe68e",
-    "chapter-02-rates-approximations-numerical-reliability.html": "3e149cbcc0d5756278340ec5ae4ae0049b9e067a303795b9e2bdd47ca03cbcbe",
+    "index.html": "055aef99494332aec6083e5c37da75f8d206e17d1a9bb159d444defdc52a0ded",
+    "source-map.html": "c866f7f537415cb3b0154b5e800cb0963cef03fd96b92d485d9e370211970dc9",
+    "references.html": "23bc231e4e0a60a7e4d766c26861dd1201fea07bb818265f994158e5c90d7ce8",
+    "code-lab.html": "2d38b12ad812222c02ae253f0bdfe912e50093fd8b709d6c997b7851dd613c97",
+    "chapter-01-financial-models-become-executable-algorithms.html": "4bf2c021341449131647795681654c2389d6a9af740479c893f385581a33c051",
+    "chapter-02-rates-approximations-numerical-reliability.html": "eb5ae333491f0fe4efb919c58bd52091069c5039854dd9623b47578e7ad09196",
     "chapter-03-portfolio-choice-and-first-numerical-workshop.html": "7eb98502bc2c060864559f64b53d90f57ec79fc14467aa1809775371e2f9e2fe",
     "chapter-04-linear-systems-and-identifiable-portfolio-weights.html": "abf7ed3a5e0198bbcd6a1390ab7091aa9227337ec7809bdf6868b058c3a1da2f",
     "chapter-05-covariance-and-the-geometry-of-risk.html": "30c6867f4c572466a6737e33239a1be64d179bab39d921dd06aeb6b53bfa6ad1",
@@ -45,20 +48,27 @@
     "chapter-09-path-dependence-and-option-laboratories.html": "f6860a5e8cb0e173a04347c3550875e10f5052f83125fc59887701359725bb3a",
     "chapter-10-financial-equations-as-inverse-problems.html": "82dcd4049e6a89c76ffadb146feffcc0e3c1190420b1d33ded0239e62cfaee4e",
     "chapter-11-newton-secant-and-safeguarded-calibration.html": "c6033b1d1fab4be759ac7676fbe81047cb4d94878ee6b459c2d29dd5c4de02b8",
-    "chapter-12-constructing-curves-and-volatility-surfaces.html": "52ccc2001735af6aedbc3524dff538d5339ab0244d7c40c131315c0aa0173171",
-    "chapter-13-bond-calculus-duration-and-convexity.html": "94423616090e30fdc00345b105c6da31729d4eebbb367e148709a8cf52e18387",
-    "chapter-14-portfolio-objectives-and-expected-utility.html": "1cbb595d7165ff35d007f2dba84a9042f605d4247efc7450471ec0dfdc7f1d73",
-    "chapter-15-numerical-integration-for-financial-expectations.html": "7b2ef5c638dd3bacc82d80262e1f9565e89b5dcffcde1f2a5e36c35478464483",
+    "chapter-12-constructing-curves-and-volatility-surfaces.html": "aec9d10ef09645d759e07dd62be6e0f6ac746d40fa888aaedceb6ee0e383825d",
+    "chapter-13-bond-calculus-duration-and-convexity.html": "0b537b68866ea1a56b4c0c88d6242fecd76387cb72386be3f4157dc755a15678",
+    "chapter-14-portfolio-objectives-and-expected-utility.html": "5834c3dc2cf37cdb0f6e8d3295fbb0ac33f25caea59738c5eb6cb9af83510f57",
+    "chapter-15-numerical-integration-for-financial-expectations.html": "0db6e4f0299e9df4a768379289680ddc6495648bcc1683cdaed619e83f20cddc",
     "chapter-16-geometric-brownian-motion-and-black-scholes.html": "97904e0523230ca071433828bf76431cd80d2fd0d3db9d7e38ec165078798840",
-    "chapter-17-finite-differences-and-early-exercise.html": "7cf1eacc229e39d9874f4604b16deabed46ec013f69ed6964324be519ff3e469",
+    "chapter-17-finite-differences-and-early-exercise.html": "c7f581df5e853e437df0cb922226c187ff38fd4011a848dee9632b5de8cbf78b",
     "chapter-18-a-reproducible-option-pricing-laboratory.html": "77fb398f57286e39cd8ea617d9b98b5eb6a5e0d6747c6f4d465d358de8ebce46",
     "chapter-19-equality-constrained-mean-variance-portfolios.html": "9b0cb009d16d0b6f84263b49eee7832864ddd607b9f8e82a9ae4cc991458e3d4",
     "chapter-20-inequality-constraints-and-optimality-certificates.html": "b6267614495d6ab27bae0cc9d7fda73b803c097f5131e637e01571f628026b18",
-    "chapter-21-arbitrage-detection-by-linear-programming.html": "00b4da2930ceb70de9b2ae579c3e0783fb87c50786aefa1895f0b373a8ed7ef1"
+    "chapter-21-arbitrage-detection-by-linear-programming.html": "3126e666375bb8cdf7983ea6efdcb10396a448b44813e33dfc458d043d78d182",
+    "chapter-22-random-walks-sampling-and-monte-carlo.html": "4ce05a3e59820209a4fd6994f525470351f553b2b7dfafae121472680870d103",
+    "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html": "bb725e0b3e41342fae39f4ba2edd2205443c333344776f1668b23332ae1c5d42",
+    "chapter-24-asian-options-and-a-complete-numerical-workflow.html": "f9a7da708bbb65cb709626fbf770520a0f07e981295ed4ea8477673ee9651bed"
   },
   "asset_sha256": {
     "book.css": "2d973e5c67896771e55fbc1ff1ddfd07a7969dd5602e2881cf5371d9a230e55e",
     "book.js": "e31d522b88712b15eddb3323de2c325a4e1ff1bf77bf0cde74f021809d2bae4f",
+    "ch01-cashflow-trace-portrait.svg": "0fc968f271b7beeb888182dcaa9c8bcb4cbffd8e248090859646228a6828ac24",
+    "ch01-cashflow-trace.svg": "2e4090b6ff528ce6cefe07891cb505886aeebf264a8223e3b20df12bd61d3cd7",
+    "ch02-models-and-errors-portrait.svg": "25b9a6ed864ea1f3dbe24042f921826d3372bfc3c199e9c754b004150da3c4bb",
+    "ch02-models-and-errors.svg": "442ed2a11ff1f595dc4e3be067c6dbc7582cf87d5236d2a483f6ea90d16f5bfd",
     "ch03-allocation-portrait.svg": "61546f1f8d6c22a52eea64394a6df6e89717a91f67171023f3757ba9edef06a9",
     "ch03-allocation.svg": "2050735046ef37d4fda34dcc2686eb02d168a196a781bd8fc35343deed2186b8",
     "ch04-feasible-weights.svg": "69b43072b35442732f78d5a0d1dc466257a2ce49da84863e2905b8c8ea0ffc59",
@@ -96,6 +106,18 @@
     "ch20-active-constraints.svg": "d113c245ef4529faa6e57b44c713b2c64e0ba720cf01a0805b47da8cb87657d6",
     "ch21-prices-and-state-prices-portrait.svg": "dfe01443b3b62ebbcfca376830e2ed8ad00d95fb355712bebe96bc9a3397cb77",
     "ch21-prices-and-state-prices.svg": "920e67e6188f75ddedb85053f53b70621b1605756d57294ff19c8d0388b51e5b",
+    "ch22-rejection-and-survival-portrait.svg": "ed44de06a6d0a3e536e8757cdc07485aaefab02d0ccdeb262f61ac6f65be01df",
+    "ch22-rejection-and-survival.svg": "1a47f57a6a58ad18a7a2a8c79be8d6d36a7072d708d98c7b2d656de9a6a38acf",
+    "ch22-walk-and-error-portrait.svg": "15103914dc3a1f5f52bafc7f987fd93297b5fec1736f69997a41d2085eb5214b",
+    "ch22-walk-and-error.svg": "2abd154ec58c26ee4d9a7d1de3d6372d143377e98a5b758499854bba61995703",
+    "ch23-estimation-and-posterior-portrait.svg": "ea740ad316b7dbe16bb9ddf24465930d80c741b1ab7281b8905eab51f364508e",
+    "ch23-estimation-and-posterior.svg": "46b5173d94b9f7be6f42080a5a74bed19f23c2fcb3c99e7cd0da1d50638c9e07",
+    "ch23-predictive-decisions-portrait.svg": "3aa9f924e57857fc15cac75bd11f7beed3122cfe85bc209f1058cb488296ec61",
+    "ch23-predictive-decisions.svg": "eaacd4ed7a0009c105a5378a9a20538205cdce1580e16689f1db88073f641f7b",
+    "ch24-dates-and-precision-portrait.svg": "393e18b21a5527f52f8498cac8e584b70e8994a78e4ae58075bf293b06071ea2",
+    "ch24-dates-and-precision.svg": "98a388225ee60006cc454702c4cd7797269a787bfc202076481eb94fa8ee321a",
+    "ch24-paths-and-controls-portrait.svg": "72ab9fbbb35b35c15962c79941c0a886d76052dbe8d7550d811e2eb2dcb431d6",
+    "ch24-paths-and-controls.svg": "162f0577bd39c24e34d276c4cc0866d20360f6fc2f6f757da0b2985626eba53a",
     "mathjax-LICENSE": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
     "mathjax-tex-svg.js": "d4295dc33744836935c1399feece5159577b34c5c8ffb9f1c6324cd82e03a882",
     "vendor-additions.json": "85069fe16ec4ec52bb8ec391611cd968a696a133d63cf6cb2fae47af1341e0f5",
@@ -139,7 +161,7 @@
     },
     {
       "file": "chapter-02-rates-approximations-numerical-reliability.html",
-      "math_expressions": 315,
+      "math_expressions": 316,
       "math_errors": 0,
       "errors": [],
       "passed": true
@@ -244,7 +266,7 @@
     },
     {
       "file": "chapter-17-finite-differences-and-early-exercise.html",
-      "math_expressions": 237,
+      "math_expressions": 243,
       "math_errors": 0,
       "errors": [],
       "passed": true
@@ -273,6 +295,27 @@
     {
       "file": "chapter-21-arbitrage-detection-by-linear-programming.html",
       "math_expressions": 269,
+      "math_errors": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "file": "chapter-22-random-walks-sampling-and-monte-carlo.html",
+      "math_expressions": 408,
+      "math_errors": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "file": "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html",
+      "math_expressions": 547,
+      "math_errors": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "file": "chapter-24-asian-options-and-a-complete-numerical-workflow.html",
+      "math_expressions": 345,
       "math_errors": 0,
       "errors": [],
       "passed": true

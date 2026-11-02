@@ -23,7 +23,7 @@
         10,
         11
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 2,
@@ -35,7 +35,7 @@
         5,
         6
       ],
-      "status": "draft"
+      "status": "accepted"
     },
     {
       "number": 3,
@@ -47,7 +47,7 @@
         8,
         9
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 4,
@@ -58,7 +58,7 @@
         12,
         14
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 5,
@@ -70,7 +70,7 @@
         15,
         17
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 6,
@@ -82,7 +82,7 @@
         18,
         19
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 7,
@@ -94,7 +94,7 @@
         21,
         22
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 8,
@@ -106,7 +106,7 @@
         24,
         26
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 9,
@@ -118,7 +118,7 @@
         27,
         28
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 10,
@@ -129,7 +129,7 @@
         29,
         30
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 11,
@@ -141,7 +141,7 @@
         32,
         34
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 12,
@@ -153,7 +153,7 @@
         35,
         36
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 13,
@@ -165,7 +165,7 @@
         38,
         42
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 14,
@@ -177,7 +177,7 @@
         41,
         43
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 15,
@@ -189,7 +189,7 @@
         44,
         45
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 16,
@@ -201,7 +201,7 @@
         47,
         51
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
         49,
         50
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 18,
@@ -224,7 +224,7 @@
         52,
         53
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 19,
@@ -237,7 +237,7 @@
         56,
         62
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 20,
@@ -250,7 +250,7 @@
         60,
         61
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 21,
@@ -263,7 +263,7 @@
         64,
         65
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 22,
@@ -277,7 +277,7 @@
         72,
         73
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 23,
@@ -289,7 +289,7 @@
         70,
         74
       ],
-      "status": "pending"
+      "status": "accepted"
     },
     {
       "number": 24,
@@ -301,7 +301,7 @@
         75,
         76
       ],
-      "status": "pending"
+      "status": "accepted"
     }
   ]
 }

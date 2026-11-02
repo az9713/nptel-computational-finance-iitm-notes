@@ -2,7 +2,7 @@
 
 An independent, source-grounded textbook rewrite of the NPTEL course coordinated by IIT Madras, taught by Sourish Das (Chennai Mathematical Institute) and Bikramaditya Datta (IIT Kanpur).
 
-**Work in progress: 21 of 24 planned chapters are accepted.** Each accepted chapter has two full independent scientific reviews. This repository is a checkpoint; the complete-course release and GitHub Pages publication remain pending.
+**All 24 chapters are written and scientifically accepted**, covering all 76 recordings with 144 solved exercises. Each chapter has two full independent reviews matching its current scientific artifacts. Final publication verification is recorded separately from chapter acceptance.
 
 - [Open the reader](index.html)
 - [Source map](source-map.html) and [completion inventory](completion.json)
@@ -25,8 +25,10 @@ python tools/check_embedded_code.py
 python tools/validate_book.py --browser
 ```
 
-Browser validation additionally needs Playwright and a compatible local Chrome installation; see the validator for its configuration. Some development and review evidence is intentionally local in ignored `work/`. Raw recordings, machine transcripts, and downloaded reference documents are not redistributed. Public metadata records acceptance and artifact digests; a fresh clone does not include private review reports.
+Install the tested validation dependencies with <code>python -m pip install -r requirements-validation.txt</code>. Browser validation additionally needs a compatible local Chrome or Edge installation; see the validator for its configuration. The embedded-code checker discovers all existing chapters when no filenames are supplied and performs syntax/style checks. Scientific review separately executes complete programs and embedded examples with their documented setup. Some development and review evidence is intentionally local in ignored <code>work/</code>. Raw recordings, machine transcripts, and downloaded reference documents are not redistributed. Public metadata records acceptance and artifact digests; a fresh clone does not include private review reports.
 
-## Remaining scope
+## Verification and evidence
 
-Chapters 22–24 cover sampling and random walks, Monte Carlo pricing with uncertain parameters, and Asian options with the final numerical workflow. Whole-book integrity checks, release documentation, and live-site verification will follow. See [WORKFLOW.md](WORKFLOW.md) for production conventions and [HANDOFF.md](HANDOFF.md) for the current resume point.
+The complete course includes Monte Carlo sampling, uncertain-parameter inference, Asian options, and a final comparison of numerical methods and error sources. Public execution and reader reports state their verification scopes. Source reading means sequential machine-transcript reading with selected audio/video checks; it does not mean a full audiovisual audit. Paired R/Python labs are mapped by substantive topic, and documentary language correspondence is distinguished from actual execution.
+
+See [WORKFLOW.md](WORKFLOW.md) for production conventions, [release validation](release-validation.json) for the complete-course checks, and [HANDOFF.md](HANDOFF.md) for the latest publication state. A public clone can rebuild the reader and run programs without raw source material. The stricter development command <code>python tools/validate_book.py --browser --release</code> also requires the private reports retained on the authoring workstation; their absence from a public clone is intentional.

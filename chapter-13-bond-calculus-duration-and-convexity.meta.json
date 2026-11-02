@@ -176,6 +176,50 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "1fbdf699a39dc96f2c489886a98db6916e7fce4a2db28e16943039a1c2f750cc"
+    },
+    {
+      "round": "current-r3",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch02_current_r3",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "afbb19735327ac63ce46eefb0a1cb9d317e9c1416a6b439b7b51df66dabd50b9",
+      "code_sha256": {
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "artifact_sha256": {
+        "figures/ch13_sensitivity_and_steps.py": "e962123e735a55e03d43d847ce43fd22f10ca4c5251dc32de94dc1ce5111fd28",
+        "assets/ch13-sensitivity-and-steps.svg": "7eb36ac4e78e8f35c06878d5bba9d6a9a4c4a8b3fc49b3d808ebc0892253278a",
+        "assets/ch13-sensitivity-and-steps-portrait.svg": "5eb70cecadc0078d170b2237c0c68e75b7b4307c8a2f3686be86bc61ea003e68",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "b6cbe1951883beb094d2ddcea54a56b0ce494bef3ea101e428247f2d1dec6385"
+    },
+    {
+      "round": "current-r4",
+      "reviewer": "independent Codex science-editor",
+      "review_task": "ch22_science_r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "afbb19735327ac63ce46eefb0a1cb9d317e9c1416a6b439b7b51df66dabd50b9",
+      "code_sha256": {
+        "code/ch13_bond_calculus.py": "bd0b868d9f91fc367139c7602da344bbb94e28942965e9dc0aba5af89ed25a87"
+      },
+      "artifact_sha256": {
+        "figures/ch13_sensitivity_and_steps.py": "e962123e735a55e03d43d847ce43fd22f10ca4c5251dc32de94dc1ce5111fd28",
+        "assets/ch13-sensitivity-and-steps.svg": "7eb36ac4e78e8f35c06878d5bba9d6a9a4c4a8b3fc49b3d808ebc0892253278a",
+        "assets/ch13-sensitivity-and-steps-portrait.svg": "5eb70cecadc0078d170b2237c0c68e75b7b4307c8a2f3686be86bc61ea003e68",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "33f20e0c3abcee2f8ecf2a645bf907ccd87ce83249c68750a3082f99ee7268d5"
     }
   ],
   "limitations": [
@@ -184,6 +228,11 @@
     "Fixed settlement accrued interest uses an explicit fractional-period convention",
     "Callable example has deterministic continuous rates and a payoff-decision kink, not a stochastic mortgage model"
   ],
-  "body_sha256": "8a3957f07ab56ee315523a4a634a936e1b337f24b020158582d884e4cba2ba9d",
-  "full_scientific_review_rounds": 2
+  "body_sha256": "afbb19735327ac63ce46eefb0a1cb9d317e9c1416a6b439b7b51df66dabd50b9",
+  "full_scientific_review_rounds": 4,
+  "review_refresh_reason": "Embedded Python formatting/import-lint repair; AST unchanged, but accepted body changed and two full current-artifact reviews are required.",
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording37 15–101: changing yields motivate bond revaluation in analytic-duration/portfolio-shocks; historical central-bank/news commentary is not presented as current causal evidence."
+  ]
 }

@@ -1,17 +1,18 @@
-phase: sequential-chapter-authoring
+phase: publication
 objective: Complete all 76 playlist recordings as a reviewed computational-finance textbook and publish the finished edition.
 authorization: User approved defaults and autonomous completion, commit, push, and GitHub Pages.
 gates:
   specification: passed_internal_under_user_autonomous_authorization
-  architecture: provisional_pending_transcript_reading
+  architecture: final_lab_sources_read_partitions_recorded
   pilot: passed_two_full_independent_reviews_plus_terminology_addendum
-  chapters: pending
-  final_integrity: pending
+  chapters: passed_all24_two_current_full_independent_reviews
+  final_integrity: passed_current_artifact_release_and_offline_browser_checks
   publication: pending
 source_recordings: 76
-completed_chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-current_chapter: 22
-current_section: pending_final_lab_source_reading
+completed_chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+review_refresh_pending: []
+current_chapter: 24
+current_section: validated_release_ready_for_commit_push_and_pages
 source_status:
   playlist: acquired
   official_course: verified
@@ -22,4 +23,4 @@ source_status:
   audio: all_76_downloaded
   integrity_repair: recording2_reacquired_clean_transcript_regenerated_all76_source_audit_passed
 review_standard: Two independent science-editor rounds per chapter; repair findings; latest verdict zero blocking.
-next_action: Read recordings75and76 fully; recover74MHtable; finalize22outline; complete22to24 with two full independent reviews each; final integrity/export/commit/push/Pages. See HANDOFF.md.
+next_action: Commit/push the reviewed and privacy-inspected complete edition; configure Pages and verify served bytes. All content/review/reproduction/release gates passed; publication remains pending.

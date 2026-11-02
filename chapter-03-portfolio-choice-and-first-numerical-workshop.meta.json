@@ -31,11 +31,11 @@
       "topic": "Safe/risky weights, mean/variance, constraints, and preference criterion"
     },
     {
-      "section": "analytic-allocation",
+      "section": "portfolio-model",
       "recording": 7,
-      "start_seconds": 729,
-      "end_seconds": 905,
-      "topic": "Substitution, strict concavity, analytic solution, and explicit constraint completion"
+      "start_seconds": 400,
+      "end_seconds": 600,
+      "topic": "Input-choice discussion: rates/return moments are treated as illustrative; unverified historical-performance and personal-allocation claims are intentionally not reproduced"
     },
     {
       "section": "grid-search",
@@ -43,6 +43,13 @@
       "start_seconds": 600,
       "end_seconds": 1117,
       "topic": "Grid search, refinement, analytic comparison, and dimension cost"
+    },
+    {
+      "section": "analytic-allocation",
+      "recording": 7,
+      "start_seconds": 729,
+      "end_seconds": 905,
+      "topic": "Substitution, strict concavity, analytic solution, and explicit constraint completion"
     },
     {
       "section": "lagrange",
@@ -125,5 +132,16 @@
     "Teaching kernels do not certify extreme-range floating-point behavior"
   ],
   "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "reviewed_artifacts": [
+    "figures/ch03_allocation.py",
+    "assets/ch03-allocation.svg",
+    "assets/ch03-allocation-portrait.svg"
+  ],
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Recording7[400,600] explains the original contemporary-rate/index-return input choice and asks how those inputs age. The existing introduction and portfolio-model section explicitly use illustrative same-horizon inputs, reject current-rate/history/forecast/advice interpretations, and distinguish modeled safe payoff from policy-rate access. The specific historical Nifty/deposit-rate and personal-allocation claims are omitted, not silently validated.",
+    "Final source-introduction audit: recording7 15–51: transition from bond pricing to safe/risky portfolio choice is covered by portfolio-model; greetings are omitted.",
+    "Final source-introduction audit: recording8 15–66: problem-session orientation is embodied in bond-workshop and interpolation-and-logarithm; administrative remarks are omitted."
+  ]
 }

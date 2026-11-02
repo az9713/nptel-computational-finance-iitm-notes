@@ -130,6 +130,50 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "2750e3d7015fd03a1b8722248b1da51f2e91ab7611b5514e97cd3d3ebaf643f4"
+    },
+    {
+      "round": "3-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch02_current_r3",
+      "review_task": "ch10-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+      "code_sha256": {
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "artifact_sha256": {
+        "figures/ch10_inverse_maps.py": "e22ce93df539bd5ad59395754d2c9516fa627930b76b61cbfdf1b5dedadf4c9e",
+        "assets/ch10-inverse-maps.svg": "ec1489c446846de9678c7770e7598cc4a6739d8f9efc7c3b712cc37bb6a6cc83",
+        "assets/ch10-inverse-maps-portrait.svg": "dbe691a3f37c7636cbb3a5c822b4c6a7feb0a587dfd269cdb116f095ddeb19dd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "afc1899c0f89110000e9f6d368599926735cdcf02f4c90aed47c89afda9f6923"
+    },
+    {
+      "round": "4-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch10-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+      "code_sha256": {
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "artifact_sha256": {
+        "figures/ch10_inverse_maps.py": "e22ce93df539bd5ad59395754d2c9516fa627930b76b61cbfdf1b5dedadf4c9e",
+        "assets/ch10-inverse-maps.svg": "ec1489c446846de9678c7770e7598cc4a6739d8f9efc7c3b712cc37bb6a6cc83",
+        "assets/ch10-inverse-maps-portrait.svg": "dbe691a3f37c7636cbb3a5c822b4c6a7feb0a587dfd269cdb116f095ddeb19dd",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "3ee86f32a2ab2ab2b0b20b673ec4827383430f6c29c8f1ccadc236ccb7361ca0"
     }
   ],
   "limitations": [
@@ -140,5 +184,9 @@
     "Public Chapter8 module required"
   ],
   "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording29 15–174: yield/implied-volatility nonlinear inverse-problem roadmap is developed in forward-and-inverse/yield-existence/implied-volatility."
+  ]
 }

@@ -81,7 +81,8 @@ inverse_square_moment = math.fsum(
 certainty_equivalent = inverse_square_moment**(-.5)
 assert mean == 526
 assert 489.5 &lt; certainty_equivalent &lt; mean
-print(f"CE={certainty_equivalent:.9f}, premium={mean-certainty_equivalent:.9f}")
+print(f"CE={certainty_equivalent:.9f}, "
+      f"premium={mean-certainty_equivalent:.9f}")
 </code></pre>
 <h2 id="allocation-condition">14.5 Derive the allocation condition before searching a grid <a class="timestamp" href="https://www.youtube.com/watch?v=J5rSv1QU_A0&amp;t=1619s">Recording 39, 26:59</a></h2>
 <p>Keep the discrete return model just defined, but now allow the risky fraction $\alpha$ to vary in $[0,1]$. Write $B=1+r_f=1.045$ and relative terminal wealth $g_i(\alpha)=B+\alpha(R_i-r_f)$. Maximizing expected utility of $g_i$, using (14.3), is equivalent to maximizing expected utility of $W_0g_i$ by CRRA's scaling property. Define $J(\alpha)=\sum_ip_iu_\gamma(g_i(\alpha))$.</p>

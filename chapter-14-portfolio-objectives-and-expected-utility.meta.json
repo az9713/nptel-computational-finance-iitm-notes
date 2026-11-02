@@ -241,6 +241,50 @@
       "blocking_findings": 0,
       "verdict": "yes",
       "report_sha256": "d791ced37cfe6e109cab7c79c61c6f9e490d1502d5d038fc26977a5769099acb"
+    },
+    {
+      "round": 4,
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch14-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "body_sha256": "3eeb2acf0cb7723c5d58a3388d51cc6f608e47871e5f9c4563123afeb05430f6",
+      "code_sha256": {
+        "code/ch14_expected_utility.py": "d7ad4c54483a2982ec68492ef2265c9dc90283cb70b5be77075ec69792170d0b"
+      },
+      "artifact_sha256": {
+        "figures/ch14_choice_and_sharing.py": "303a59834a17504cdb57dcfcb80fe1268e76a91c9211f64add27a5272292474a",
+        "assets/ch14-choice-and-sharing.svg": "712542fdd733c001bccdcda1267dfc9ecb53fd40357f681b0858613e9477b1fa",
+        "assets/ch14-choice-and-sharing-portrait.svg": "ddf480ee092af79cedb938712b5c26dce1272e5eb65020cd3a405ca818180b24",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "1f0309f9a443c8e16d959272c9eb24c44ebd8814292aea4d231acf137acf7770"
+    },
+    {
+      "round": 5,
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch14-r4-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "body_sha256": "3eeb2acf0cb7723c5d58a3388d51cc6f608e47871e5f9c4563123afeb05430f6",
+      "code_sha256": {
+        "code/ch14_expected_utility.py": "d7ad4c54483a2982ec68492ef2265c9dc90283cb70b5be77075ec69792170d0b"
+      },
+      "artifact_sha256": {
+        "figures/ch14_choice_and_sharing.py": "303a59834a17504cdb57dcfcb80fe1268e76a91c9211f64add27a5272292474a",
+        "assets/ch14-choice-and-sharing.svg": "712542fdd733c001bccdcda1267dfc9ecb53fd40357f681b0858613e9477b1fa",
+        "assets/ch14-choice-and-sharing-portrait.svg": "ddf480ee092af79cedb938712b5c26dce1272e5eb65020cd3a405ca818180b24",
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "code/ch10_inverse_pricing.py": "1dd6e71f599c3935559c6fd717040eea3ba3edcf6ae2c493bd5ca15055f46e3d"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "2afb249e07fd068d16460379ec1f51f97c999e89db55851f6d002429b2ddb126"
     }
   ],
   "limitations": [
@@ -251,6 +295,10 @@
     "Recording43 quadrature and supplied-price derivative spans also covered in chapter15",
     "Near-logarithmic CE moment branch independently checked; extreme-value CRRA range remains outside teaching fixtures."
   ],
-  "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
-  "full_scientific_review_rounds": 2
+  "body_sha256": "3eeb2acf0cb7723c5d58a3388d51cc6f608e47871e5f9c4563123afeb05430f6",
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording41 15–113: expected-utility motivation across portfolio choice and insurance is developed in wealth-and-utility and insurance-and-information."
+  ]
 }

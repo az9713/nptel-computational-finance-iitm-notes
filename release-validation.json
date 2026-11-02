@@ -1,0 +1,214 @@
+{
+  "checked_at_utc": "2026-11-02T19:55:11.922992+00:00",
+  "passed": true,
+  "scope": "Complete-course scientific evidence and reproducibility release gate; live publication is verified separately after push.",
+  "chapters_accepted": 24,
+  "recordings_mapped": 76,
+  "solved_exercises": 144,
+  "chapter_scientific_evidence": [
+    {
+      "chapter": 1,
+      "body_sha256": "2c1f3c4ba9d26ba85069305c9a8874e9f3fc5609e915ca7a5e7eb2dd028e2010",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 2,
+      "body_sha256": "04b34f6f45141dc865f840e426e294ee9f76438dd53b9c29c4030fbd11cd6c62",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 3,
+      "body_sha256": "4fcb6aab23e32ffa93d59d9d8c4d025fc47519ffef5517e1391269f44c0eb07c",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 4,
+      "body_sha256": "b4a2c51912750f04ecc6590ce4d325e684423a9da30a2242b701d8a34997dba3",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 5,
+      "body_sha256": "dab097b92e6edc0aa3620f64b5d8d9e15ebface13cb90a989e2e647dd4f43fc5",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 6,
+      "body_sha256": "43e8f55a65b6f45bdaea98fe3a236d036ed35ff3d09f33fb80a0ab5988c245f6",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 7,
+      "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 8,
+      "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 9,
+      "body_sha256": "d8a8d47223d2e3511a7bb6b5bc389996e3fc308081f80784f4966e5411992b95",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 10,
+      "body_sha256": "81fce75d84c2c5feee8d159e692047c40a36fc83d2a046016df826a6048c4ffe",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 11,
+      "body_sha256": "5c40cfb76688a26716761fae7b192eebb83cc94b083c741a4124fb98b3c28a23",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 12,
+      "body_sha256": "fe1a00f2709a5d9d2dbd578f6aa6bf3352f229332ac6e644a2dc8952648fe227",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 13,
+      "body_sha256": "afbb19735327ac63ce46eefb0a1cb9d317e9c1416a6b439b7b51df66dabd50b9",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 14,
+      "body_sha256": "3eeb2acf0cb7723c5d58a3388d51cc6f608e47871e5f9c4563123afeb05430f6",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 15,
+      "body_sha256": "162f46c8ab7a9d5fc2a2f3619a75ade00d082508f8c28c620220958d33dfb548",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 16,
+      "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 17,
+      "body_sha256": "09e0e3883a8b9d097b1cf287d45aa3866542a32a6d49c9d00e4e29685aefc803",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 18,
+      "body_sha256": "94408a248500a15acf43d66e60d9ab0d5db149dad6932c0975367ff8e0b1b3d7",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 19,
+      "body_sha256": "a20900b59023e41810beffbccbcd4b7175801304edc30b3a11af01056cdee9fe",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 1,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 20,
+      "body_sha256": "a30eb56aa2fa8cbf13078e1626a8c99e74c66f2d9ffba2ad02e2e597dba40478",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 21,
+      "body_sha256": "63a39d4f1135712f725c42451d675fe1fc3aca2142503fbc8ceb51204031cee8",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 22,
+      "body_sha256": "69053e60a45e908b52fc5b9d39c5c3c7ed50a9fa7d8d059d295d33a8aeb2a9ff",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 23,
+      "body_sha256": "60fa2c18833bde53c823682205cb70779b3d58a153a20743bbeefe5a7801f718",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    },
+    {
+      "chapter": 24,
+      "body_sha256": "6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527",
+      "current_full_reviews": 2,
+      "infrastructure_addenda": 0,
+      "private_reports_checked": true
+    }
+  ],
+  "complete_programs_executed": 24,
+  "exact_embedded_blocks_executed_with_declared_setup": 25,
+  "chapter_diagnostics": 144,
+  "offline_reader_pages": 28,
+  "source_free_rebuild": {
+    "passed": true,
+    "programs_executed": 24,
+    "broken_book_links": 0,
+    "private_sources_or_reports_supplied": false,
+    "boundary": "Public attestations and reproducibility can be checked without private editorial reports. The development --release gate also checks those actual private reports."
+  },
+  "privacy": {
+    "selected_publication_files_passed": true,
+    "private_sources_reviews_paths_credentials_included": false,
+    "boundary": "Pattern-assisted current-content and reachable-history inspection. Historical commit contact metadata was explicitly permitted; new commits use noreply identity."
+  },
+  "evidence_reports": {
+    "completion.json": "28f03356946f0b8948d49e872d401adc0e8f58c38cc2e5247c75d923145e45c9",
+    "chapter-code-validation.json": "5e2941cc1355df3d2e52745a2193d4e1f54ce2726c3c6112a69d065ce534a2f9",
+    "reader-validation.json": "ceaaebf03862d5267d2fc88b7bfba68d10e4ef2c85f57f116f406cc3e15030a2",
+    "source-validation-summary.json": "42a1d680bfb50ef6733319b2c1659f54a7c8e3c6207bbe504265e09821725724"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "matplotlib": "3.9.3",
+    "playwright": "1.57.0",
+    "pycodestyle": "2.14.0"
+  },
+  "limits": [
+    "Full sequential machine-transcript reading, not full audiovisual audit.",
+    "Scientific reviews are independent agent assessments, not formal proofs.",
+    "Checks and numerical examples have their declared model/input domains.",
+    "R/cloud correspondence is distinguished from actual runtime checks.",
+    "This report excludes its own digest to avoid self-reference."
+  ]
+}

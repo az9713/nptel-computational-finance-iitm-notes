@@ -136,6 +136,26 @@
       "verdict": "yes",
       "report_sha256": "975756ce2d92b478d8f9e0d7a0a856023ad456705286b762da341bb6231bfaaa",
       "nonblocking_disposition": "Extreme-price covered-call cancellation retained as a numerical-range limitation; all printed and plotted moderate inputs independently verified."
+    },
+    {
+      "round": 3,
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch07-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
+      "code_sha256": {
+        "code/ch07_payoff_functions.py": "20d076bf95c78d861d479ac010de62e2d3a1e3abd89cd6b55bd3966bd91405e1"
+      },
+      "artifact_sha256": {
+        "figures/ch07_payoff_geometry.py": "02114f918734f9f610b041cb3030f3485110cc08fe46a1ce28ae9f6e0b022197",
+        "assets/ch07-payoff-geometry.svg": "8e8258332757f61be48e84e56afe9cfde677bd7afdf3cf9445727959884ad9b9",
+        "assets/ch07-payoff-geometry-portrait.svg": "caa3e8fe1cec45afc623ef65b8e4ee9928103fab581971cb5ec7e81fd9335d6b"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "98dadf23e51e99810dbda62aa619d69e23e8ef2ebedd527d6c17d8083e3f288f"
     }
   ],
   "limitations": [
@@ -146,5 +166,9 @@
     "Composite wealth helper is checked on moderate teaching prices; terminal-minus-call can cancel at extreme prices such as 1e18 or 1e20. Exact minimum identity remains mathematical."
   ],
   "body_sha256": "a4e08ba746da2944989ae27b9b50560b7dab051aa8086ec511cdb3ea5c9c8871",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 3,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording20 15–437: nonlinear payoff/function motivation and holder/writer distinction are covered in contract-and-exercise/payoff-geometry/functions-as-values. The blanket claim that options are not assets is explicitly corrected in the chapter. Unsupported collateral generalizations and historical origin/insurance anecdotes are not adopted."
+  ]
 }

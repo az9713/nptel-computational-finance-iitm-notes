@@ -57,10 +57,12 @@
 assert h &gt; 0
 assert x + h == x
 
+
 def centered(function, x, h):
     if h &lt;= 0 or not x - h &lt; x &lt; x + h:
         raise ValueError("A positive distinguishable step is required")
     return (function(x + h) - function(x - h)) / (2 * h)
+
 
 assert centered(lambda t: 3*t + 2, 1.0, .25) == 3.0
 </code></pre>

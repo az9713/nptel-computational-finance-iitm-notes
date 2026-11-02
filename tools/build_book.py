@@ -8,8 +8,12 @@ from html import escape
 import json
 from pathlib import Path
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from review_evidence import accepted_evidence, artifact_path, body_bytes  # noqa: E402
+
 BEGIN, END = '<!-- BEGIN CHAPTER -->', '<!-- END CHAPTER -->'
 
 
@@ -28,24 +32,12 @@ def chapter_path(name):
 
 
 def body_of(path):
-    text = path.read_text(encoding='utf-8')
-    if text.count(BEGIN) != 1 or text.count(END) != 1:
-        raise ValueError(f'{path.name}: exactly one chapter body required')
-    return text.split(BEGIN, 1)[1].split(END, 1)[0]
+    # Do not normalize line endings before checking a raw body-bound review.
+    return body_bytes(path.read_bytes()).decode('utf-8')
 
 
 def reviewed_artifact(name):
-    patterns = (r'code/ch\d{2}_[a-z0-9_]+\.py',
-                r'figures/ch\d{2}_[a-z0-9_]+\.py',
-                r'assets/ch\d{2}-[a-z0-9-]+\.svg')
-    if not isinstance(name, str) or not any(re.fullmatch(p, name)
-                                           for p in patterns):
-        raise ValueError('invalid reviewed artifact path')
-    original = ROOT / name
-    path = original.resolve()
-    if original.is_symlink() or path.parent != ROOT / name.split('/')[0]:
-        raise ValueError('reviewed artifact must stay in its public directory')
-    return path
+    return artifact_path(ROOT, name)
 
 
 def wrap(title, body, *, chapter=False, turns=''):
@@ -108,17 +100,11 @@ def main():
         meta = json.loads(sidecar.read_text(encoding='utf-8'))
         c['status'] = meta['status']
         if meta['status'] == 'accepted':
-            reviews = meta.get('reviews', [])
-            if len(reviews) < 2 or reviews[-1].get('body_sha256') != digest or reviews[-1].get('blocking_findings') != 0:
-                raise ValueError(f'{path.name}: acceptance is missing or stale')
-            for listing in meta.get('code', []):
-                current_code = hashlib.sha256(reviewed_artifact(listing['path']).read_bytes()).hexdigest()
-                if reviews[-1].get('code_sha256', {}).get(listing['path']) != current_code:
-                    raise ValueError(f'{path.name}: accepted program has changed')
-            for name, reviewed_digest in reviews[-1].get('artifact_sha256', {}).items():
-                actual = hashlib.sha256(reviewed_artifact(name).read_bytes()).hexdigest()
-                if actual != reviewed_digest:
-                    raise ValueError(f'{path.name}: accepted figure artifact has changed')
+            try:
+                evidence = accepted_evidence(meta, path.read_bytes(), ROOT)
+            except ValueError as error:
+                raise ValueError(f'{path.name}: {error}') from error
+            meta['current_full_scientific_review_rounds'] = evidence['current_full_reviews']
         # A rebuild may update inventory, but cannot invent or promote a review.
         meta['body_sha256'] = digest
         sidecar.write_text(json.dumps(meta, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')

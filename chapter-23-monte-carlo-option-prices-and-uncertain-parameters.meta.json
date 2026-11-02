@@ -1,0 +1,285 @@
+{
+  "chapter": 23,
+  "title": "Monte Carlo option prices and uncertain parameters",
+  "file": "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html",
+  "source_recordings": [
+    69,
+    70,
+    74
+  ],
+  "status": "accepted",
+  "coverage_complete": true,
+  "completed_sections": [
+    "pricing-law",
+    "pricing-error",
+    "variance-reduction",
+    "normal-posterior",
+    "metropolis-hastings",
+    "chain-error",
+    "predictive-law",
+    "admissible-utility",
+    "predictive-decision-lab",
+    "limits-and-program",
+    "exercises",
+    "sources-and-reproduction"
+  ],
+  "coverage": [
+    {
+      "section": "pricing-law",
+      "recording": 69,
+      "start_seconds": 16,
+      "end_seconds": 355,
+      "topic": "Risk-neutral versus historical law, discounted call expectation and analytic benchmark"
+    },
+    {
+      "section": "pricing-error",
+      "recording": 69,
+      "start_seconds": 355,
+      "end_seconds": 1045,
+      "topic": "Complete European sampler, error ladder and qualified random-stream reproducibility"
+    },
+    {
+      "section": "pricing-error",
+      "recording": 74,
+      "start_seconds": 15,
+      "end_seconds": 526,
+      "topic": "Five terminal prices, payoff mean/sample variance, discounted SE and pilot budget"
+    },
+    {
+      "section": "variance-reduction",
+      "recording": 74,
+      "start_seconds": 526,
+      "end_seconds": 560,
+      "topic": "Efficiency motivation extended with proved antithetic and independent-pilot stock controls"
+    },
+    {
+      "section": "normal-posterior",
+      "recording": 70,
+      "start_seconds": 16,
+      "end_seconds": 454,
+      "topic": "Physical uncertain normal parameters, explicit prior measure and normal/inverse-gamma laws"
+    },
+    {
+      "section": "metropolis-hastings",
+      "recording": 70,
+      "start_seconds": 454,
+      "end_seconds": 751,
+      "topic": "State-dependent proposal, accepted/rejected transition and transformed target"
+    },
+    {
+      "section": "chain-error",
+      "recording": 70,
+      "start_seconds": 751,
+      "end_seconds": 1092,
+      "topic": "Acceptance/warmup/trace limitations and analytic posterior audit"
+    },
+    {
+      "section": "predictive-law",
+      "recording": 70,
+      "start_seconds": 1092,
+      "end_seconds": 1148,
+      "topic": "Posterior pair to conditional future return and predictive expected utility"
+    },
+    {
+      "section": "admissible-utility",
+      "recording": 70,
+      "start_seconds": 1148,
+      "end_seconds": 1235,
+      "topic": "Leverage admissibility and qualified uncertainty/allocation interpretation"
+    },
+    {
+      "section": "metropolis-hastings",
+      "recording": 74,
+      "start_seconds": 756,
+      "end_seconds": 1093,
+      "topic": "Recovered actual target table, all four MH decisions and retained rejection"
+    },
+    {
+      "section": "chain-error",
+      "recording": 74,
+      "start_seconds": 1093,
+      "end_seconds": 1146,
+      "topic": "Four-step acceptance fraction distinguished from convergence assessment"
+    },
+    {
+      "section": "admissible-utility",
+      "recording": 74,
+      "start_seconds": 1146,
+      "end_seconds": 1675,
+      "topic": "Two versus four finite log-return states, positive-wealth leverage and utility ranking"
+    },
+    {
+      "section": "pricing-error",
+      "recording": 75,
+      "start_seconds": 1027,
+      "end_seconds": 1170,
+      "topic": "R European terminal/payoff/discount/standard-error laboratory"
+    },
+    {
+      "section": "pricing-error",
+      "recording": 76,
+      "start_seconds": 1042,
+      "end_seconds": 1197,
+      "topic": "Paired Python European terminal/payoff/discount/standard-error laboratory"
+    },
+    {
+      "section": "predictive-decision-lab",
+      "recording": 75,
+      "start_seconds": 1445,
+      "end_seconds": 2068,
+      "topic": "Complete R posterior/MH/burnin/trace/future-return/utility-grid pipeline and corrected domains"
+    },
+    {
+      "section": "predictive-decision-lab",
+      "recording": 76,
+      "start_seconds": 1480,
+      "end_seconds": 2022,
+      "topic": "Complete paired Python posterior/MH/moment-check/future-return/utility-grid pipeline and corrected interpretation"
+    }
+  ],
+  "code": [
+    {
+      "path": "code/ch23_pricing_and_inference.py",
+      "check": "Exact European benchmark, IID/paired/independent-pilot control, source74 workshop/trace, analytic/IID/MH posterior, batch errors, predictive t/utility/tails, six invalid contracts"
+    }
+  ],
+  "reviewed_artifacts": [
+    "code/ch22_sampling.py",
+    "figures/ch23_pricing_posterior_and_decisions.py",
+    "assets/ch23-estimation-and-posterior.svg",
+    "assets/ch23-estimation-and-posterior-portrait.svg",
+    "assets/ch23-predictive-decisions.svg",
+    "assets/ch23-predictive-decisions-portrait.svg"
+  ],
+  "reviews": [
+    {
+      "round": "ch23-r1-rejected",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch23-r1",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "95c0f6d2e87e21baf87a295a267008ef6b67b33513846d130d8db411d13d0792",
+      "code_sha256": {
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "figures/ch23_pricing_posterior_and_decisions.py": "f41758e1198f98b4ffe7359fbe3972ae1aeed0286f3485f6c84a477cc70a5d9a",
+        "assets/ch23-estimation-and-posterior.svg": "46b5173d94b9f7be6f42080a5a74bed19f23c2fcb3c99e7cd0da1d50638c9e07",
+        "assets/ch23-estimation-and-posterior-portrait.svg": "ea740ad316b7dbe16bb9ddf24465930d80c741b1ab7281b8905eab51f364508e",
+        "assets/ch23-predictive-decisions.svg": "eaacd4ed7a0009c105a5378a9a20538205cdce1580e16689f1db88073f641f7b",
+        "assets/ch23-predictive-decisions-portrait.svg": "3aa9f924e57857fc15cac75bd11f7beed3122cfe85bc209f1058cb488296ec61"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision; unapproved",
+      "report_sha256": "3c641b265361c57caeeececb03714e142ad36bbd5d6dff0dfa673e2f610f69e0"
+    },
+    {
+      "round": "ch23-r2-rejected",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch23-r2",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review",
+      "full_scientific_review": true,
+      "body_sha256": "95c0f6d2e87e21baf87a295a267008ef6b67b33513846d130d8db411d13d0792",
+      "code_sha256": {
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "figures/ch23_pricing_posterior_and_decisions.py": "f41758e1198f98b4ffe7359fbe3972ae1aeed0286f3485f6c84a477cc70a5d9a",
+        "assets/ch23-estimation-and-posterior.svg": "46b5173d94b9f7be6f42080a5a74bed19f23c2fcb3c99e7cd0da1d50638c9e07",
+        "assets/ch23-estimation-and-posterior-portrait.svg": "ea740ad316b7dbe16bb9ddf24465930d80c741b1ab7281b8905eab51f364508e",
+        "assets/ch23-predictive-decisions.svg": "eaacd4ed7a0009c105a5378a9a20538205cdce1580e16689f1db88073f641f7b",
+        "assets/ch23-predictive-decisions-portrait.svg": "3aa9f924e57857fc15cac75bd11f7beed3122cfe85bc209f1058cb488296ec61"
+      },
+      "blocking_findings": 1,
+      "verdict": "yes-after-revision; unapproved",
+      "report_sha256": "862e7afd670820a54d98e2f9021c26e39ca9b905b7dec109ef551580ab5a96fd"
+    },
+    {
+      "round": "1-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r1",
+      "review_task": "ch23-r1-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "60fa2c18833bde53c823682205cb70779b3d58a153a20743bbeefe5a7801f718",
+      "code_sha256": {
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "figures/ch23_pricing_posterior_and_decisions.py": "f41758e1198f98b4ffe7359fbe3972ae1aeed0286f3485f6c84a477cc70a5d9a",
+        "assets/ch23-estimation-and-posterior.svg": "46b5173d94b9f7be6f42080a5a74bed19f23c2fcb3c99e7cd0da1d50638c9e07",
+        "assets/ch23-estimation-and-posterior-portrait.svg": "ea740ad316b7dbe16bb9ddf24465930d80c741b1ab7281b8905eab51f364508e",
+        "assets/ch23-predictive-decisions.svg": "eaacd4ed7a0009c105a5378a9a20538205cdce1580e16689f1db88073f641f7b",
+        "assets/ch23-predictive-decisions-portrait.svg": "3aa9f924e57857fc15cac75bd11f7beed3122cfe85bc209f1058cb488296ec61"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "4f381c06ef8cdc51374479f4f2afc18214403e9cef9650278ff994efeb53429d"
+    },
+    {
+      "round": "2-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch23-r2-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "60fa2c18833bde53c823682205cb70779b3d58a153a20743bbeefe5a7801f718",
+      "code_sha256": {
+        "code/ch23_pricing_and_inference.py": "28b2ccd5eaa3cde1529089d0790254974a84daff9436705e4f31b18ea3528232"
+      },
+      "artifact_sha256": {
+        "code/ch22_sampling.py": "cdfb2c76d8ce5953a705a9e5b67c9fa15c795287562f01be823dbd04bfc17c0b",
+        "figures/ch23_pricing_posterior_and_decisions.py": "f41758e1198f98b4ffe7359fbe3972ae1aeed0286f3485f6c84a477cc70a5d9a",
+        "assets/ch23-estimation-and-posterior.svg": "46b5173d94b9f7be6f42080a5a74bed19f23c2fcb3c99e7cd0da1d50638c9e07",
+        "assets/ch23-estimation-and-posterior-portrait.svg": "ea740ad316b7dbe16bb9ddf24465930d80c741b1ab7281b8905eab51f364508e",
+        "assets/ch23-predictive-decisions.svg": "eaacd4ed7a0009c105a5378a9a20538205cdce1580e16689f1db88073f641f7b",
+        "assets/ch23-predictive-decisions-portrait.svg": "3aa9f924e57857fc15cac75bd11f7beed3122cfe85bc209f1058cb488296ec61"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "40d8b1800ba65cdfcc014deed56800ba2e37773aaafe932d7127f5da89a96b65"
+    }
+  ],
+  "body_sha256": "60fa2c18833bde53c823682205cb70779b3d58a153a20743bbeefe5a7801f718",
+  "full_scientific_review_rounds": 4,
+  "current_full_scientific_review_rounds": 2,
+  "limitations": [
+    "One-asset normal model with explicit improper prior and proper-data conditions",
+    "Reconstructed rounded sufficient statistics, not original source70 raw data or exact trace",
+    "Classical batch errors and plots are diagnostic, not a convergence proof",
+    "Synthetic moderate floating inputs and fixed interior quadrature benchmark, not interval-certified optimization",
+    "Full-support log-return laws require long-only positive wealth; finite-support source74 domain differs",
+    "Physical predictive t has no finite gross-return exponential moment",
+    "R interface correspondence documentary; no R runtime claimed for this chapter"
+  ],
+  "source_corrections": [
+    "Pricing drift under Q is not the historical expected stock return",
+    "A million draws and an identical cross-language seed do not guarantee identical rounded prices",
+    "Flat prior requires coordinates; full versus collapsed variance laws and log-variance Jacobian differ",
+    "MH retains rejected states; no universal acceptance band or fixed warmup convergence guarantee",
+    "Five pilot draws give weak variance information, not exact normal inference",
+    "Mean-preserving log-return spread differs from a mean-preserving wealth spread",
+    "Finite positive-wealth simulations cannot justify unrestricted leverage; uncertainty need not decrease weight"
+  ],
+  "original_additions": [
+    "Antithetic covariance and independent-pilot stock control derivations and seeded experiments",
+    "Explicit normal/inverse-gamma posterior moments, IID audit and transformed-target MH benchmark",
+    "Predictive Student-t derivation and exponential-moment boundary",
+    "Uniform utility/derivative-tail analysis and constrained predictive decision",
+    "Original figure generator and six fully solved exercises"
+  ],
+  "coverage_notes": [
+    "Asian69[1045,1792] and74[560,756] belong24",
+    "Final labs75[1170,1445] and76[1197,1480] belong24; initial sampling spans belong22",
+    "Source70 rounded statistics visually confirmed in70-1000.png; full data/seed/proposal scales/safe rate unrecovered"
+  ]
+}

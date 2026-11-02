@@ -227,6 +227,28 @@
       "resolved_nonblocking_findings": [
         "Two Itô multiplication commas replaced by thin spaces; exact historical-body reconstruction checked independently"
       ]
+    },
+    {
+      "round": "3-current",
+      "reviewer": "independent Codex science-editor",
+      "reviewer_id": "/root/ch22_science_r2",
+      "review_task": "ch16-r3-current",
+      "date": "2026-11-02",
+      "scope": "Full independent scientific/editorial review of entire current chapter",
+      "full_scientific_review": true,
+      "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
+      "code_sha256": {
+        "code/ch16_black_scholes.py": "0424b0818d4c27458292129f56c23c5f1b9faa4661a8a2d56fc370286eb5db58"
+      },
+      "artifact_sha256": {
+        "code/ch08_binomial_valuation.py": "482443b945e9ab9d99b86330305dd8cc9f6beb196cb98d52a4dbbac1c0ef4551",
+        "figures/ch16_prices_and_convergence.py": "0cdb0b0629fa2473f9092f6e2831eac7858493b2e4dd4c88e0b5de0bf97758cf",
+        "assets/ch16-prices-and-convergence.svg": "62210a2fd5ec5785c82456db60b46cd61b654f0d2fd4039c3ccb1d29d04ae0ba",
+        "assets/ch16-prices-and-convergence-portrait.svg": "405e693a9a624d830f113b4b5196caf43ef9aa00a2819adfa982fbba5a3b26ed"
+      },
+      "blocking_findings": 0,
+      "verdict": "yes",
+      "report_sha256": "d8bb7bf40d6b3de50ea2d59b9fb1da0b4e9407637ec4ebf9dd916819e87872ce"
     }
   ],
   "limitations": [
@@ -236,5 +258,10 @@
     "Historical estimates use an explicitly original synthetic fixture"
   ],
   "body_sha256": "4114d5aa9ad9f6cc85cd93aa1079575bf53aca788097bed7524ddf1f09edb21f",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 3,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording46 15–151: historical exchange/model introduction is contextual rather than a missing pricing derivation; the chapter develops its contract/model in pricing-task. Unverified exchange chronology and source anecdotes are not adopted.",
+    "Final source-introduction audit: recording47 15–103: Brownian/GBM orientation is developed in brownian/gbm. Source historical attribution to a relativity paper is not adopted; no historical proof is claimed."
+  ]
 }

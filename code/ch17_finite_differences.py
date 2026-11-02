@@ -40,6 +40,13 @@ def coefficients(rate, volatility, space_steps, drift='monotone'):
 
 @dataclass(frozen=True)
 class GridResult:
+    """Values and a separate, noncertified exercise-classification diagnostic.
+
+    exercise_brackets columns are remaining time, last clear exercise stock,
+    first clear continuation stock. Ties can widen the band; NaN endpoints
+    indicate conflicting clear classifications, without invalidating prices.
+    """
+
     stock: np.ndarray
     values: np.ndarray
     previous_values: np.ndarray
@@ -101,15 +108,23 @@ def explicit_grid(strike, rate, volatility, horizon, smax, space_steps,
         if american:
             values[1:-1] = np.maximum(intrinsic[1:-1], continuation)
             if kind == 'put':
-                exercised = ((intrinsic[1:-1] > 0)
-                             & (intrinsic[1:-1] >= continuation))
-                # Only positive-payoff exercise is identified. Far zero-payoff
-                # equality must not be mistaken for the put's lower boundary.
-                indices = np.flatnonzero(exercised) + 1
-                last = int(indices[-1]) if indices.size else 0
-                if indices.size and not np.array_equal(indices, np.arange(1, last + 1)):
-                    raise ValueError('noncontiguous put exercise nodes in this grid')
-                brackets.append((level * dt, stock[last], stock[last + 1]))
+                exercise_scale = np.maximum(
+                    1., np.maximum(np.abs(intrinsic[1:-1]), np.abs(continuation)))
+                exercise_tol = 64 * np.finfo(float).eps * exercise_scale
+                gap = intrinsic[1:-1] - continuation
+                positive = intrinsic[1:-1] > 0
+                clear_exercise = positive & (gap > exercise_tol)
+                clear_continuation = ~positive | (gap < -exercise_tol)
+                exercise_nodes = np.flatnonzero(clear_exercise) + 1
+                continuation_nodes = np.flatnonzero(clear_continuation) + 1
+                last = int(exercise_nodes[-1]) if exercise_nodes.size else 0
+                first = (int(continuation_nodes[0])
+                         if continuation_nodes.size else m)
+                # Ambiguous ties can widen this diagnostic. Inconsistent
+                # clear classifications leave it unresolved, never abort prices.
+                lo, hi = ((stock[last], stock[first]) if last < first
+                          else (math.nan, math.nan))
+                brackets.append((level * dt, lo, hi))
         else:
             values[1:-1] = continuation
         if not np.all(np.isfinite(values)):
@@ -207,6 +222,18 @@ def main():
                                common_n, american=True)
         print('Fixed-dS/dt domain check Smax/M/N/AMput:', ceiling, ceiling // 2,
               result.time_steps, result.price(100))
+    # At zero and near-zero rates, numerical exercise ties must not abort
+    # the unchanged max-projection value solve.
+    for rate in (0., 1e-12):
+        for m in (50, 100, 200):
+            zero_am = explicit_grid(100, rate, .3, 1, 400, m, american=True)
+            zero_eu = explicit_grid(100, rate, .3, 1, 400, m)
+            tolerance = 1e-9 if rate == 0 else 1e-8
+            np.testing.assert_allclose(
+                zero_am.values, zero_eu.values, atol=tolerance, rtol=0)
+            bands = zero_am.exercise_brackets[:, 1:]
+            resolved = bands[np.all(np.isfinite(bands), axis=1)]
+            assert np.all(resolved[:, 0] < resolved[:, 1])
     for params in ({'space_steps': True}, {'time_steps': 0}, {'rate': -.01},
                    {'volatility': 0}, {'kind': 'unknown'}, {'american': 1},
                    {'allow_unsafe': 1}, {'smax': 80}, {'horizon': float('nan')}):

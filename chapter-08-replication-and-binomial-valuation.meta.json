@@ -152,5 +152,10 @@
     "Local machine transcripts; no full audiovisual verification"
   ],
   "body_sha256": "93b53faa0919236de20d6be1de52d7ca788710292ed6229adff39ea16094d355",
-  "full_scientific_review_rounds": 2
+  "full_scientific_review_rounds": 2,
+  "current_full_scientific_review_rounds": 2,
+  "coverage_notes": [
+    "Final source-introduction audit: recording23 15–217: motivation for replication versus pricing measures and the two-state toy model is developed in two-state-market/replication/pricing-probabilities; generic modeling aphorisms are omitted.",
+    "Final source-introduction audit: recording24 15–96: motivation for multiperiod recursion and the continuous-limit bridge is developed in lattice-state/crr-scaling/implementation."
+  ]
 }

@@ -1,15 +1,15 @@
 {
   "recordings_total": 76,
   "chapters_planned": 24,
-  "chapters_written": 21,
-  "chapters_accepted": 21,
-  "complete": false,
+  "chapters_written": 24,
+  "chapters_accepted": 24,
+  "complete": true,
   "chapters": [
     {
       "chapter": 1,
       "file": "chapter-01-financial-models-become-executable-algorithms.html",
       "status": "accepted",
-      "body_sha256": "ed5059a8a9ffc795ed808750667bf34312a83de460928ee6f421ff736efe8dc9",
+      "body_sha256": "2c1f3c4ba9d26ba85069305c9a8874e9f3fc5609e915ca7a5e7eb2dd028e2010",
       "recordings": [
         1,
         2,
@@ -22,7 +22,7 @@
       "chapter": 2,
       "file": "chapter-02-rates-approximations-numerical-reliability.html",
       "status": "accepted",
-      "body_sha256": "72a63175de3891e4a43c51b4f102420548a22ecb8238b5367cbcafa211d98356",
+      "body_sha256": "04b34f6f45141dc865f840e426e294ee9f76438dd53b9c29c4030fbd11cd6c62",
       "recordings": [
         4,
         5,
@@ -130,7 +130,7 @@
       "chapter": 12,
       "file": "chapter-12-constructing-curves-and-volatility-surfaces.html",
       "status": "accepted",
-      "body_sha256": "8a98d19023a5752064a4e003ee88575036e693d53fdb074832c3dea81c175014",
+      "body_sha256": "fe1a00f2709a5d9d2dbd578f6aa6bf3352f229332ac6e644a2dc8952648fe227",
       "recordings": [
         33,
         35,
@@ -141,7 +141,7 @@
       "chapter": 13,
       "file": "chapter-13-bond-calculus-duration-and-convexity.html",
       "status": "accepted",
-      "body_sha256": "8a3957f07ab56ee315523a4a634a936e1b337f24b020158582d884e4cba2ba9d",
+      "body_sha256": "afbb19735327ac63ce46eefb0a1cb9d317e9c1416a6b439b7b51df66dabd50b9",
       "recordings": [
         37,
         38,
@@ -152,7 +152,7 @@
       "chapter": 14,
       "file": "chapter-14-portfolio-objectives-and-expected-utility.html",
       "status": "accepted",
-      "body_sha256": "18408ab4e3c693b1da7950478dbf924a91e4593695a61f53570f0dcc51269332",
+      "body_sha256": "3eeb2acf0cb7723c5d58a3388d51cc6f608e47871e5f9c4563123afeb05430f6",
       "recordings": [
         39,
         41,
@@ -163,7 +163,7 @@
       "chapter": 15,
       "file": "chapter-15-numerical-integration-for-financial-expectations.html",
       "status": "accepted",
-      "body_sha256": "52a7e0b9ec826379247fb956af30d1a8ab9f4d36ebc57750ce1bc7ef851c01d9",
+      "body_sha256": "162f46c8ab7a9d5fc2a2f3619a75ade00d082508f8c28c620220958d33dfb548",
       "recordings": [
         40,
         44,
@@ -185,7 +185,7 @@
       "chapter": 17,
       "file": "chapter-17-finite-differences-and-early-exercise.html",
       "status": "accepted",
-      "body_sha256": "861a34db25b954ff2952227f3852554347f2805a20d757105879d78444fb5a9f",
+      "body_sha256": "09e0e3883a8b9d097b1cf287d45aa3866542a32a6d49c9d00e4e29685aefc803",
       "recordings": [
         48,
         49,
@@ -236,6 +236,41 @@
         63,
         64,
         65
+      ]
+    },
+    {
+      "chapter": 22,
+      "file": "chapter-22-random-walks-sampling-and-monte-carlo.html",
+      "status": "accepted",
+      "body_sha256": "69053e60a45e908b52fc5b9d39c5c3c7ed50a9fa7d8d059d295d33a8aeb2a9ff",
+      "recordings": [
+        66,
+        67,
+        68,
+        72,
+        73
+      ]
+    },
+    {
+      "chapter": 23,
+      "file": "chapter-23-monte-carlo-option-prices-and-uncertain-parameters.html",
+      "status": "accepted",
+      "body_sha256": "60fa2c18833bde53c823682205cb70779b3d58a153a20743bbeefe5a7801f718",
+      "recordings": [
+        69,
+        70,
+        74
+      ]
+    },
+    {
+      "chapter": 24,
+      "file": "chapter-24-asian-options-and-a-complete-numerical-workflow.html",
+      "status": "accepted",
+      "body_sha256": "6aef41fc16f8d333df4ae6d43bc71775e3e26139b9f93385e60c11f5763aa527",
+      "recordings": [
+        71,
+        75,
+        76
       ]
     }
   ]
